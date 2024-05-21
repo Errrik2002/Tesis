@@ -509,6 +509,27 @@ influence of the cytokines TNF and IL-10.</p>
 </div>
 </div>
 </div>
+<div id="segundo-modelo-con-citocinas" class="section level1">
+<h1>Segundo Modelo (Con citocinas)</h1>
+<p>Se implementara la misma funcion de citocinas como en el modelo de
+Staphylococcus aureus.</p>
+<p>1.-<span class="math display">\[ d{T_{L}} = \alpha_{1} T_{L} -
+\alpha_{2} T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N} - \mu T_{L}
+\]</span></p>
+<p>2.-<span class="math display">\[ dT_{i} = \alpha_{2}T_{L}M_{\phi} +
+\alpha_{3}T_{L}C_{N} - \alpha_{4}M_{\phi}iT_{i}-\alpha_{5}M_{\phi}iCD8 -
+\alpha_{6}C_{i}CD8 - \mu T_{i} + \alpha_{9}T_{i} \]</span></p>
+<p>3.-<span class="math display">\[ dM_{\phi} = \alpha_{7}M_{\phi} -
+\alpha_{2}T_{L}M_{\phi} - \mu M_{\phi} \]</span></p>
+<p>4-.<span class="math display">\[ dM_{\phi}i = \alpha_{2}T_{L}M_{\phi}
+- \alpha_{5}M_{\phi}iCD8 -\mu M_{\phi}i \]</span></p>
+<p>5.-<span class="math display">\[ dC_{N}= \alpha_{8}C_{N} -
+\alpha_{3}T_{L}C_{N} - \mu C_{N} \]</span></p>
+<p>6.-<span class="math display">\[ dC_{i} = \alpha_{3}T_{L}C_{N} -
+\alpha_{6}C_{i}CD8 - \mu C_{i} \]</span></p>
+<p>7.- <span class="math display">\[ dCD8 = \alpha_{10} CD8 - \mu CD8
+\]</span></p>
+</div>
 
 
 
