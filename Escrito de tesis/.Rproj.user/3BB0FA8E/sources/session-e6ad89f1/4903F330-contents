@@ -164,7 +164,7 @@ TODO JUNTO:  represents macrophage activation at the rate γMA in response to th
 Se implementara la misma funcion de citocinas como en el modelo de Staphylococcus aureus.
 
 
-1.-$$ d{T_{L}} = \alpha_{1} T_{L} - \alpha_{2} T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N} - \mu T_{L} $$
+1.-$$ d{T_{L}} = \alpha_{1} T_{L} - (\alpha_{2} H_{M}^U(TNF)H_{M}^D(IL10)) T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N} - \mu T_{L} $$
 
 2.-$$ dT_{i} = \alpha_{2}T_{L}M_{\phi} + \alpha_{3}T_{L}C_{N} - \alpha_{4}M_{\phi}iT_{i}-\alpha_{5}M_{\phi}iCD8 - \alpha_{6}C_{i}CD8 - \mu T_{i} + \alpha_{9}T_{i} $$
 
