@@ -164,19 +164,20 @@ TODO JUNTO:  represents macrophage activation at the rate γMA in response to th
 Se implementara la misma funcion de citocinas como en el modelo de Staphylococcus aureus.
 
 
-1.-$$ d{T_{L}} = \alpha_{1} T_{L} - (\alpha_{2} H_{M}^U(TNF)H_{M}^D(IL10)) T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N} - \mu T_{L} $$
+1.-$$ d{T_{L}} = \alpha_{1} T_{L} - (\alpha_{2} H_{M}^U(TNF)H_{M}^D(IL10)) T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N} - \mu_{1} T_{L} $$
 
-2.-$$ dT_{i} = \alpha_{2}T_{L}M_{\phi} + \alpha_{3}T_{L}C_{N} - \alpha_{4}M_{\phi}iT_{i}-\alpha_{5}M_{\phi}iCD8 - \alpha_{6}C_{i}CD8 - \mu T_{i} + \alpha_{9}T_{i} $$
+2.-$$ dT_{i} = (\alpha_{2} H_{M}^{U}(TNF)H_{M}^{D}(IL10)) T_{L}M_{\phi} + \alpha_{3}T_{L}C_{N} - (\alpha_{4}H_{M}^{U}(TNF)H_{M}^{U}(IFN)H_{M}^{D}(IL10) )M_{\phi}iT_{i}$$
+$$-(\alpha_{5}H_{CD8}^{U}H_{CD8}^{D}(IL10))M_{\phi}iCD8 - (\alpha_{6}H_{CD8}^{U}(TNF)H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10))C_{i}CD8 - \mu_{2} T_{i} + \alpha_{9}T_{i} $$
 
-3.-$$ dM_{\phi} = \alpha_{7}M_{\phi} - \alpha_{2}T_{L}M_{\phi} - \mu M_{\phi} $$
+3.-$$ dM_{\phi} = \alpha_{7}M_{\phi} - (\alpha_{2}H_{M}^{U}(TNF)H_{M}^{D}(IL10) )T_{L}M_{\phi} - \mu_{3} M_{\phi} $$
 
-4-.$$ dM_{\phi}i = \alpha_{2}T_{L}M_{\phi} - \alpha_{5}M_{\phi}iCD8 -\mu M_{\phi}i $$
+4-.$$ dM_{\phi}i = (\alpha_{2}H_{M}^{U}(TNF)H_{M}^{D}(IL10))T_{L}M_{\phi} - (\alpha_{5} H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10))M_{\phi}iCD8 -\mu_{4} M_{\phi}i $$
 
-5.-$$ dC_{N}= \alpha_{8}C_{N} - \alpha_{3}T_{L}C_{N} - \mu C_{N} $$
+5.-$$ dC_{N}= \alpha_{8}C_{N} - \alpha_{3}T_{L}C_{N} - \mu_{5} C_{N} $$
 
-6.-$$ dC_{i} = \alpha_{3}T_{L}C_{N} - \alpha_{6}C_{i}CD8 - \mu C_{i} $$
+6.-$$ dC_{i} = \alpha_{3}T_{L}C_{N} - (\alpha_{6} H_{CD8}^{U}(TNF)H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10))C_{i}CD8 - \mu_{6} C_{i} $$
 
-7.- $$ dCD8 = \alpha_{10} CD8 - \mu CD8 $$
+7.- $$ dCD8 = (\alpha_{10}H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10)) CD8 - (\mu_{7}H_{CD8}^{D}(IFN)H_{CD8}^{U}(IL10) )CD8 $$
 
 
 
