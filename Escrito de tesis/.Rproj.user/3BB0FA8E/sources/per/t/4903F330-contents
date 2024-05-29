@@ -192,7 +192,7 @@ $$-(\alpha_{5}H_{CD8}^{U}H_{CD8}^{D}(IL10))M_{\phi}iCD8 - (\alpha_{6}H_{CD8}^{U}
 2.-$$ dT_{i} = (\alpha_{2} H_{M}^{U}(TNF)H_{M}^{D}(IL10)) T_{L}M_{\phi} + \alpha_{3}T_{L}C_{N} - (\alpha_{4}H_{M}^{U}(TNF)H_{M}^{U}(IFN)H_{M}^{D}(IL10) )M_{\phi}iT_{i}$$
 $$-(\alpha_{5}H_{CD8}^{U}H_{CD8}^{D}(IL10))M_{\phi}iCD8 - (\alpha_{6}H_{CD8}^{U}(TNF)H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10))C_{i}CD8 - \mu_{2} T_{i} + \alpha_{9}T_{i}(C_{i}+M_{\phi}i) $$
 
-3.-$$ dM_{\phi} = \alpha_{7}(M_{\phi}-M_{\phi}0) - (\alpha_{2}H_{M}^{U}(TNF)H_{M}^{D}(IL10) )T_{L}M_{\phi} - \mu_{3} M_{\phi} $$
+3.-$$ \dot {dM}_{\phi} = \alpha_{7}(M_{\phi}-M_{\phi}0) - (\alpha_{2}H_{M}^{U}(TNF)H_{M}^{D}(IL10) )T_{L}M_{\phi} - \mu_{3} M_{\phi} $$
 
 4-.$$ dM_{\phi}i = (\alpha_{2}H_{M}^{U}(TNF)H_{M}^{D}(IL10))T_{L}M_{\phi} - (\alpha_{5} H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10))M_{\phi}iCD8 -\mu_{4} M_{\phi}i $$
 
@@ -217,5 +217,11 @@ La ecuacion de aparicion de parasitos libres, que puede ser por infeccion con un
 
 
 
+|  Variable         | Valor Inicial | Definicion   |
+|-------------------|---------------|--------------|
+| 
 
 
+| Parametro         | Valor       | Definicion    | Referencia   |
+|-------------------|-------------|---------------|--------------|
+|
