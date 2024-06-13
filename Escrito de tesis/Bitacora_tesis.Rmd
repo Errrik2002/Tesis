@@ -220,3 +220,39 @@ $$-(\alpha_{5}H_{CD8}^{U}H_{CD8}^{D}(IL10))M_{\phi}iCD8 - (\alpha_{6}H_{CD8}^{U}
 | Parametro         | Valor       | Definicion    | Referencia   |
 |-------------------|-------------|---------------|--------------|
 |
+
+
+
+
+# Tercer modelo Citocinas y funciones de Hill
+
+
+1 .- $$ \dot T_{L}= (\alpha_{1}+ \mu_{6} C_{i} + \mu_{4}M_{\phi i})T_{L} - [\alpha_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}}) (\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N}-\mu_{1}T_{L}$$
+
+2.- $$\dot{T_{i}} = [\alpha_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M_{\phi}+ \alpha_{3}T_{L}C_{N} $$
+$$- [\alpha_{4} (\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})]M_{\phi i}T_{i}$$
+$$-[\alpha_{5}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})]M_{\phi i}CD8 $$
+$$-[\alpha_{6}(\dfrac{TNF^{h}}{\eta^{h}(CD8)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})]C_{i}CD8 
+$$ 
+$$- \mu_{2}T_{i}+ \alpha_{9}T_{i}(C_{i}+M_{\phi i}) $$
+3.-$$ \dot{M_{\phi}}= \alpha_{7}(M_{\phi}-M_{\phi}0) - [\alpha_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M_{\phi}-\mu_{3}M_{\phi} $$
+
+4.- $$ \dot{M_{\phi i }}= [\alpha_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M_{\phi} $$
+$$-[\alpha_{5}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})]M_{\phi i }CD8 - \mu_{4}M_{\phi i} $$
+5.- $$\dot{C_{N}}= \alpha_{8}(C_{N}-C_{N}0) -\alpha_{3}T_{L}C_{N}-\mu_{5}C_{N} $$
+
+6.- $$ \dot{C_{i}}= \alpha_{3}T_{L}C_{N} - [\alpha_{6}(\dfrac{TNF^{h}}{\eta^{h}(CD8)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+ IL10^{h}})]C_{i}CD8 -\mu_{6}C_{i} $$
+
+7.- $$ \dot{ CD8}= [\alpha_{10}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})](CD8-CD80) $$
+$$ -[\mu_{7}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})]$$
+8.- $$\dot{TNF}= [\alpha_{11}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{\phi i} - \mu_{8}(TNF-qTNF)  $$
+9.- $$\dot{IFN}= [\alpha_{11}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+ IL10^{h}})]C_{i}??? - \mu_{9}(IFN-qIFN) $$
+
+10.- $$\dot{IL10}= \alpha_{13}- \mu_{10}(IL10-qIL10) $$
+
+
+
+
+
+
+
