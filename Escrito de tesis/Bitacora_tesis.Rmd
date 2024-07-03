@@ -233,21 +233,28 @@ $$-(\alpha_{5}H_{CD8}^{U}H_{CD8}^{D}(IL10))M_{\phi}iCD8 - (\alpha_{6}H_{CD8}^{U}
 | $\alpha_{1}$  | ----------------|Tasa de entrada de parasitos|--------------|
 | $\alpha_{2}$  | ----------------|Tasa de infeccion de macrofagos|--------------|
 | $\alpha_{3}$  | ----------------|Tasa de infeccion de cardiomiocitos|--------------|
-| $\alpha_{4}$  | ----------------||--------------|
-| $\alpha_{5}$  | ----------------|---------------|--------------|
-| $\alpha_{6}$  | ----------------|---------------|--------------|
-| $\alpha_{7}$  | ----------------|---------------|--------------|
-| $\alpha_{8}$  | ----------------|---------------|--------------|
-| $\alpha_{9}$  | ----------------|---------------|--------------|
-| $\alpha_{10}$  | ----------------|---------------|--------------|
-| $\alpha_{11}$  | ----------------|---------------|--------------|
-| $\alpha_{12}$  | ----------------|---------------|--------------|
-| $\alpha_{13}$  | ----------------|---------------|--------------|
-| $\alpha_{14}$  | ----------------|---------------|--------------|
-| $\mu_{1}$  | ----------------|---------------|--------------|
-| $\mu_{2}$  | ----------------|---------------|--------------|
-| $\mu_{3}$  | ----------------|---------------|--------------|
-| $\mu_{4}$  | ----------------|---------------|--------------|
+| $\alpha_{4}$  | -|Tasa de eliminacion de parasito I por macrofago|--------------|
+| $\alpha_{5}$  | ----------------| Tasa de eliminacion de Macrofago I por CD8 |   |
+| $\alpha_{6}$  | ----------------| Tasa de eliminacion de cardiomiocito I por CD8 |--|
+| $\alpha_{7}$  | ----------------| Tasa de produccion de Macrofagos|--------------|
+| $\alpha_{8}$  | ----------------| Tasa de produccion de cardiomiocitos |----|
+| $\alpha_{9}$  | ----------------| Tasa de proliferacion del parasito I |-----------|
+| $\alpha_{10}$  | ----------------|Tasa de proliferacion de CD8 |--------------|
+| $\alpha_{11}$  | ----------------|Tasa de produccion de TNF |--------------|
+| $\alpha_{12}$  | ----------------| Tasa de produccion de IFN |--------------|
+| $\alpha_{13}$  | ----------------|Tasa de produccion IL-10 |--------------|
+| $\mu_{1}$  | ----------------|Muerte de parasito libre |--------------|
+| $\mu_{2}$  | ----------------| Muerte de Parasito intracelular |--------------|
+| $\mu_{3}$  | ----------------|Muerte de macrofago|--------------|
+| $\mu_{4}$  | ----------------|Muerte de macrofago infectado|--------------|
+| $\mu_{5}$  | ----------------|Muerte de cardiomiocito|--------------|
+| $\mu_{6}$  | ----------------|Muerte de cardiomiocito infectado|--------------|
+| $\mu_{7}$  | ----------------|Muerte de CD8|--------------|
+| $\mu_{8}$  | ----------------|Caida de TNF|--------------|
+| $\mu_{9}$  | ----------------|Caida de IFN|--------------|
+| $\mu_{10}$  | ----------------|Caida de IL-10|--------------|
+
+
 
 # Tercer modelo Citocinas y funciones de Hill
 
@@ -271,7 +278,7 @@ $$-[\alpha_{5}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)
 7.- $$ \dot{ CD8}= [\alpha_{10}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})](CD8-CD80) $$
 $$ -[\mu_{7}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})]$$
 8.- $$\dot{TNF}= [\alpha_{11}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{\phi i} - \mu_{8}(TNF-qTNF)  $$
-9.- $$\dot{IFN}= [\alpha_{11}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+ IL10^{h}})]C_{i}??? - \mu_{9}(IFN-qIFN) $$
+9.- $$\dot{IFN}= [\alpha_{12}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+ IL10^{h}})]C_{i}??? - \mu_{9}(IFN-qIFN) $$
 
 10.- $$\dot{IL10}= \alpha_{13}- \mu_{10}(IL10-qIL10) $$
 
