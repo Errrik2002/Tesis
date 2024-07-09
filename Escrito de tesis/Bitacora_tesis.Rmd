@@ -253,8 +253,10 @@ $$-(\alpha_{5}H_{CD8}^{U}H_{CD8}^{D}(IL10))M_{\phi}iCD8 - (\alpha_{6}H_{CD8}^{U}
 | $\mu_{8}$  | ----------------|Caida de TNF|--------------|
 | $\mu_{9}$  | ----------------|Caida de IFN|--------------|
 | $\mu_{10}$  | ----------------|Caida de IL-10|--------------|
+| $ $  | ----------------|Caida de IL-10|--------------|
 
 
+Tienen parametros de produccion de citokinas por cada tipo celular o estimulacion por otra citokina
 
 # Tercer modelo Citocinas y funciones de Hill
 
