@@ -869,41 +869,66 @@ IL10^{h}})]C_{i}??? - \mu_{9}(IFN-qIFN) \]</span></p>
 </div>
 <div id="modelo-sin-cd8-desde-el-diagrama" class="section level1">
 <h1>Modelo sin CD8 desde el diagrama</h1>
-<p>1.<span class="math display">\[ \dot{T_{L}}= \nu -
+<ol style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[ \dot{T_{L}}= \nu -
 [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+
 TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  \]</span>
 <span class="math display">\[-\alpha_{2}T_{L}C_{N}-
 [\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}
 \]</span></p>
 <ol start="2" style="list-style-type: decimal">
-<li><p><span class="math display">\[ \dot{M}=
+<li></li>
+</ol>
+<p><span class="math display">\[ \dot{M}=
 [\nu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)\]</span>
 <span class="math display">\[-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+
 TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M\]</span>
-<span class="math display">\[-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M  \]</span></p></li>
-<li><p><span class="math display">\[ \dot{C_{N}}=
+<span class="math display">\[-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M  \]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[ \dot{C_{N}}=
 \nu_{3}-\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}(C_{N})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IL10^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N}
-\]</span></p></li>
-<li><p><span class="math display">\[
+\]</span></p>
+<ol start="4" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[
 \dot{T_{i}}=\alpha_{2}T_{L}C_{N}+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+
 TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  \]</span>
 <span class="math display">\[-[\mu_{4}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{i}-\mu_{5}T_{i}  \]</span>
-<span class="math display">\[+[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}  \]</span></p></li>
-<li><p><span class="math display">\[ \dot{M_{i}}=
-+[\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}   \]</span>
-<span class="math display">\[-[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}  \]</span></p></li>
-<li><p><span class="math display">\[ \dot{C_{i}}= +\alpha_{2}T_{L}C_{N}-
-[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}})]C_{i}
-\]</span></p></li>
-<li><p><span class="math display">\[\dot{TNF}=
-[\alpha_{5}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{i}
--(TNF -qTNF)\]</span></p></li>
-<li><p><span class="math display">\[
-\dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^{h}})]C_{i}-\mu_{8}(IFN-qIFN)
-\]</span></p></li>
-<li><p><span class="math display">\[ \dot{IL10}=
-\alpha{7}-\mu_{9}(IL10-qIL10) \]</span></p></li>
+<span class="math display">\[+[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}  \]</span></p>
+<ol start="5" style="list-style-type: decimal">
+<li></li>
 </ol>
+<p><span class="math display">\[ \dot{M_{i}}=
++[\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}   \]</span>
+<span class="math display">\[-[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}  \]</span></p>
+<ol start="6" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[ \dot{C_{i}}= +\alpha_{2}T_{L}C_{N}-
+[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}})]C_{i}
+\]</span></p>
+<ol start="7" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[\dot{TNF}=
+[\alpha_{5}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{i}
+-(TNF -qTNF)\]</span></p>
+<ol start="8" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[
+\dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^{h}})]C_{i}-\mu_{8}(IFN-qIFN)
+\]</span></p>
+<ol start="9" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[ \dot{IL10}=
+\alpha{7}-\mu_{9}(IL10-qIL10) \]</span></p>
 </div>
 
 
