@@ -149,20 +149,25 @@ representa la citocina que afecta a la citocina Y.
 
 Half maximum value by $\eta$
 
-
 ### Activacion de macrofagos por Staphylococcus aureus
+
 ![](images/397ab830-736c-47a6-881a-0279fd5025aa-01.jpg)
 
-Estan los efectos de las citocinas que impactan a el parametro $K_{MTNF}$ que es: Activation rate of resting macrophages influenced by TNF-α
+Estan los efectos de las citocinas que impactan a el parametro
+$K_{MTNF}$ que es: Activation rate of resting macrophages influenced by
+TNF-α
 
-El factor $\gamma _{MA}$ es el factor de  represents macrophage activation at the rate γMA in response to the bacteria
+El factor $\gamma _{MA}$ es el factor de represents macrophage
+activation at the rate γMA in response to the bacteria
 
-TODO JUNTO:  represents macrophage activation at the rate γMA in response to the bacteria and activation rate kMTNF considering the influence of the cytokines TNF and IL-10.
+TODO JUNTO: represents macrophage activation at the rate γMA in response
+to the bacteria and activation rate kMTNF considering the influence of
+the cytokines TNF and IL-10.
 
 # Segundo Modelo (Con citocinas)
 
-Se implementara la misma funcion de citocinas como en el modelo de Staphylococcus aureus.
-
+Se implementara la misma funcion de citocinas como en el modelo de
+Staphylococcus aureus.
 
 1.-$$ d{T_{L}} = \alpha_{1} T_{L} - (\alpha_{2} H_{M}^U(TNF)H_{M}^D(IL10)) T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N} - \mu_{1} T_{L} $$
 
@@ -177,9 +182,11 @@ $$-(\alpha_{5}H_{CD8}^{U}H_{CD8}^{D}(IL10))M_{\phi}iCD8 - (\alpha_{6}H_{CD8}^{U}
 
 6.-$$ dC_{i} = \alpha_{3}T_{L}C_{N} - (\alpha_{6} H_{CD8}^{U}(TNF)H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10))C_{i}CD8 - \mu_{6} C_{i} $$
 
-7.- $$ dCD8 = (\alpha_{10}H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10)) CD8 - (\mu_{7}H_{CD8}^{D}(IFN)H_{CD8}^{U}(IL10) )CD8 $$
+7.-
+$$ dCD8 = (\alpha_{10}H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10)) CD8 - (\mu_{7}H_{CD8}^{D}(IFN)H_{CD8}^{U}(IL10) )CD8 $$
 
-8.- $$dTNF = (\alpha_{11}H_{TNF}^{D}(IL10))M_{\phi}i - \mu_{8}(TNF - qTNF)$$
+8.-
+$$dTNF = (\alpha_{11}H_{TNF}^{D}(IL10))M_{\phi}i - \mu_{8}(TNF - qTNF)$$
 
 9.- $$ dIFN = (\alpha_{12}H_{IFN}^{D}(IL10))- \mu_{9}(IFN-qIFN)  $$
 
@@ -200,93 +207,119 @@ $$-(\alpha_{5}H_{CD8}^{U}H_{CD8}^{D}(IL10))M_{\phi}iCD8 - (\alpha_{6}H_{CD8}^{U}
 
 6.-$$ \dot{C_{i}} = \alpha_{3}T_{L}C_{N} - (\alpha_{6} H_{CD8}^{U}(TNF)H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10))C_{i}CD8 - \mu_{6} C_{i} $$
 
-7.- $$ \dot{CD8} = (\alpha_{10}H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10)) CD8 - (\mu_{7}H_{CD8}^{D}(IFN)H_{CD8}^{U}(IL10) )CD8 $$
+7.-
+$$ \dot{CD8} = (\alpha_{10}H_{CD8}^{U}(IFN)H_{CD8}^{D}(IL10)) CD8 - (\mu_{7}H_{CD8}^{D}(IFN)H_{CD8}^{U}(IL10) )CD8 $$
 
-8.- $$\dot{TNF} = (\alpha_{11}H_{TNF}^{D}(IL10))M_{\phi}i - \mu_{8}(TNF - qTNF)$$
+8.-
+$$\dot{TNF} = (\alpha_{11}H_{TNF}^{D}(IL10))M_{\phi}i - \mu_{8}(TNF - qTNF)$$
 
 9.- $$ \dot{IFN} = (\alpha_{12}H_{IFN}^{D}(IL10))- \mu_{9}(IFN-qIFN)  $$
 
 10.- $$\dot{IL10} = \alpha_{13} - \mu_{10}(IL10-qIL10)  $$
 
- 
+| Variable     | Valor Inicial | Definicion                   | Cita             |
+|-----------------------|------------------|-----------------|----------------|
+| $T_{L}$      | 50            | Parasitos en sangre          | Freitas 2018     |
+| $T_{i}$      | 0             | Parasitos intracelulares     |                  |
+| $M_{\phi}$   | 209           | Macrofagos                   | Freitas 2018     |
+| $M_{\phi i}$ | 0             | Macrofagos infectados        | --------         |
+| $C_{N}$      | 136           | Cardiomiocitos no infectados | Freitas 2018     |
+| $C_{i}$      | 0             | Cardiomiocitos infectados    | Freitas 2018     |
+| CD8          | 708           | Linfocitos CD8               | Freitas 2018     |
+| TNF          | 0.14          | TNF alpha                    | Brady et al 2016 |
+| IFN          | 0.10          | IFN gamma                    | Rincon 2024      |
+| IL10         | 0.15          | Interleucina 10              | Brady et al 2016 |
 
+| Parametro     | Valor            | Definicion                                      | Referencia     |
+|---------------------|-----------------|-----------------|-----------------|
+| $\alpha_{1}$  | ---------------- | Tasa de entrada de parasitos                    | -------------- |
+| $\alpha_{2}$  | ---------------- | Tasa de infeccion de macrofagos                 | -------------- |
+| $\alpha_{3}$  | ---------------- | Tasa de infeccion de cardiomiocitos             | -------------- |
+| $\alpha_{4}$  | \-               | Tasa de eliminacion de parasito I por macrofago | -------------- |
+| $\alpha_{5}$  | ---------------- | Tasa de eliminacion de Macrofago I por CD8      |                |
+| $\alpha_{6}$  | ---------------- | Tasa de eliminacion de cardiomiocito I por CD8  | --             |
+| $\alpha_{7}$  | ---------------- | Tasa de produccion de Macrofagos                | -------------- |
+| $\alpha_{8}$  | ---------------- | Tasa de produccion de cardiomiocitos            | ----           |
+| $\alpha_{9}$  | ---------------- | Tasa de proliferacion del parasito I            | -----------    |
+| $\alpha_{10}$ | ---------------- | Tasa de proliferacion de CD8                    | -------------- |
+| $\alpha_{11}$ | ---------------- | Tasa de produccion de TNF                       | -------------- |
+| $\alpha_{12}$ | ---------------- | Tasa de produccion de IFN                       | -------------- |
+| $\alpha_{13}$ | ---------------- | Tasa de produccion IL-10                        | -------------- |
+| $\mu_{1}$     | ---------------- | Muerte de parasito libre                        | -------------- |
+| $\mu_{2}$     | ---------------- | Muerte de Parasito intracelular                 | -------------- |
+| $\mu_{3}$     | ---------------- | Muerte de macrofago                             | -------------- |
+| $\mu_{4}$     | ---------------- | Muerte de macrofago infectado                   | -------------- |
+| $\mu_{5}$     | ---------------- | Muerte de cardiomiocito                         | -------------- |
+| $\mu_{6}$     | ---------------- | Muerte de cardiomiocito infectado               | -------------- |
+| $\mu_{7}$     | ---------------- | Muerte de CD8                                   | -------------- |
+| $\mu_{8}$     | ---------------- | Caida de TNF                                    | -------------- |
+| $\mu_{9}$     | ---------------- | Caida de IFN                                    | -------------- |
+| $\mu_{10}$    | ---------------- | Caida de IL-10                                  | -------------- |
+| \$ \$         | ---------------- | Caida de IL-10                                  | -------------- |
 
-
-|  Variable         | Valor Inicial | Definicion   | Cita |
-|-------------------|---------------|--------------|------|
-| $T_{L}$                |       50  | Parasitos en sangre |  Freitas 2018 |
-| $T_{i}$                 | 0 | Parasitos intracelulares|  | Freitas 2018 |
-| $M_{\phi}$        |   209  | Macrofagos | Freitas 2018 |
-| $M_{\phi i}$      | 0 | Macrofagos infectados | --------|
-| $C_{N}$           |    136 | Cardiomiocitos no infectados | Freitas 2018|
-| $C_{i}$           |   0| Cardiomiocitos infectados | Freitas 2018|
-| CD8               |   708 | Linfocitos CD8   | Freitas 2018|
-| TNF               | 0.14 | TNF alpha | Brady et al 2016 |
-|IFN                | 0.10| IFN gamma | Rincon 2024  |
-|IL10               |0.15 | Interleucina 10 | Brady et al 2016|
-
-
-
-
-| Parametro         | Valor       | Definicion    | Referencia   |
-|-------------------|-------------|---------------|--------------|
-| $\alpha_{1}$  | ----------------|Tasa de entrada de parasitos|--------------|
-| $\alpha_{2}$  | ----------------|Tasa de infeccion de macrofagos|--------------|
-| $\alpha_{3}$  | ----------------|Tasa de infeccion de cardiomiocitos|--------------|
-| $\alpha_{4}$  | -|Tasa de eliminacion de parasito I por macrofago|--------------|
-| $\alpha_{5}$  | ----------------| Tasa de eliminacion de Macrofago I por CD8 |   |
-| $\alpha_{6}$  | ----------------| Tasa de eliminacion de cardiomiocito I por CD8 |--|
-| $\alpha_{7}$  | ----------------| Tasa de produccion de Macrofagos|--------------|
-| $\alpha_{8}$  | ----------------| Tasa de produccion de cardiomiocitos |----|
-| $\alpha_{9}$  | ----------------| Tasa de proliferacion del parasito I |-----------|
-| $\alpha_{10}$  | ----------------|Tasa de proliferacion de CD8 |--------------|
-| $\alpha_{11}$  | ----------------|Tasa de produccion de TNF |--------------|
-| $\alpha_{12}$  | ----------------| Tasa de produccion de IFN |--------------|
-| $\alpha_{13}$  | ----------------|Tasa de produccion IL-10 |--------------|
-| $\mu_{1}$  | ----------------|Muerte de parasito libre |--------------|
-| $\mu_{2}$  | ----------------| Muerte de Parasito intracelular |--------------|
-| $\mu_{3}$  | ----------------|Muerte de macrofago|--------------|
-| $\mu_{4}$  | ----------------|Muerte de macrofago infectado|--------------|
-| $\mu_{5}$  | ----------------|Muerte de cardiomiocito|--------------|
-| $\mu_{6}$  | ----------------|Muerte de cardiomiocito infectado|--------------|
-| $\mu_{7}$  | ----------------|Muerte de CD8|--------------|
-| $\mu_{8}$  | ----------------|Caida de TNF|--------------|
-| $\mu_{9}$  | ----------------|Caida de IFN|--------------|
-| $\mu_{10}$  | ----------------|Caida de IL-10|--------------|
-| $ $  | ----------------|Caida de IL-10|--------------|
-
-
-Tienen parametros de produccion de citokinas por cada tipo celular o estimulacion por otra citokina
+Tienen parametros de produccion de citokinas por cada tipo celular o
+estimulacion por otra citokina
 
 # Tercer modelo Citocinas y funciones de Hill
 
+1 .-
+$$ \dot T_{L}= (\alpha_{1}+ \mu_{6} C_{i} + \mu_{4}M_{\phi i})T_{L} - [\alpha_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}}) (\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N}-\mu_{1}T_{L}$$
 
-1 .- $$ \dot T_{L}= (\alpha_{1}+ \mu_{6} C_{i} + \mu_{4}M_{\phi i})T_{L} - [\alpha_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}}) (\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N}-\mu_{1}T_{L}$$
-
-2.- $$\dot{T_{i}} = [\alpha_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M_{\phi}+ \alpha_{3}T_{L}C_{N} $$
+2.-
+$$\dot{T_{i}} = [\alpha_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M_{\phi}+ \alpha_{3}T_{L}C_{N} $$
 $$- [\alpha_{4} (\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})]M_{\phi i}T_{i}$$
 $$-[\alpha_{5}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})]M_{\phi i}CD8 $$
 $$-[\alpha_{6}(\dfrac{TNF^{h}}{\eta^{h}(CD8)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})]C_{i}CD8 
-$$ 
-$$- \mu_{2}T_{i}+ \alpha_{9}T_{i}(C_{i}+M_{\phi i}) $$
+$$ $$- \mu_{2}T_{i}+ \alpha_{9}T_{i}(C_{i}+M_{\phi i}) $$
 3.-$$ \dot{M_{\phi}}= \alpha_{7}(M_{\phi}-M_{\phi}0) - [\alpha_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M_{\phi}-\mu_{3}M_{\phi} $$
 
-4.- $$ \dot{M_{\phi i }}= [\alpha_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M_{\phi} $$
+4.-
+$$ \dot{M_{\phi i }}= [\alpha_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M_{\phi} $$
 $$-[\alpha_{5}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})]M_{\phi i }CD8 - \mu_{4}M_{\phi i} $$
-5.- $$\dot{C_{N}}= \alpha_{8}(C_{N}-C_{N}0) -\alpha_{3}T_{L}C_{N}-\mu_{5}C_{N} $$
+5.-
+$$\dot{C_{N}}= \alpha_{8}(C_{N}-C_{N}0) -\alpha_{3}T_{L}C_{N}-\mu_{5}C_{N} $$
 
-6.- $$ \dot{C_{i}}= \alpha_{3}T_{L}C_{N} - [\alpha_{6}(\dfrac{TNF^{h}}{\eta^{h}(CD8)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+ IL10^{h}})]C_{i}CD8 -\mu_{6}C_{i} $$
+6.-
+$$ \dot{C_{i}}= \alpha_{3}T_{L}C_{N} - [\alpha_{6}(\dfrac{TNF^{h}}{\eta^{h}(CD8)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+ IL10^{h}})]C_{i}CD8 -\mu_{6}C_{i} $$
 
-7.- $$ \dot{ CD8}= [\alpha_{10}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})](CD8-CD80) $$
+7.-
+$$ \dot{ CD8}= [\alpha_{10}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})](CD8-CD80) $$
 $$ -[\mu_{7}(\dfrac{IFN^{h}}{\eta^{h}(CD8)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(CD8)(IL10)}{\eta^{h}(CD8)(IL10)+IL10^{h}})]$$
-8.- $$\dot{TNF}= [\alpha_{11}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{\phi i} - \mu_{8}(TNF-qTNF)  $$
-9.- $$\dot{IFN}= [\alpha_{12}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+ IL10^{h}})]C_{i}??? - \mu_{9}(IFN-qIFN) $$
+8.-
+$$\dot{TNF}= [\alpha_{11}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{\phi i} - \mu_{8}(TNF-qTNF)  $$
+9.-
+$$\dot{IFN}= [\alpha_{12}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+ IL10^{h}})]C_{i}??? - \mu_{9}(IFN-qIFN) $$
 
-10.- $$\dot{IL10}= \alpha_{13}- \mu_{10}(IL10-qIL10) $$
+10.-
 
+$$\dot{IL10}= \alpha_{13}- \mu_{10}(IL10-qIL10) $$
 
+# Diagrama
 
+![](images/Modelo_citocinas.jfif)
 
+# Modelo sin CD8 desde el diagrama
 
+1.$$ \dot{T_{L}}= \nu - [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
+$$-\alpha_{2}T_{L}C_{N}- [\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L} $$
 
+2.  $$ \dot{M}= [\nu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)$$
+    $$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+    $$-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M  $$
 
+3.  $$ \dot{C_{N}}= \nu_{3}-\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}(C_{N})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IL10^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N} $$
+
+4.  $$ \dot{T_{i}}=\alpha_{2}T_{L}C_{N}+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
+    $$-[\mu_{4}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{i}-\mu_{5}T_{i}  $$
+    $$+[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}  $$
+
+5.  $$ \dot{M_{i}}= +[\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}   $$
+    $$-[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}  $$
+
+6.  $$ \dot{C_{i}}= +\alpha_{2}T_{L}C_{N}- [\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}})]C_{i} $$
+
+7.  $$\dot{TNF}= [\alpha_{5}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{i} -(TNF -qTNF)$$
+
+8.  $$ \dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^{h}})]C_{i}-\mu_{8}(IFN-qIFN) $$
+
+9.  $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
