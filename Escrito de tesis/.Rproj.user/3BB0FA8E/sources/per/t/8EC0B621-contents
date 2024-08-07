@@ -371,10 +371,11 @@ $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 | $\mu_{4}$ |-----------------| Tasa de muerte de Trypanosoma intracelular |-----------------|
 | $\alpha_{3}$ |-----------------| Tasa de proliferacion en $C_{i}$ |-----------------|
 | $\alpha_{4}$ |-----------------| Tasa de proliferacion en $M_{i}$ |-----------------|
+| $\mu_{5}$ |-----------------| Muerte de Macrofago infectado |-----------------|
 | $\mu_{6}$ |-----------------| Muerte de cardiomiocito infectado |-----------------|
 | $\alpha_{5}$ |-----------------| Secrecion de TNF-$\alpha$ |-----------------|
 | $\alpha_{6}$ |-----------------| Secrecion de IFN-$\gamma$ |-----------------|
-| $\alpha_{6}$ |-----------------| Secrecion de IL-10 |-----------------|
+| $\alpha_{7}$ |-----------------| Secrecion de IL-10 |-----------------|
 | $\mu_{7}$ |-----------------|Degradacion de TNF-$\alpha$|-----------------|
 | $\mu_{8}$ |-----------------|Degradacion de IFN-$\gamma$|-----------------|
 | $\mu_{9}$ |-----------------|Degradacion de IL-10|-----------------|
