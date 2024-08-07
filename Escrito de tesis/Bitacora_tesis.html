@@ -904,7 +904,7 @@ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  \]</spa
 <li></li>
 </ol>
 <p><span class="math display">\[ \dot{M_{i}}=
-+[\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}   \]</span>
++[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}M   \]</span>
 <span class="math display">\[-[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}  \]</span></p>
 <ol start="6" style="list-style-type: decimal">
 <li></li>
@@ -929,6 +929,204 @@ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  \]</spa
 </ol>
 <p><span class="math display">\[ \dot{IL10}=
 \alpha{7}-\mu_{9}(IL10-qIL10) \]</span></p>
+<table>
+<colgroup>
+<col width="31%" />
+<col width="24%" />
+<col width="22%" />
+<col width="21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Valor Inicial</th>
+<th>Definicion</th>
+<th>Cita</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(T_{L}\)</span></td>
+<td>50</td>
+<td>Parasitos en sangre</td>
+<td>Freitas 2018</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(T_{i}\)</span></td>
+<td>0</td>
+<td>Parasitos intracelulares</td>
+<td>—————</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(M_{\phi}\)</span></td>
+<td>209</td>
+<td>Macrofagos</td>
+<td>Freitas 2018</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(M_{\phi i}\)</span></td>
+<td>0</td>
+<td>Macrofagos infectados</td>
+<td>——–</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C_{N}\)</span></td>
+<td>136</td>
+<td>Cardiomiocitos no infectados</td>
+<td>Freitas 2018</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(C_{i}\)</span></td>
+<td>0</td>
+<td>Cardiomiocitos infectados</td>
+<td>Freitas 2018</td>
+</tr>
+<tr class="odd">
+<td>TNF</td>
+<td>0.14</td>
+<td>TNF alpha</td>
+<td>Brady et al 2016</td>
+</tr>
+<tr class="even">
+<td>IFN</td>
+<td>0.10</td>
+<td>IFN gamma</td>
+<td>Rincon 2024</td>
+</tr>
+<tr class="odd">
+<td>IL10</td>
+<td>0.15</td>
+<td>Interleucina 10</td>
+<td>Brady et al 2016</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col width="29%" />
+<col width="23%" />
+<col width="23%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parametro</th>
+<th>Valor</th>
+<th>Definicion</th>
+<th>Referencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\nu_{1}\)</span></td>
+<td>—————–</td>
+<td>Tasa de entrada de parasitos</td>
+<td>—————–</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\alpha_{1}\)</span></td>
+<td>—————–</td>
+<td>Tasa de fagocitosis de Macrofagos</td>
+<td>—————–</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\alpha_{2}\)</span></td>
+<td>—————–</td>
+<td>Tasa de infeccion de cardiomiocitos</td>
+<td>—————–</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mu_{1}\)</span></td>
+<td>—————–</td>
+<td>Muerte de pareasito libre</td>
+<td>—————–</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\nu_{2}\)</span></td>
+<td>—————–</td>
+<td>Proliferacion de Macrofagos</td>
+<td>—————–</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mu_{2}\)</span></td>
+<td>—————–</td>
+<td>Tasa de muerte de macrofago</td>
+<td>—————–</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\nu_{3}\)</span></td>
+<td>—————–</td>
+<td>Proliferacion de cardiomiocitos</td>
+<td>—————–</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mu_{3}\)</span></td>
+<td>—————–</td>
+<td>Muerte de cardiomiocitos</td>
+<td>—————–</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mu_{4}\)</span></td>
+<td>—————–</td>
+<td>Tasa de muerte de Trypanosoma intracelular</td>
+<td>—————–</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\alpha_{3}\)</span></td>
+<td>—————–</td>
+<td>Tasa de proliferacion en <span class="math inline">\(C_{i}\)</span></td>
+<td>—————–</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\alpha_{4}\)</span></td>
+<td>—————–</td>
+<td>Tasa de proliferacion en <span class="math inline">\(M_{i}\)</span></td>
+<td>—————–</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mu_{6}\)</span></td>
+<td>—————–</td>
+<td>Muerte de cardiomiocito infectado</td>
+<td>—————–</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\alpha_{5}\)</span></td>
+<td>—————–</td>
+<td>Secrecion de TNF-<span class="math inline">\(\alpha\)</span></td>
+<td>—————–</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\alpha_{6}\)</span></td>
+<td>—————–</td>
+<td>Secrecion de IFN-<span class="math inline">\(\gamma\)</span></td>
+<td>—————–</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\alpha_{6}\)</span></td>
+<td>—————–</td>
+<td>Secrecion de IL-10</td>
+<td>—————–</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mu_{7}\)</span></td>
+<td>—————–</td>
+<td>Degradacion de TNF-<span class="math inline">\(\alpha\)</span></td>
+<td>—————–</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mu_{8}\)</span></td>
+<td>—————–</td>
+<td>Degradacion de IFN-<span class="math inline">\(\gamma\)</span></td>
+<td>—————–</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mu_{9}\)</span></td>
+<td>—————–</td>
+<td>Degradacion de IL-10</td>
+<td>—————–</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 

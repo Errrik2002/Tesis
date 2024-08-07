@@ -323,7 +323,7 @@ $$ \dot{T_{i}}=\alpha_{2}T_{L}C_{N}+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)
 
 5.
 
-$$ \dot{M_{i}}= +[\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}   $$
+$$ \dot{M_{i}}= +[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}M   $$
     $$-[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}  $$
 
 6.
@@ -341,3 +341,54 @@ $$ \dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^
 9.
 
 $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
+
+
+| Variable     | Valor Inicial | Definicion                   | Cita             |
+|-----------------------|------------------|-----------------|----------------|
+| $T_{L}$      | 50            | Parasitos en sangre          | Freitas 2018     |
+| $T_{i}$      | 0             | Parasitos intracelulares     | ---------------  |
+| $M_{\phi}$   | 209           | Macrofagos                   | Freitas 2018     |
+| $M_{\phi i}$ | 0             | Macrofagos infectados        | --------         |
+| $C_{N}$      | 136           | Cardiomiocitos no infectados | Freitas 2018     |
+| $C_{i}$      | 0             | Cardiomiocitos infectados    | Freitas 2018     |
+| TNF          | 0.14          | TNF alpha                    | Brady et al 2016 |
+| IFN          | 0.10          | IFN gamma                    | Rincon 2024      |
+| IL10         | 0.15          | Interleucina 10              | Brady et al 2016 |
+
+
+
+
+| Parametro     | Valor            | Definicion                                      | Referencia     |
+|---------------------|-----------------|-----------------|-----------------|
+| $\nu_{1}$ |-----------------|Tasa de entrada de parasitos|-----------------|
+| $\alpha_{1}$ |-----------------|Tasa de fagocitosis de Macrofagos|-----------------|
+| $\alpha_{2}$ |-----------------|Tasa de infeccion de cardiomiocitos|-----------------|
+| $\mu_{1}$ |-----------------|Muerte de pareasito libre|-----------------|
+| $\nu_{2}$ |-----------------| Proliferacion de Macrofagos |-----------------|
+| $\mu_{2}$ |-----------------| Tasa de muerte de macrofago |-----------------|
+| $\nu_{3}$ |-----------------| Proliferacion de cardiomiocitos |-----------------|
+| $\mu_{3}$ |-----------------| Muerte de cardiomiocitos |-----------------|
+| $\mu_{4}$ |-----------------| Tasa de muerte de Trypanosoma intracelular |-----------------|
+| $\alpha_{3}$ |-----------------| Tasa de proliferacion en $C_{i}$ |-----------------|
+| $\alpha_{4}$ |-----------------| Tasa de proliferacion en $M_{i}$ |-----------------|
+| $\mu_{6}$ |-----------------| Muerte de cardiomiocito infectado |-----------------|
+| $\alpha_{5}$ |-----------------| Secrecion de TNF-$\alpha$ |-----------------|
+| $\alpha_{6}$ |-----------------| Secrecion de IFN-$\gamma$ |-----------------|
+| $\alpha_{6}$ |-----------------| Secrecion de IL-10 |-----------------|
+| $\mu_{7}$ |-----------------|Degradacion de TNF-$\alpha$|-----------------|
+| $\mu_{8}$ |-----------------|Degradacion de IFN-$\gamma$|-----------------|
+| $\mu_{9}$ |-----------------|Degradacion de IL-10|-----------------|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
