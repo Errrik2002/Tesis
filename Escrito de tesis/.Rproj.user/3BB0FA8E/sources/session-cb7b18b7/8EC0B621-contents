@@ -218,7 +218,7 @@ $$\dot{TNF} = (\alpha_{11}H_{TNF}^{D}(IL10))M_{\phi}i - \mu_{8}(TNF - qTNF)$$
 10.- $$\dot{IL10} = \alpha_{13} - \mu_{10}(IL10-qIL10)  $$
 
 | Variable     | Valor Inicial | Definicion                   | Cita             |
-|-----------------------|------------------|-----------------|----------------|
+|---------------------|-----------------|-----------------|-----------------|
 | $T_{L}$      | 50            | Parasitos en sangre          | Freitas 2018     |
 | $T_{i}$      | 0             | Parasitos intracelulares     |                  |
 | $M_{\phi}$   | 209           | Macrofagos                   | Freitas 2018     |
@@ -231,7 +231,7 @@ $$\dot{TNF} = (\alpha_{11}H_{TNF}^{D}(IL10))M_{\phi}i - \mu_{8}(TNF - qTNF)$$
 | IL10         | 0.15          | Interleucina 10              | Brady et al 2016 |
 
 | Parametro     | Valor            | Definicion                                      | Referencia     |
-|---------------------|-----------------|-----------------|-----------------|
+|--------------------|-----------------|-----------------|-----------------|
 | $\alpha_{1}$  | ---------------- | Tasa de entrada de parasitos                    | -------------- |
 | $\alpha_{2}$  | ---------------- | Tasa de infeccion de macrofagos                 | -------------- |
 | $\alpha_{3}$  | ---------------- | Tasa de infeccion de cardiomiocitos             | -------------- |
@@ -300,51 +300,50 @@ $$\dot{IL10}= \alpha_{13}- \mu_{10}(IL10-qIL10) $$
 
 # Modelo sin CD8 desde el diagrama
 
-1.
+1.  
 
 $$ \dot{T_{L}}= \nu - [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
 $$-\alpha_{2}T_{L}C_{N}- [\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L} $$
 
-2.
+2.  
 
 $$ \dot{M}= [\nu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)$$
-    $$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
-    $$-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M  $$
+$$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+$$-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M  $$
 
-3.
+3.  
 
 $$ \dot{C_{N}}= -\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}(C_{N})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IL10^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N} $$
 
-4.
+4.  
 
 $$ \dot{T_{i}}=\alpha_{2}T_{L}C_{N}+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
-    $$-[\mu_{4}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{i} $$
-    $$+[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}  $$
+$$-[\mu_{4}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{i} $$
+$$+[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}  $$
 
-5.
+5.  
 
 $$ \dot{M_{i}}= +[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}M   $$
-    $$-[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}  $$
+$$-[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}  $$
 
-6.
+6.  
 
 $$ \dot{C_{i}}= +\alpha_{2}T_{L}C_{N}- [\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}})]C_{i} $$
 
-7.
+7.  
 
 $$\dot{TNF}= [\alpha_{5}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{i} -\mu_{7}(TNF -qTNF)$$
 
-8.
+8.  
 
 $$ \dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^{h}})]C_{i}-\mu_{8}(IFN-qIFN) $$
 
-9.
+9.  
 
 $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 
-
 | Variable     | Valor Inicial | Definicion                   | Cita             |
-|-----------------------|------------------|-----------------|----------------|
+|---------------------|-----------------|-----------------|-----------------|
 | $T_{L}$      | 50            | Parasitos en sangre          | Freitas 2018     |
 | $T_{i}$      | 0             | Parasitos intracelulares     | ---------------  |
 | $M_{\phi}$   | 209           | Macrofagos                   | Freitas 2018     |
@@ -355,41 +354,80 @@ $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 | IFN          | 0.10          | IFN gamma                    | Rincon 2024      |
 | IL10         | 0.15          | Interleucina 10              | Brady et al 2016 |
 
+| Parametro      | Valor                                        | Definicion                                 | Referencia                     |
+|--------------------|-----------------|-----------------|-----------------|
+| $\alpha_{1}$   | $3.14X^{-10} \dfrac{1}{M_{\phi}*Dia}$        | Tasa de fagocitosis de Macrofagos          | Flores Garza 2022              |
+| $\alpha_{2}$   | $2.5X10^{-9}$                                | Tasa de infeccion de cardiomiocitos        | Freitas 2018                   |
+| $\mu_{1}$\*    | $0.06 \dfrac{1}{Dia}$                        | Muerte de pareasito libre                  | Yang 2015                      |
+| $\mu_{1}$\*    | $1X10^{-1}$                                  | Muerte de pareasito libre                  | Freitas 2018                   |
+| $\nu_{2}$\*    | 1                                            | Proliferacion de Macrofagos                | Freitas 2018                   |
+| $\nu_{2}$\*    | 1,080,728                                    | Proliferacion de Macrofagos                | Flores Garza 2022              |
+| $\mu_{2}$      | $0.0019 \dfrac{1}{Dia}$                      | Tasa de muerte de macrofago                | Flores Garza 2022              |
+| $\mu_{2}$      | $5X10^{-1}$                                  | Tasa de muerte de macrofago                | Freitas 2018                   |
+| $\mu_{3}$      | -----------------                            | Muerte de cardiomiocitos                   | -----------------              |
+| $\mu_{4}$      | $5X10^{-4} + 1.5X10^{-4}$                    | Tasa de muerte de Trypanosoma intracelular | Freitas 2018 (M+CD8)           |
+| $\alpha_{3}$\* | 90                                           | Tasa de proliferacion en $C_{i}$           | Freitas 2018                   |
+| $\alpha_{3}$\* | $20 \dfrac{1}{Ti*Sc}$                        | Tasa de proliferacion en $C_{i}$           | Yang 2015 Sc=Susceptible cells |
+| $\alpha_{3}$\* | 1.95 \* cell                                 | Tasa de proliferacion en $C_{i}$           | Arias 2020                     |
+| $\alpha_{4}$\* | 90                                           | Tasa de proliferacion en $M_{i}$           | Freitas 2018                   |
+| $\alpha_{4}$\* | $20 \dfrac{1}{Ti*Sc}$                        | Tasa de proliferacion en $M_{i}$           | Yang 2015 Sc=Susceptible cells |
+| $\alpha_{4}$\* | 1.95 \* cell                                 | Tasa de proliferacion en $M_{i}$           | Arias 2020                     |
+| $\mu_{5}$      | $5X10^{-1}$                                  | Muerte de Macrofago infectado              | Feitas 2018                    |
+| $\mu_{6}$      | $1X10^{-6}$                                  | Muerte de cardiomiocito infectado          | Freitas 2018                   |
+| $\alpha_{5}$   | $200 \dfrac{1}{Dia} + 1.5 \dfrac{1}{M*Dia}$  | Secrecion de TNF-$\alpha$                  | Talaei 2021                    |
+| $\alpha_{6}$   | -----------------                            | Secrecion de IFN-$\gamma$                  | -----------------              |
+| $\alpha_{7}$   | $1.1 \dfrac{1}{Dia} + 0.19 \dfrac{R}{Dia*M}$ | Secrecion de IL-10                         | Talaei 2021                    |
+| $\mu_{7}$      | -----------------                            | Degradacion de TNF-$\alpha$                | -----------------              |
+| $\mu_{8}$      | -----------------                            | Degradacion de IFN-$\gamma$                | -----------------              |
+| $\mu_{9}$      | -----------------                            | Degradacion de IL-10                       | -----------------              |
+| $\eta_{TNF-IL10}$      | 17.4 | Hill Functions Relative concentration                      | Talaei 2021|
+| $\eta_{10-IL6}$      | 560                     | Hill Functions Relative concentration                       | Talaei 2021|
+| $h_{10-IL6}$      | 3.68                           | Hill Functions Dimentionless                       | Talaei 2021      |
+| $h_{TNF-IL10}$      | 3                            | Hill Functions Dimentionless                      | Talaei 2021              |
 
+# Modelo corregido
 
+![](images/Modelo_BioRender.jfif)
 
-| Parametro     | Valor            | Definicion                                      | Referencia     |
-|---------------------|-----------------|-----------------|-----------------|
-| $\nu_{1}$ |-----------------|Tasa de entrada de parasitos|-----------------|
-| $\alpha_{1}$ |-----------------|Tasa de fagocitosis de Macrofagos|-----------------|
-| $\alpha_{2}$ |-----------------|Tasa de infeccion de cardiomiocitos|-----------------|
-| $\mu_{1}$ |-----------------|Muerte de pareasito libre|-----------------|
-| $\nu_{2}$ |-----------------| Proliferacion de Macrofagos |-----------------|
-| $\mu_{2}$ |-----------------| Tasa de muerte de macrofago |-----------------|
-| $\nu_{3}$ |-----------------| Proliferacion de cardiomiocitos |-----------------|
-| $\mu_{3}$ |-----------------| Muerte de cardiomiocitos |-----------------|
-| $\mu_{4}$ |-----------------| Tasa de muerte de Trypanosoma intracelular |-----------------|
-| $\alpha_{3}$ |-----------------| Tasa de proliferacion en $C_{i}$ |-----------------|
-| $\alpha_{4}$ |-----------------| Tasa de proliferacion en $M_{i}$ |-----------------|
-| $\mu_{5}$ |-----------------| Muerte de Macrofago infectado |-----------------|
-| $\mu_{6}$ |-----------------| Muerte de cardiomiocito infectado |-----------------|
-| $\alpha_{5}$ |-----------------| Secrecion de TNF-$\alpha$ |-----------------|
-| $\alpha_{6}$ |-----------------| Secrecion de IFN-$\gamma$ |-----------------|
-| $\alpha_{7}$ |-----------------| Secrecion de IL-10 |-----------------|
-| $\mu_{7}$ |-----------------|Degradacion de TNF-$\alpha$|-----------------|
-| $\mu_{8}$ |-----------------|Degradacion de IFN-$\gamma$|-----------------|
-| $\mu_{9}$ |-----------------|Degradacion de IL-10|-----------------|
+# Ecuaciones de Modelo corregido
+1.  
 
+$$ \dot{T_{L}}= - [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
+$$-\alpha_{2}T_{L}C_{N}- [\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L} $$
 
+2.  
 
+$$ \dot{M}= [\nu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)$$
+$$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+$$-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M  $$
 
+3.  
 
+$$ \dot{C_{N}}= -\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}(C_{N})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IL10^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N} $$
 
+4.  
 
+$$ \dot{T_{i}}=\alpha_{2}T_{L}C_{N}+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
+$$-[\mu_{4}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{i} $$
+$$+[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}  $$
 
+5.  
 
+$$ \dot{M_{i}}= +[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}M   $$
+$$-[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}  $$
 
+6.  
 
+$$ \dot{C_{i}}= +\alpha_{2}T_{L}C_{N}- [\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}})]C_{i} $$
 
+7.  
 
+$$\dot{TNF}= [\alpha_{5}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{i} -\mu_{7}(TNF -qTNF)$$
 
+8.  
+
+$$ \dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^{h}})]C_{i}-\mu_{8}(IFN-qIFN) $$
+
+9.  
+
+$$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
