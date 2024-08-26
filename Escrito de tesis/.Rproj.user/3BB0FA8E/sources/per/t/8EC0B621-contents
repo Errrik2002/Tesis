@@ -399,11 +399,11 @@ $$-\alpha_{2}T_{L}C_{N}- [\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})
 
 $$ \dot{M}= [\nu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)$$
 $$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
-$$-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M  $$
+$$-[\mu_{2}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M  $$
 
 3.  
 
-$$ \dot{C_{N}}= -\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}(C_{N})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IL10^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N} $$
+$$ \dot{C_{N}}= -\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IL10^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N} $$
 
 4.  
 
@@ -431,3 +431,52 @@ $$ \dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^
 9.  
 
 $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
+
+# Explicacion de las ecuaciones
+
+## Primer ecuacion Tl. Trypanosomas Libres
+
+$$ - [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
+Los trypomastigotes que se encutran en via sanguinea, van a interactuar con los macrofagos (M) a una tasa $\alpha_{1}$, por medio de la fagocitosis, dejan de ser trypomanosomas libres y se vuelven trypanosomas intracelulares. La fagocitosis de estos se ve impactado por el ambiente de citocinas. En un ambiente proinflamatorio habra mas fagocitosis que en un ambiente antiinflamatorio.
+
+$$-\alpha_{2}T_{L}C_{N}$$
+Los trypanosomas libres invaden los cardiomiocitos a una tasa $\alpha_{2}$. Dejan de ser trypanosomas libres y se vuelven trypanosomas intracelulares.
+
+$$- [\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}$$
+Los trypanosomas libres que se encuentran en via sanguinea, mueren a una tasa $\mu_{1}$, sin embargo se encuentran expuestos a otros componentes del sistema inmune (neutrofilos, complemento, anticuerpos, etc.) los cuales pueden incrementar su actvidad en un ambiente proinflamatorio ($TNF-\alpha \ y \ IFN-\gamma$) que en un ambiente antiinflamatorio ($IL-10$) aumentando latasa de muerte de trypanosomas libres. 
+
+## Segunda ecuacion M. Macrofagos no infectados/sin fagocitar
+
+$$ [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)$$
+Los macrofagos proliferan a una tasa $\nu_{1}$, esta proliferacion pueden aumentar dependiendo de su reclutamiento en un ambiente proinflamatorio que en un ambiente antiinflamatorio. $(M-M0)$ representa el retardo de proliferacion de los macrofagos. 
+$$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+Los macrofagos sin infectar, interactuan con los trypanosomas libre, que los fagocitan a una tasa $\alpha_{1}$, esta tasa de fagocitosis aumenta en presencia de citocinas proinflamatorias ($TNF-\alpha$) que en presencia de citocinas antiinflamatorias $IL-10$.
+
+$$-[\mu_{2}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M$$
+Los macrofagos no infectados o que no han fagocitado, mueren a una tasa $\mu_{2}$, esta muerte del macrofago se puede aumentar en presencia de estres proinflamatorio como la citocina $IFN-\gamma$ y verse el efectuo reducida de esta con la citocina antiinflamatoria $IL-10$
+
+## Tercera ecuacion Cn. Cardiomiocitos no infectados
+$$-\alpha_{2}T_{L}C_{N}$$
+Los cardiomiocitos no infectados se infectan por el trypanosoma a una tasa $\alpha_{2}$, dejando de ser cardiomiocitos no infectados y volviendose cardiomiocitos infectados
+
+
+$$-[\mu_{3}(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IL10^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N} $$
+Los cardiomiocitos no infectados mueren a una tasa $\mu_{3}$, pero su mortalidad puede aumentar en presencia de ambiente proinflamatorio ($INF-\gamma$) o verse disminuida por un ambiente antiinflamatorio ($IFN-\gamma$)
+
+## Cuarta ecuacion Ti. Trypanosoma intracelular.
+
+$$\alpha_{2}T_{L}C_{N}$$
+
+$$+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
+Lo trypanosomas libres que son fagocitados a una tasa $\alpha_{1}$, se convierten en trypanosomas intracelulares. La fagocitosis esta mediada por el ambiente de citocinas proinflamatorias o antiinflamatorias
+
+$$-[\mu_{4}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{i} $$
+
+
+
+$$+[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}$$
+
+
+
+ 
+ 
