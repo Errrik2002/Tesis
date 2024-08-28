@@ -434,7 +434,7 @@ $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 
 # Explicacion de las ecuaciones
 
-## Primer ecuacion Tl. Trypanosomas Libres
+## Primer ecuacion Tl. Trypanosomas Libres (PONER LA CONTRIBUCION DE LOS QUE SALEN DE LAS CELULAS)
 
 $$ - [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
 Los trypomastigotes que se encutran en via sanguinea, van a interactuar con los macrofagos (M) a una tasa $\alpha_{1}$, por medio de la fagocitosis, dejan de ser trypomanosomas libres y se vuelven trypanosomas intracelulares. La fagocitosis de estos se ve impactado por el ambiente de citocinas. En un ambiente proinflamatorio habra mas fagocitosis que en un ambiente antiinflamatorio.
@@ -471,10 +471,53 @@ $$+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL
 Lo trypanosomas libres que son fagocitados a una tasa $\alpha_{1}$, se convierten en trypanosomas intracelulares. La fagocitosis esta mediada por el ambiente de citocinas proinflamatorias o antiinflamatorias
 
 $$-[\mu_{4}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{i} $$
-
-
+Los trypanosomas intracelulares, mueren a una tasa $\mu_{4}$, esta muerte de los parasitos intracelulares se puede ver afectada por el sistema inmune, ya sea por su estimulacion a apoptosis, activacion de linfocitos citotoxicos, mayor produccion de especies reactivas de nitrogeno del macrofago, etc. 
 
 $$+[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}$$
+Los trypomastigotes intracelulares se replican dentro la celula hospedero, a una tasa de $\alpha_{3}$ para los macrofagos y a una tasa de $\alpha_{4}$ en los cardiomiocitos, esta rpelicacion se puede ver afectada por el ambiente de citocinas que pueden estimular produccion de especies reactivas de nitrogeno, impidiendo la replicacion del parasito. O con IL-10 que inhibe esta actividad antiparasitica. (VER EFECTO DE CITOCINAS EN LA REPLICACION O SOLO EN SU MUERTE?)
+
+
+## Quinta ecuacion Mi. Macrofago infectado.
+
+$$+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}M   $$
+Los macrofagos al interaccionar con el parasito y fagocitarlo a una tasa $\alpha_{1}$ se convierten en macrofagos infectados. Esta fagocitosis se puede ver aumentada con citocinas proinflamatorias o disminuida con citocinas antiinflamatorias
+
+$$-[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}  $$
+Los macrofagos infectados, mueren a una tasa $\mu_{5}$, esta tasa se puede ver afectada por el ambiente inflamatorio, aumenta en presencia de citocinas proinflamatorias que aumentan la apoptosis de las celulas infectadas, o por citocinas antiinflamatorias que disminuyen la apoptosis. 
+
+## Sexta ecuacion Ci. Cardiomiocito infectado.
+
+$$+\alpha_{2}T_{L}C_{N}$$
+Los trypanosomas libres infectan a los cardiomiocitos a una tasa $\alpha_{2}$, de forma que se aumenta la poblacion de cardiomiocitos infectados.
+
+$$-[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}})]C_{i}$$
+Los cardiomiocitos infectados mueren a una tasa $\mu_{6}$, la cul se puede ver aumentado por ambiente proinflamatorio y promover la apoptosis, o inhibirlo con la presencia de citocinas antiiflamatorias
+
+
+## Septima ecuacion TNF. Factor de Necrosis Tumoral Alpha (Proinflamatoria)
+
+
+$$[\alpha_{5}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{i}$$
+La citocina $TNF-\alpha$ se secreta por los macrofagos a una tasa $\alpha_{5}$, aumentando su concentracion, esta secrecion de citocina puede verse inhibida por la citocina antiinflamatoria IL-10
+
+$$-\mu_{7}(TNF -qTNF)$$
+La citocina $TNF-\alpha$ se degrada a una tasa $\mu_{7}$, pero no puede llegar a cero y unicamente puede llegar a su nivel basal qTNF
+
+## Octava ecuacion IFN. interferon gamma
+
+$$[\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^{h}})]C_{i}$$
+La citocina $IFN-\gamma$ es secretada a una tasa $\mu_{6}$ por los cardiomiocitos infectados, asi como otros grupos celulares, esta produccion de interferon s epuede ver inhibida en la presencia de la citocina antiinflamatoria IL-10.
+
+$$-\mu_{8}(IFN-qIFN)$$
+La citocina se degrada a una tasa $\mu_{8}$, pero no puede llegar a cero, unicamente a su nivel basal qIFN
+
+## Novena ecuacion IL10. Interleucina 10
+
+$$ \alpha{7}-\mu_{9}(IL10-qIL10) $$
+La citocina IL-10 se secreta a una tasa $\alpha_{7}$ y se degrada a una tasa $\mu_{9}$, pero no puede llegar a cero, unicamente a su nivel basal qIL10
+
+
+
 
 
 
