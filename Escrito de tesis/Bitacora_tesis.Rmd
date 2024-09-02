@@ -516,6 +516,35 @@ La citocina se degrada a una tasa $\mu_{8}$, pero no puede llegar a cero, unicam
 $$ \alpha{7}-\mu_{9}(IL10-qIL10) $$
 La citocina IL-10 se secreta a una tasa $\alpha_{7}$ y se degrada a una tasa $\mu_{9}$, pero no puede llegar a cero, unicamente a su nivel basal qIL10
 
+## Determinar cuales valores de las citocinas son multiplicativos y cuales son agregativos o ambos
+
+### Ecuacion 1
+
+$\alpha_{1}$ Es una interaccion multiplicativa, debido a que se tiene una tasa de fagocitosis por parte del macrofago, la activacion de los macrofagos por parte del ambiente pro-inflamatorio incrementa esta tasa de fagocitosis, de una forma multiplicativa
+
+$\mu_{1}$ el efecto de las citocinas seria un efecto agregativo, de igual forma puede ser un efecto multiplicativo si aumenta la tasa de muerte por el estres al parasito. Sin embargo la mayor parte de muerte de citocinas, se deberia a la activacion de componenetes celulares no contemplados en el modelo, como pueden ser opsinizacion de anticuerpos, opsonizacion del fragmento C3b del complemento, mayor proliferacion de neutrofilos que ataquen al parasito, NETosis por parte de los neutrofilos, mayor formacion de complejos de ataque a membrana (MAC) por parte del complemento, etc. Estos factores incrementan la tasa de fagocitosis sin afectar directamente en el mecanismo de muerte del parasito.
+
+### Ecuacion 2
+
+$\nu_{1}$ hace una interaccion multiplicativa con las citocinas, debido a que el ambiente pro-inflamatorio estimula la tasa de produccion de macrofagos derivados de la medula osea, asi como facilitar su migracion al sitio de infeccion con el parasito
+
+$\alpha_{1}$ se describio su interaccion en la ecuacion 1
+
+$\mu_{2}$ hace una interaccion multiplicativa con el ambiente de citocinas,un incremento de citocina pro-inflamatoria como $IFN-\gamma$ aumenta la tasa de muerte del macrofago por medio de la estimulacion del mecanismo de apoptosis.
+
+### Ecuacion 3
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
