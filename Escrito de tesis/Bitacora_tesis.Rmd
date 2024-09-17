@@ -559,6 +559,31 @@ $\mu_{6}$ La muerte de los cardiomiocitos infectados su interaccion con las cito
 
 
 
+```{r}
+install.packages("deSolve")
+library(deSolve)
+
+#Variables
+#Parametros
+trypanosoma <- function(t, state, parameter){
+  with(as.list(c(state, parameter)), {
+    
+  })
+}
+  
+
+zika <- function(t, state, parameter){
+  with(as.list(c(state, parameter)), {
+    dS_h <- mu_h-mu_h*S_h -betah*S_h*I_v
+    dI_h <- betah*S_h*I_v - mu_h*I_h - gamma*I_h
+    dR_h <- gamma*I_h - mu_h*R_h
+    dS_v <- mu_v - betav*S_v*I_v - mu_v*S_v
+    dE_v <- betav*S_v*I_h - mu_v*E_v - gamma*E_v
+    dI_v <- gamma*E_v - mu_v*I_v
+    list(c(dS_h, dI_h, dR_h, dS_v, dE_v, dI_v))
+  })
+}
+```
 
 
 
