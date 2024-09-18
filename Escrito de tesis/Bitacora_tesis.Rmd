@@ -556,35 +556,52 @@ $\mu_{6}$ La muerte de los cardiomiocitos infectados su interaccion con las cito
 
 
 
+# Ecuaciones de Modelo corregido con factores aditivos y multiplicativos
 
+1.  
 
+$$ \dot{T_{L}}= - [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M $$
 
-```{r}
-install.packages("deSolve")
-library(deSolve)
+$$-\alpha_{2}T_{L}C_{N}- [(\mu_{1}+1)((\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}}))]T_{L} $$
+$$+[(\mu_{5}+1)((\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}))]M_{i}$$
+ $$+[(\mu_{6}+1)((\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}}))]C_{i} $$
 
-#Variables
-#Parametros
-trypanosoma <- function(t, state, parameter){
-  with(as.list(c(state, parameter)), {
-    
-  })
-}
-  
+2.  
 
-zika <- function(t, state, parameter){
-  with(as.list(c(state, parameter)), {
-    dS_h <- mu_h-mu_h*S_h -betah*S_h*I_v
-    dI_h <- betah*S_h*I_v - mu_h*I_h - gamma*I_h
-    dR_h <- gamma*I_h - mu_h*R_h
-    dS_v <- mu_v - betav*S_v*I_v - mu_v*S_v
-    dE_v <- betav*S_v*I_h - mu_v*E_v - gamma*E_v
-    dI_v <- gamma*E_v - mu_v*I_v
-    list(c(dS_h, dI_h, dR_h, dS_v, dE_v, dI_v))
-  })
-}
-```
+$$ \dot{M}= [\nu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)$$
+$$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+$$-[\mu_{2}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M  $$
 
+3.  
+
+$$ \dot{C_{N}}= -\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IL10^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N} $$
+
+4.  
+
+$$ \dot{T_{i}}=\alpha_{2}T_{L}C_{N}+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
+$$-[(\mu_{4}+1)((\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}))]T_{i} $$
+$$+[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}  $$
+
+5.  
+
+$$ \dot{M_{i}}= +[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}M   $$
+$$-[(\mu_{5}+1)((\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}))]M_{i}  $$
+
+6.  
+
+$$ \dot{C_{i}}= +\alpha_{2}T_{L}C_{N}- [(\mu_{6}+1)((\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}}))]C_{i} $$
+
+7.  
+
+$$\dot{TNF}= [\alpha_{5}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{i} -\mu_{7}(TNF -qTNF)$$
+
+8.  
+
+$$ \dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^{h}})]C_{i}-\mu_{8}(IFN-qIFN) $$
+
+9.  
+
+$$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 
 
 
