@@ -34,10 +34,21 @@ zika <- function(t, state, parameter){
 
 trypanosoma <- function(t, state, parameter){
   with(as.list(c(state, parameter)), {
-  d_TL <- -(alpha1*((TNF^h)/(n^h*(TL)*(TNF)+TNF^h))*((n^h*(M)*(IL10))/(n^h*(M)*(IL10)+IL10^h)))*TL*M-alpha2*TL*Cn-(mu1*((TNF^h)/(n^h*(TL)*(TNF)+TNF^h))*((IFN^h)/(n^h*(TL)*(IFN)+IFN^h))*((n^h*(TL)*(IL10))/(n^h*(TL)*(IL10)+IL10^h)))*TL
+  d_TL <- -(alpha1*((TNF^h)/(n1^h1*(TL)*(TNF)+TNF^h1))*((n1^h1*(M)*(IL10))/(n1^h1*(M)*(IL10)+IL10^h1)))*TL*M-alpha2*TL*Cn-(mu1*((TNF^h1)/(n1^h1*(TL)*(TNF)+TNF^h1))*((IFN^h1)/(n1^h1*(TL)*(IFN)+IFN^h1))*((n1^h1*(TL)*(IL10))/(n1^h1*(TL)*(IL10)+IL10^h1)))*TL
+  d_M <- (nu2*((TNF^h2)/(n2^h2*(TL)*(TNF)+TNF^h2))((n2^h2*(M)*(IL10))/(n2^h2*(M)*(IL10)+IL10^h2)))*(M-M0)-(alpha1*(((TNF^h2)/(n2^h2*(M)*(TNF)+TNF^h2))((n2^h2*(M)*(IL10))/(n2^h2*(M)*(IL10)+IL10^h2))))*TL*M-(mu2*(((IFN^h2)/(n2^h2*(M)*(IFN)+IFN^h2))((n2^h2*(M)*(IL10))/(n2^h2*(M)*(IL10)+IL10^h2))))*M
+  d_Cn <- -alpha2*TL*Cn-(mu3*(((IFN^h3)/(n3^h3*(Cn)*(IFN)+IL10^h3))((n3^h3*(Cn)*(IL10))/(n3^h3*(Cn)*(IL10)+IL10^h3))))*Cn
+  d_Ti <- 
+  
   
   })
 }
+
+
+
+#Curvas solucion proxima semana deSolve
+#Revisarlas con lupa
+#escribir ecuaciones con descriptores
+
 
 
 

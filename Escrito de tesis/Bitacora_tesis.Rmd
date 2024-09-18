@@ -389,7 +389,8 @@ $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 
 ![](images/Modelo_BioRender.jfif)
 
-# Ecuaciones de Modelo corregido
+# POSTER OAXACA
+## Ecuaciones de Modelo corregido
 1.  
 
 $$ \dot{T_{L}}= - [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
@@ -555,8 +556,8 @@ $\alpha_{5}$ Las citocinas tendrian un efecto aditivo y multiplicativo, pues un 
 $\mu_{6}$ La muerte de los cardiomiocitos infectados su interaccion con las citocinas es multiplicativo y aditivo. El efecto multiplicativo por que elestres de las citocinas incrementa la tasa de apoptosis. Efecto aditivo por la activacion de CD8 y destruccion de los cardiomiocitos infectados
 
 
-
-# Ecuaciones de Modelo corregido con factores aditivos y multiplicativos
+# PARA TESIS
+## Ecuaciones de Modelo corregido con factores aditivos y multiplicativos 
 
 1.  
 
@@ -601,7 +602,7 @@ $$ \dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^
 
 9.  
 
-$$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
+$$ \underbrace{\dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10)}_{Texto} $$
 
 
 
