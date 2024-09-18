@@ -25,14 +25,17 @@ zika <- function(t, state, parameter){
   })
 }
 
-#####################
+##################### ECUACIONES DE TESIS ###############
 
 
 #Variables
+
 #Parametros
+
 trypanosoma <- function(t, state, parameter){
   with(as.list(c(state, parameter)), {
   d_TL <- -(alpha1*((TNF^h)/(n^h*(TL)*(TNF)+TNF^h))*((n^h*(M)*(IL10))/(n^h*(M)*(IL10)+IL10^h)))*TL*M-alpha2*TL*Cn-(mu1*((TNF^h)/(n^h*(TL)*(TNF)+TNF^h))*((IFN^h)/(n^h*(TL)*(IFN)+IFN^h))*((n^h*(TL)*(IL10))/(n^h*(TL)*(IL10)+IL10^h)))*TL
+  
   })
 }
 
