@@ -1,0 +1,79 @@
+---
+title: "Zika Model"
+author: "Erik Martinez"
+date: "2023-10-05"
+output: html_document
+---
+
+# Modelo de Zika
+
+## Ecuaciones
+
+$$\dot S_h = \mu_h - \mu_hS_h-\beta_h S_h I_v $$
+$$ \dot I_h = \beta_h S_h I_v-\mu_h I_h - \gamma I_h$$
+
+$$\dot R_h = \gamma I_h - \mu_h R_h$$
+
+$$\dot S_v = \mu_v -\beta_v S_v I_v - \mu_v S_v$$
+
+$$\dot E_v = \beta_v S_v I_h - \mu_v E_v - \gamma E_v $$
+
+$$\dot I_v = \gamma E_v - \mu_v I_v$$
+
+## deSolve
+
+```{r}
+library(deSolve)
+
+Lv <- 10 #Esperanza de vida de mosquitos (dias)
+Lh <- 50*365 #esperanza de vida en humanos dias
+Iph <- 7 #Periodo infeccioso hymanos
+IP <- 6 #Periodo infecciosos de vectores
+EIP <- 8.4 #Periodo de incubacion en mosquitos adultos
+mu_v <- 1/Lv #Mortalidad en mosquitos
+mu_h <- 1/Lh  #Mortalidad en humanos
+gamma <- 1/Iph #Tasa de recuperacion humanos
+delta <- 1/EIP #Tasa de incubacion extrinseca
+ 
+##Poblacion##
+
+Nh <- 2.4*10^6 #Humanos en Cali, Colombia
+m <- 2 #proporcion vector a humano
+Nv <- m*Nh #Numero de vectores
+betah <- 0.7 #probabilidad de transmision del vector al hospedador
+betav <- 0.7 #Probabilidad de transmision del hospedador al vector 
+R0 <- 3 #numero reproductivo 
+b <- sqrt((R0^2 * mu_v*(mu_v+delta)*(mu_h+gamma))/ (m*betah*betav*delta)) #tasa de picadura
+TIME <- 100 #nunero de year to simulate
+
+
+zika <- function(t, state, parameter){
+  with(as.list(c(state, parameter)), {
+    dS_h <- mu_h-mu_h*S_h -betah*S_h*I_v
+    dI_h <- betah*S_h*I_v - mu_h*I_h - gamma*I_h
+    dR_h <- gamma*I_h - mu_h*R_h
+    dS_v <- mu_v - betav*S_v*I_v - mu_v*S_v
+    dE_v <- betav*S_v*I_h - mu_v*E_v - gamma*E_v
+    dI_v <- gamma*E_v - mu_v*I_v
+    list(c(dS_h, dI_h, dR_h, dS_v, dE_v, dI_v))
+  })
+}
+
+parameter <- c(mu_h, betah, gamma, mu_v, betav) #delta donde queda?
+state <- c(S_h=0.9 , I_h=0.1 , R_h=0.1 , S_v=0.9 , E_v=0.1 , I_v=0.1 )
+times <- seq(0,100, by=1)
+out <- ode(y= state, times = times, func= zika, parms = parameter)
+  
+
+matplot(out[ , 1], out [ , 2:7], type = "l", xlab = "tiempo", ylab = "Población",
+        main = "mosquitos", lwd = 2)
+        legend("topright", c("S_h", "I_h", "R_h","S_v","E_v","I_v"), col = 1:6,lty=1:6, cex=0.5)
+
+plot(out, col="red")
+
+
+
+
+
+```
+

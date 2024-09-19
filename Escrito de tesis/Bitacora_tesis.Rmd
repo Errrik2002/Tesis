@@ -218,7 +218,7 @@ $$\dot{TNF} = (\alpha_{11}H_{TNF}^{D}(IL10))M_{\phi}i - \mu_{8}(TNF - qTNF)$$
 10.- $$\dot{IL10} = \alpha_{13} - \mu_{10}(IL10-qIL10)  $$
 
 | Variable     | Valor Inicial | Definicion                   | Cita             |
-|---------------------|-----------------|-----------------|-----------------|
+|--------------------|-----------------|-----------------|-----------------|
 | $T_{L}$      | 50            | Parasitos en sangre          | Freitas 2018     |
 | $T_{i}$      | 0             | Parasitos intracelulares     |                  |
 | $M_{\phi}$   | 209           | Macrofagos                   | Freitas 2018     |
@@ -231,7 +231,7 @@ $$\dot{TNF} = (\alpha_{11}H_{TNF}^{D}(IL10))M_{\phi}i - \mu_{8}(TNF - qTNF)$$
 | IL10         | 0.15          | Interleucina 10              | Brady et al 2016 |
 
 | Parametro     | Valor            | Definicion                                      | Referencia     |
-|--------------------|-----------------|-----------------|-----------------|
+|--------------------|------------------|------------------|------------------|
 | $\alpha_{1}$  | ---------------- | Tasa de entrada de parasitos                    | -------------- |
 | $\alpha_{2}$  | ---------------- | Tasa de infeccion de macrofagos                 | -------------- |
 | $\alpha_{3}$  | ---------------- | Tasa de infeccion de cardiomiocitos             | -------------- |
@@ -343,7 +343,7 @@ $$ \dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^
 $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 
 | Variable     | Valor Inicial | Definicion                   | Cita             |
-|---------------------|-----------------|-----------------|-----------------|
+|--------------------|-----------------|-----------------|-----------------|
 | $T_{L}$      | 50            | Parasitos en sangre          | Freitas 2018     |
 | $T_{i}$      | 0             | Parasitos intracelulares     | ---------------  |
 | $M_{\phi}$   | 209           | Macrofagos                   | Freitas 2018     |
@@ -354,67 +354,69 @@ $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 | IFN          | 0.10          | IFN gamma                    | Rincon 2024      |
 | IL10         | 0.15          | Interleucina 10              | Brady et al 2016 |
 
-| Parametro      | Valor                                        | Definicion                                 | Referencia                     |
-|--------------------|-----------------|-----------------|-----------------|
-| $\alpha_{1}$   | $3.14X^{-10} \dfrac{1}{M_{\phi}*Dia}$        | Tasa de fagocitosis de Macrofagos          | Flores Garza 2022              |
-| $\alpha_{2}$   | $2.5X10^{-9}$                                | Tasa de infeccion de cardiomiocitos        | Freitas 2018                   |
-| $\mu_{1}$\*    | $0.06 \dfrac{1}{Dia}$                        | Muerte de pareasito libre                  | Yang 2015                      |
-| $\mu_{1}$\*    | $1X10^{-1}$                                  | Muerte de pareasito libre                  | Freitas 2018                   |
-| $\nu_{2}$\*    | 1                                            | Proliferacion de Macrofagos                | Freitas 2018                   |
-| $\nu_{2}$\*    | 1,080,728                                    | Proliferacion de Macrofagos                | Flores Garza 2022              |
-| $\mu_{2}$      | $0.0019 \dfrac{1}{Dia}$                      | Tasa de muerte de macrofago                | Flores Garza 2022              |
-| $\mu_{2}$      | $5X10^{-1}$                                  | Tasa de muerte de macrofago                | Freitas 2018                   |
-| $\mu_{3}$      | -----------------                            | Muerte de cardiomiocitos                   | -----------------              |
-| $\mu_{4}$      | $5X10^{-4} + 1.5X10^{-4}$                    | Tasa de muerte de Trypanosoma intracelular | Freitas 2018 (M+CD8)           |
-| $\alpha_{3}$\* | 90                                           | Tasa de proliferacion en $C_{i}$           | Freitas 2018                   |
-| $\alpha_{3}$\* | $20 \dfrac{1}{Ti*Sc}$                        | Tasa de proliferacion en $C_{i}$           | Yang 2015 Sc=Susceptible cells |
-| $\alpha_{3}$\* | 1.95 \* cell                                 | Tasa de proliferacion en $C_{i}$           | Arias 2020                     |
-| $\alpha_{4}$\* | 90                                           | Tasa de proliferacion en $M_{i}$           | Freitas 2018                   |
-| $\alpha_{4}$\* | $20 \dfrac{1}{Ti*Sc}$                        | Tasa de proliferacion en $M_{i}$           | Yang 2015 Sc=Susceptible cells |
-| $\alpha_{4}$\* | 1.95 \* cell                                 | Tasa de proliferacion en $M_{i}$           | Arias 2020                     |
-| $\mu_{5}$      | $5X10^{-1}$                                  | Muerte de Macrofago infectado              | Feitas 2018                    |
-| $\mu_{6}$      | $1X10^{-6}$                                  | Muerte de cardiomiocito infectado          | Freitas 2018                   |
-| $\alpha_{5}$   | $200 \dfrac{1}{Dia} + 1.5 \dfrac{1}{M*Dia}$  | Secrecion de TNF-$\alpha$                  | Talaei 2021                    |
-| $\alpha_{6}$   | -----------------                            | Secrecion de IFN-$\gamma$                  | -----------------              |
-| $\alpha_{7}$   | $1.1 \dfrac{1}{Dia} + 0.19 \dfrac{R}{Dia*M}$ | Secrecion de IL-10                         | Talaei 2021                    |
-| $\mu_{7}$      | -----------------                            | Degradacion de TNF-$\alpha$                | -----------------              |
-| $\mu_{8}$      | -----------------                            | Degradacion de IFN-$\gamma$                | -----------------              |
-| $\mu_{9}$      | -----------------                            | Degradacion de IL-10                       | -----------------              |
-| $\eta_{TNF-IL10}$      | 17.4 | Hill Functions Relative concentration                      | Talaei 2021|
-| $\eta_{10-IL6}$      | 560                     | Hill Functions Relative concentration                       | Talaei 2021|
-| $h_{10-IL6}$      | 3.68                           | Hill Functions Dimentionless                       | Talaei 2021      |
-| $h_{TNF-IL10}$      | 3                            | Hill Functions Dimentionless                      | Talaei 2021              |
+| Parametro         | Valor                                        | Definicion                                 | Referencia                     |
+|--------------------|------------------|------------------|------------------|
+| $\alpha_{1}$      | $3.14X^{-10} \dfrac{1}{M_{\phi}*Dia}$        | Tasa de fagocitosis de Macrofagos          | Flores Garza 2022              |
+| $\alpha_{2}$      | $2.5X10^{-9}$                                | Tasa de infeccion de cardiomiocitos        | Freitas 2018                   |
+| $\mu_{1}$\*       | $0.06 \dfrac{1}{Dia}$                        | Muerte de pareasito libre                  | Yang 2015                      |
+| $\mu_{1}$\*       | $1X10^{-1}$                                  | Muerte de pareasito libre                  | Freitas 2018                   |
+| $\nu_{2}$\*       | 1                                            | Proliferacion de Macrofagos                | Freitas 2018                   |
+| $\nu_{2}$\*       | 1,080,728                                    | Proliferacion de Macrofagos                | Flores Garza 2022              |
+| $\mu_{2}$         | $0.0019 \dfrac{1}{Dia}$                      | Tasa de muerte de macrofago                | Flores Garza 2022              |
+| $\mu_{2}$         | $5X10^{-1}$                                  | Tasa de muerte de macrofago                | Freitas 2018                   |
+| $\mu_{3}$         | -----------------                            | Muerte de cardiomiocitos                   | -----------------              |
+| $\mu_{4}$         | $5X10^{-4} + 1.5X10^{-4}$                    | Tasa de muerte de Trypanosoma intracelular | Freitas 2018 (M+CD8)           |
+| $\alpha_{3}$\*    | 90                                           | Tasa de proliferacion en $C_{i}$           | Freitas 2018                   |
+| $\alpha_{3}$\*    | $20 \dfrac{1}{Ti*Sc}$                        | Tasa de proliferacion en $C_{i}$           | Yang 2015 Sc=Susceptible cells |
+| $\alpha_{3}$\*    | 1.95 \* cell                                 | Tasa de proliferacion en $C_{i}$           | Arias 2020                     |
+| $\alpha_{4}$\*    | 90                                           | Tasa de proliferacion en $M_{i}$           | Freitas 2018                   |
+| $\alpha_{4}$\*    | $20 \dfrac{1}{Ti*Sc}$                        | Tasa de proliferacion en $M_{i}$           | Yang 2015 Sc=Susceptible cells |
+| $\alpha_{4}$\*    | 1.95 \* cell                                 | Tasa de proliferacion en $M_{i}$           | Arias 2020                     |
+| $\mu_{5}$         | $5X10^{-1}$                                  | Muerte de Macrofago infectado              | Feitas 2018                    |
+| $\mu_{6}$         | $1X10^{-6}$                                  | Muerte de cardiomiocito infectado          | Freitas 2018                   |
+| $\alpha_{5}$      | $200 \dfrac{1}{Dia} + 1.5 \dfrac{1}{M*Dia}$  | Secrecion de TNF-$\alpha$                  | Talaei 2021                    |
+| $\alpha_{6}$      | -----------------                            | Secrecion de IFN-$\gamma$                  | -----------------              |
+| $\alpha_{7}$      | $1.1 \dfrac{1}{Dia} + 0.19 \dfrac{R}{Dia*M}$ | Secrecion de IL-10                         | Talaei 2021                    |
+| $\mu_{7}$         | -----------------                            | Degradacion de TNF-$\alpha$                | -----------------              |
+| $\mu_{8}$         | -----------------                            | Degradacion de IFN-$\gamma$                | -----------------              |
+| $\mu_{9}$         | -----------------                            | Degradacion de IL-10                       | -----------------              |
+| $\eta_{TNF-IL10}$ | 17.4                                         | Hill Functions Relative concentration      | Talaei 2021                    |
+| $\eta_{10-IL6}$   | 560                                          | Hill Functions Relative concentration      | Talaei 2021                    |
+| $h_{10-IL6}$      | 3.68                                         | Hill Functions Dimentionless               | Talaei 2021                    |
+| $h_{TNF-IL10}$    | 3                                            | Hill Functions Dimentionless               | Talaei 2021                    |
 
 # Modelo corregido
 
-![](images/Modelo_BioRender.jfif)
+![](images/Proyecto de Tesis.jpg)
 
 # POSTER OAXACA
+
 ## Ecuaciones de Modelo corregido
+
 1.  
 
-$$ \dot{T_{L}}= - [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
+$$ \dot{T_{L}}= - [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
 $$-\alpha_{2}T_{L}C_{N}- [\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L} $$
 
 2.  
 
 $$ \dot{M}= [\nu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)$$
-$$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+$$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
 $$-[\mu_{2}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M  $$
 
 3.  
 
-$$ \dot{C_{N}}= -\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IL10^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N} $$
+$$ \dot{C_{N}}= -\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N} $$
 
 4.  
 
-$$ \dot{T_{i}}=\alpha_{2}T_{L}C_{N}+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
+$$ \dot{T_{i}}=\alpha_{2}T_{L}C_{N}+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
 $$-[\mu_{4}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{i} $$
 $$+[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}  $$
 
 5.  
 
-$$ \dot{M_{i}}= +[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}M   $$
+$$ \dot{M_{i}}= +[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}M   $$
 $$-[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}  $$
 
 6.  
@@ -438,126 +440,212 @@ $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 ## Primer ecuacion Tl. Trypanosomas Libres (PONER LA CONTRIBUCION DE LOS QUE SALEN DE LAS CELULAS)
 
 $$ - [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
-Los trypomastigotes que se encutran en via sanguinea, van a interactuar con los macrofagos (M) a una tasa $\alpha_{1}$, por medio de la fagocitosis, dejan de ser trypomanosomas libres y se vuelven trypanosomas intracelulares. La fagocitosis de estos se ve impactado por el ambiente de citocinas. En un ambiente proinflamatorio habra mas fagocitosis que en un ambiente antiinflamatorio.
+Los trypomastigotes que se encutran en via sanguinea, van a interactuar
+con los macrofagos (M) a una tasa $\alpha_{1}$, por medio de la
+fagocitosis, dejan de ser trypomanosomas libres y se vuelven
+trypanosomas intracelulares. La fagocitosis de estos se ve impactado por
+el ambiente de citocinas. En un ambiente proinflamatorio habra mas
+fagocitosis que en un ambiente antiinflamatorio.
 
-$$-\alpha_{2}T_{L}C_{N}$$
-Los trypanosomas libres invaden los cardiomiocitos a una tasa $\alpha_{2}$. Dejan de ser trypanosomas libres y se vuelven trypanosomas intracelulares.
+$$-\alpha_{2}T_{L}C_{N}$$ Los trypanosomas libres invaden los
+cardiomiocitos a una tasa $\alpha_{2}$. Dejan de ser trypanosomas libres
+y se vuelven trypanosomas intracelulares.
 
 $$- [\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}$$
-Los trypanosomas libres que se encuentran en via sanguinea, mueren a una tasa $\mu_{1}$, sin embargo se encuentran expuestos a otros componentes del sistema inmune (neutrofilos, complemento, anticuerpos, etc.) los cuales pueden incrementar su actvidad en un ambiente proinflamatorio ($TNF-\alpha \ y \ IFN-\gamma$) que en un ambiente antiinflamatorio ($IL-10$) aumentando latasa de muerte de trypanosomas libres. 
+Los trypanosomas libres que se encuentran en via sanguinea, mueren a una
+tasa $\mu_{1}$, sin embargo se encuentran expuestos a otros componentes
+del sistema inmune (neutrofilos, complemento, anticuerpos, etc.) los
+cuales pueden incrementar su actvidad en un ambiente proinflamatorio
+($TNF-\alpha \ y \ IFN-\gamma$) que en un ambiente antiinflamatorio
+($IL-10$) aumentando latasa de muerte de trypanosomas libres.
 
 ## Segunda ecuacion M. Macrofagos no infectados/sin fagocitar
 
 $$ [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)$$
-Los macrofagos proliferan a una tasa $\nu_{1}$, esta proliferacion pueden aumentar dependiendo de su reclutamiento en un ambiente proinflamatorio que en un ambiente antiinflamatorio. $(M-M0)$ representa el retardo de proliferacion de los macrofagos. 
+Los macrofagos proliferan a una tasa $\nu_{1}$, esta proliferacion
+pueden aumentar dependiendo de su reclutamiento en un ambiente
+proinflamatorio que en un ambiente antiinflamatorio. $(M-M0)$ representa
+el retardo de proliferacion de los macrofagos.
 $$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
-Los macrofagos sin infectar, interactuan con los trypanosomas libre, que los fagocitan a una tasa $\alpha_{1}$, esta tasa de fagocitosis aumenta en presencia de citocinas proinflamatorias ($TNF-\alpha$) que en presencia de citocinas antiinflamatorias $IL-10$.
+Los macrofagos sin infectar, interactuan con los trypanosomas libre, que
+los fagocitan a una tasa $\alpha_{1}$, esta tasa de fagocitosis aumenta
+en presencia de citocinas proinflamatorias ($TNF-\alpha$) que en
+presencia de citocinas antiinflamatorias $IL-10$.
 
 $$-[\mu_{2}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M$$
-Los macrofagos no infectados o que no han fagocitado, mueren a una tasa $\mu_{2}$, esta muerte del macrofago se puede aumentar en presencia de estres proinflamatorio como la citocina $IFN-\gamma$ y verse el efectuo reducida de esta con la citocina antiinflamatoria $IL-10$
+Los macrofagos no infectados o que no han fagocitado, mueren a una tasa
+$\mu_{2}$, esta muerte del macrofago se puede aumentar en presencia de
+estres proinflamatorio como la citocina $IFN-\gamma$ y verse el efectuo
+reducida de esta con la citocina antiinflamatoria $IL-10$
 
 ## Tercera ecuacion Cn. Cardiomiocitos no infectados
-$$-\alpha_{2}T_{L}C_{N}$$
-Los cardiomiocitos no infectados se infectan por el trypanosoma a una tasa $\alpha_{2}$, dejando de ser cardiomiocitos no infectados y volviendose cardiomiocitos infectados
 
+$$-\alpha_{2}T_{L}C_{N}$$ Los cardiomiocitos no infectados se infectan
+por el trypanosoma a una tasa $\alpha_{2}$, dejando de ser
+cardiomiocitos no infectados y volviendose cardiomiocitos infectados
 
 $$-[\mu_{3}(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IL10^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N} $$
-Los cardiomiocitos no infectados mueren a una tasa $\mu_{3}$, pero su mortalidad puede aumentar en presencia de ambiente proinflamatorio ($INF-\gamma$) o verse disminuida por un ambiente antiinflamatorio ($IFN-\gamma$)
+Los cardiomiocitos no infectados mueren a una tasa $\mu_{3}$, pero su
+mortalidad puede aumentar en presencia de ambiente proinflamatorio
+($INF-\gamma$) o verse disminuida por un ambiente antiinflamatorio
+($IFN-\gamma$)
 
 ## Cuarta ecuacion Ti. Trypanosoma intracelular.
 
 $$\alpha_{2}T_{L}C_{N}$$
 
 $$+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  $$
-Lo trypanosomas libres que son fagocitados a una tasa $\alpha_{1}$, se convierten en trypanosomas intracelulares. La fagocitosis esta mediada por el ambiente de citocinas proinflamatorias o antiinflamatorias
+Lo trypanosomas libres que son fagocitados a una tasa $\alpha_{1}$, se
+convierten en trypanosomas intracelulares. La fagocitosis esta mediada
+por el ambiente de citocinas proinflamatorias o antiinflamatorias
 
 $$-[\mu_{4}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{i} $$
-Los trypanosomas intracelulares, mueren a una tasa $\mu_{4}$, esta muerte de los parasitos intracelulares se puede ver afectada por el sistema inmune, ya sea por su estimulacion a apoptosis, activacion de linfocitos citotoxicos, mayor produccion de especies reactivas de nitrogeno del macrofago, etc. 
+Los trypanosomas intracelulares, mueren a una tasa $\mu_{4}$, esta
+muerte de los parasitos intracelulares se puede ver afectada por el
+sistema inmune, ya sea por su estimulacion a apoptosis, activacion de
+linfocitos citotoxicos, mayor produccion de especies reactivas de
+nitrogeno del macrofago, etc.
 
 $$+[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}$$
-Los trypomastigotes intracelulares se replican dentro la celula hospedero, a una tasa de $\alpha_{3}$ para los macrofagos y a una tasa de $\alpha_{4}$ en los cardiomiocitos, esta rpelicacion se puede ver afectada por el ambiente de citocinas que pueden estimular produccion de especies reactivas de nitrogeno, impidiendo la replicacion del parasito. O con IL-10 que inhibe esta actividad antiparasitica. (VER EFECTO DE CITOCINAS EN LA REPLICACION O SOLO EN SU MUERTE?)
-
+Los trypomastigotes intracelulares se replican dentro la celula
+hospedero, a una tasa de $\alpha_{3}$ para los macrofagos y a una tasa
+de $\alpha_{4}$ en los cardiomiocitos, esta rpelicacion se puede ver
+afectada por el ambiente de citocinas que pueden estimular produccion de
+especies reactivas de nitrogeno, impidiendo la replicacion del parasito.
+O con IL-10 que inhibe esta actividad antiparasitica. (VER EFECTO DE
+CITOCINAS EN LA REPLICACION O SOLO EN SU MUERTE?)
 
 ## Quinta ecuacion Mi. Macrofago infectado.
 
 $$+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}M   $$
-Los macrofagos al interaccionar con el parasito y fagocitarlo a una tasa $\alpha_{1}$ se convierten en macrofagos infectados. Esta fagocitosis se puede ver aumentada con citocinas proinflamatorias o disminuida con citocinas antiinflamatorias
+Los macrofagos al interaccionar con el parasito y fagocitarlo a una tasa
+$\alpha_{1}$ se convierten en macrofagos infectados. Esta fagocitosis se
+puede ver aumentada con citocinas proinflamatorias o disminuida con
+citocinas antiinflamatorias
 
 $$-[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}  $$
-Los macrofagos infectados, mueren a una tasa $\mu_{5}$, esta tasa se puede ver afectada por el ambiente inflamatorio, aumenta en presencia de citocinas proinflamatorias que aumentan la apoptosis de las celulas infectadas, o por citocinas antiinflamatorias que disminuyen la apoptosis. 
+Los macrofagos infectados, mueren a una tasa $\mu_{5}$, esta tasa se
+puede ver afectada por el ambiente inflamatorio, aumenta en presencia de
+citocinas proinflamatorias que aumentan la apoptosis de las celulas
+infectadas, o por citocinas antiinflamatorias que disminuyen la
+apoptosis.
 
 ## Sexta ecuacion Ci. Cardiomiocito infectado.
 
-$$+\alpha_{2}T_{L}C_{N}$$
-Los trypanosomas libres infectan a los cardiomiocitos a una tasa $\alpha_{2}$, de forma que se aumenta la poblacion de cardiomiocitos infectados.
+$$+\alpha_{2}T_{L}C_{N}$$ Los trypanosomas libres infectan a los
+cardiomiocitos a una tasa $\alpha_{2}$, de forma que se aumenta la
+poblacion de cardiomiocitos infectados.
 
 $$-[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}})]C_{i}$$
-Los cardiomiocitos infectados mueren a una tasa $\mu_{6}$, la cul se puede ver aumentado por ambiente proinflamatorio y promover la apoptosis, o inhibirlo con la presencia de citocinas antiiflamatorias
-
+Los cardiomiocitos infectados mueren a una tasa $\mu_{6}$, la cul se
+puede ver aumentado por ambiente proinflamatorio y promover la
+apoptosis, o inhibirlo con la presencia de citocinas antiiflamatorias
 
 ## Septima ecuacion TNF. Factor de Necrosis Tumoral Alpha (Proinflamatoria)
 
-
 $$[\alpha_{5}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{i}$$
-La citocina $TNF-\alpha$ se secreta por los macrofagos a una tasa $\alpha_{5}$, aumentando su concentracion, esta secrecion de citocina puede verse inhibida por la citocina antiinflamatoria IL-10
+La citocina $TNF-\alpha$ se secreta por los macrofagos a una tasa
+$\alpha_{5}$, aumentando su concentracion, esta secrecion de citocina
+puede verse inhibida por la citocina antiinflamatoria IL-10
 
-$$-\mu_{7}(TNF -qTNF)$$
-La citocina $TNF-\alpha$ se degrada a una tasa $\mu_{7}$, pero no puede llegar a cero y unicamente puede llegar a su nivel basal qTNF
+$$-\mu_{7}(TNF -qTNF)$$ La citocina $TNF-\alpha$ se degrada a una tasa
+$\mu_{7}$, pero no puede llegar a cero y unicamente puede llegar a su
+nivel basal qTNF
 
 ## Octava ecuacion IFN. interferon gamma
 
 $$[\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^{h}})]C_{i}$$
-La citocina $IFN-\gamma$ es secretada a una tasa $\mu_{6}$ por los cardiomiocitos infectados, asi como otros grupos celulares, esta produccion de interferon s epuede ver inhibida en la presencia de la citocina antiinflamatoria IL-10.
+La citocina $IFN-\gamma$ es secretada a una tasa $\mu_{6}$ por los
+cardiomiocitos infectados, asi como otros grupos celulares, esta
+produccion de interferon s epuede ver inhibida en la presencia de la
+citocina antiinflamatoria IL-10.
 
-$$-\mu_{8}(IFN-qIFN)$$
-La citocina se degrada a una tasa $\mu_{8}$, pero no puede llegar a cero, unicamente a su nivel basal qIFN
+$$-\mu_{8}(IFN-qIFN)$$ La citocina se degrada a una tasa $\mu_{8}$, pero
+no puede llegar a cero, unicamente a su nivel basal qIFN
 
 ## Novena ecuacion IL10. Interleucina 10
 
-$$ \alpha{7}-\mu_{9}(IL10-qIL10) $$
-La citocina IL-10 se secreta a una tasa $\alpha_{7}$ y se degrada a una tasa $\mu_{9}$, pero no puede llegar a cero, unicamente a su nivel basal qIL10
+$$ \alpha{7}-\mu_{9}(IL10-qIL10) $$ La citocina IL-10 se secreta a una
+tasa $\alpha_{7}$ y se degrada a una tasa $\mu_{9}$, pero no puede
+llegar a cero, unicamente a su nivel basal qIL10
 
 ## Determinar cuales valores de las citocinas son multiplicativos y cuales son agregativos o ambos
 
 ### Ecuacion 1
 
-$\alpha_{1}$ Es una interaccion multiplicativa, debido a que se tiene una tasa de fagocitosis por parte del macrofago, la activacion de los macrofagos por parte del ambiente pro-inflamatorio incrementa esta tasa de fagocitosis, de una forma multiplicativa
+$\alpha_{1}$ Es una interaccion multiplicativa, debido a que se tiene
+una tasa de fagocitosis por parte del macrofago, la activacion de los
+macrofagos por parte del ambiente pro-inflamatorio incrementa esta tasa
+de fagocitosis, de una forma multiplicativa
 
-$\mu_{1}$ el efecto de las citocinas seria un efecto agregativo, de igual forma puede ser un efecto multiplicativo si aumenta la tasa de muerte por el estres al parasito. Sin embargo la mayor parte de muerte de citocinas, se deberia a la activacion de componenetes celulares no contemplados en el modelo, como pueden ser opsinizacion de anticuerpos, opsonizacion del fragmento C3b del complemento, mayor proliferacion de neutrofilos que ataquen al parasito, NETosis por parte de los neutrofilos, mayor formacion de complejos de ataque a membrana (MAC) por parte del complemento, etc. Estos factores incrementan la tasa de fagocitosis sin afectar directamente en el mecanismo de muerte del parasito.
+$\mu_{1}$ el efecto de las citocinas seria un efecto agregativo, de
+igual forma puede ser un efecto multiplicativo si aumenta la tasa de
+muerte por el estres al parasito. Sin embargo la mayor parte de muerte
+de citocinas, se deberia a la activacion de componenetes celulares no
+contemplados en el modelo, como pueden ser opsinizacion de anticuerpos,
+opsonizacion del fragmento C3b del complemento, mayor proliferacion de
+neutrofilos que ataquen al parasito, NETosis por parte de los
+neutrofilos, mayor formacion de complejos de ataque a membrana (MAC) por
+parte del complemento, etc. Estos factores incrementan la tasa de
+fagocitosis sin afectar directamente en el mecanismo de muerte del
+parasito.
 
 ### Ecuacion 2
 
-$\nu_{1}$ hace una interaccion multiplicativa con las citocinas, debido a que el ambiente pro-inflamatorio estimula la tasa de produccion de macrofagos derivados de la medula osea, asi como facilitar su migracion al sitio de infeccion con el parasito
+$\nu_{1}$ hace una interaccion multiplicativa con las citocinas, debido
+a que el ambiente pro-inflamatorio estimula la tasa de produccion de
+macrofagos derivados de la medula osea, asi como facilitar su migracion
+al sitio de infeccion con el parasito
 
 $\alpha_{1}$ se describio su interaccion en la ecuacion 1
 
-$\mu_{2}$ hace una interaccion multiplicativa con el ambiente de citocinas,un incremento de citocina pro-inflamatoria como $IFN-\gamma$ aumenta la tasa de muerte del macrofago por medio de la estimulacion del mecanismo de apoptosis.
+$\mu_{2}$ hace una interaccion multiplicativa con el ambiente de
+citocinas,un incremento de citocina pro-inflamatoria como $IFN-\gamma$
+aumenta la tasa de muerte del macrofago por medio de la estimulacion del
+mecanismo de apoptosis.
 
 ### Ecuacion 3
 
-$\mu_{3}$ hace una interaccion multiplicativo con las citocinas implicadas, ya que debido al estres de las citocinas proinflamatorias, los procesos de apoptosis aumentan.
+$\mu_{3}$ hace una interaccion multiplicativo con las citocinas
+implicadas, ya que debido al estres de las citocinas proinflamatorias,
+los procesos de apoptosis aumentan.
 
-### Ecuacion 4 
+### Ecuacion 4
 
 $\alpha_{1}$ Se describio previamente en la ecuacion 1
 
-$\mu_{4}$ La muerte de los parasitos intracelulares, se afecta por las citocinas de manera multiplicativa y aditivo. Multiplicativa, por que se incrmentan la produccion de Oxido Nitrico en el caso de los Macrofagos que aumentan la tasa de muerte (Aditivo?). Por otro lado un efecto aditivo, debido a que los parasitos intracelulares mueren por la activacion de las CD8, que eliminan a las celulas infectadas, como en el caso de cardiomiocitos y macrofagos infectados
+$\mu_{4}$ La muerte de los parasitos intracelulares, se afecta por las
+citocinas de manera multiplicativa y aditivo. Multiplicativa, por que se
+incrmentan la produccion de Oxido Nitrico en el caso de los Macrofagos
+que aumentan la tasa de muerte (Aditivo?). Por otro lado un efecto
+aditivo, debido a que los parasitos intracelulares mueren por la
+activacion de las CD8, que eliminan a las celulas infectadas, como en el
+caso de cardiomiocitos y macrofagos infectados
 
-$\alpha_{3} \ y \ \alpha_{4}$ Hace una interaccion con las citocinas de manera multiplicativa, ya que la interaccion disminuye la replicacion del parasito por estres
+$\alpha_{3} \ y \ \alpha_{4}$ Hace una interaccion con las citocinas de
+manera multiplicativa, ya que la interaccion disminuye la replicacion
+del parasito por estres
 
 ### Quinta ecuacion
 
 $\alpha_{1}$ Se describio en la ecuacion 1
 
-$\alpha_{5}$ Las citocinas tendrian un efecto aditivo y multiplicativo, pues un ambiente inflamatorio,de modo multiplicativo aumenta la tasa de apoptosis por el estres celular y aditivo debido a que activa los linfocitos CD8, que eliminan a las celulas infectadas
+$\alpha_{5}$ Las citocinas tendrian un efecto aditivo y multiplicativo,
+pues un ambiente inflamatorio,de modo multiplicativo aumenta la tasa de
+apoptosis por el estres celular y aditivo debido a que activa los
+linfocitos CD8, que eliminan a las celulas infectadas
 
 ### Ecuacion 6
 
-$\mu_{6}$ La muerte de los cardiomiocitos infectados su interaccion con las citocinas es multiplicativo y aditivo. El efecto multiplicativo por que elestres de las citocinas incrementa la tasa de apoptosis. Efecto aditivo por la activacion de CD8 y destruccion de los cardiomiocitos infectados
-
+$\mu_{6}$ La muerte de los cardiomiocitos infectados su interaccion con
+las citocinas es multiplicativo y aditivo. El efecto multiplicativo por
+que elestres de las citocinas incrementa la tasa de apoptosis. Efecto
+aditivo por la activacion de CD8 y destruccion de los cardiomiocitos
+infectados
 
 # PARA TESIS
-## Ecuaciones de Modelo corregido con factores aditivos y multiplicativos 
+
+## Ecuaciones de Modelo corregido con factores aditivos y multiplicativos
 
 1.  
 
@@ -565,7 +653,7 @@ $$ \dot{T_{L}}= - [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac
 
 $$-\alpha_{2}T_{L}C_{N}- [(\mu_{1}+1)((\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}}))]T_{L} $$
 $$+[(\mu_{5}+1)((\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}))]M_{i}$$
- $$+[(\mu_{6}+1)((\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}}))]C_{i} $$
+$$+[(\mu_{6}+1)((\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}}))]C_{i} $$
 
 2.  
 
@@ -603,14 +691,3 @@ $$ \dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^
 9.  
 
 $$ \underbrace{\dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10)}_{Texto} $$
-
-
-
-
-
-
-
-
-
- 
- 
