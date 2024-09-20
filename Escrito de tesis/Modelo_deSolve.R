@@ -1,4 +1,4 @@
-
+library(deSolve)
 
 ##################### ECUACIONES DE TESIS ###############
 
@@ -25,6 +25,10 @@ n1 <- 17.4 #TNF-IL10
 n2 <- 560 #IL10-IL6
 h1 <- 3 #TNF-IL10
 h2 <- 3.68 #IL10-IL6
+M0 <-50
+qTNF <- 0.14
+qIFN <- 0.10
+qIL10 <- 0.15
 
 #Variables
 TL <- 50
@@ -36,29 +40,47 @@ Ci <- 0
 TNF <- 0.14
 IFN <- 0.10
 IL10 <- 0.15
-M0 <-50
-qTNF <- 0.14
-qIFN <- 0.10
-qIL10 <- 0.15
+
 
 #####ECUACIONES####
 trypanosoma <- function(t, state, parameter){
   with(as.list(c(state, parameter)), {
-  d_TL <- -(alpha1*((TNF^h1)/(n1^h1*(M)*(TNF)+TNF^h1))*((IFN^h1)/(n1^h1*(M)*(IFN)+IFN^h1))*((n2^h2*(M)*(IL10))/(n2^h2*(M)*(IL10)+IL10^h2)))*TL*M-alpha2*TL*Cn-(mu1*((TNF^h1)/(n1^h1*(TL)*(TNF)+TNF^h1))*((IFN^h1)/(n1^h1*(TL)*(IFN)+IFN^h1))*((n2^h2*(TL)*(IL10))/(n2^h2*(TL)*(IL10)+IL10^h2)))*TL
-  d_M <- +(nu2*((TNF^h1)/(n1^h1*(TL)*(TNF)+TNF^h1))((n2^h2*(M)*(IL10))/(n2^h2*(M)*(IL10)+IL10^h2)))*(M-M0)-(alpha1*(((TNF^h1)/(n1^h1*(M)*(TNF)+TNF^h1))*((IFN^h1)/(n1^h1*(IFN)+(IFN^h1)))*((n2^h2*(M)*(IL10))/(n2^h2*(M)*(IL10)+IL10^h2))))*TL*M-(mu2*(((IFN^h1)/(n1^h1*(M)*(IFN)+IFN^h1))((n2^h2*(M)*(IL10))/(n2^h2*(M)*(IL10)+IL10^h2))))*M
-  d_Cn <- -alpha2*TL*Cn-(mu3*(((IFN^h1)/(n1^h1*(Cn)*(IFN)+IFN^h1))((n2^h2*(Cn)*(IL10))/(n2^h2*(Cn)*(IL10)+IL10^h2))))*Cn
-  d_Ti <- +alpha2*TL*Cn+(alpha1*((TNF^h1)/(n1^h1*(M)*(TNF)+TNF^h1))*((IFN^h1)/(n1^h1*(M)*(IFN)+IFN^h1))*((n2^h2*(M)*(IL10))/(n2^h2*(M)*(IL10)+IL10^h2)))*TL*M-(mu4*((TNF^h1)/(n1^h1*(M)*(TNF)+TNF^h1))*((IFN^h1)/(n1^h1*(M)*(IFN)+IFN^h1))*((n2^h2*(M)*(IL10))/(n2^h2*(M)*(IL10)+IL10^h2)))*Ti+((((TNF^h1)/(n1^h1*(Ti)*(TNF)+TNF^h1))*((IFN^h1)/(n1^h1*(Ti)*(IFN)+IFN^h1))*((n2^h2*(Ti)*(IL10))/(n2^h2*(Ti)*(IL10)+IL10^h2)))*(alpha3+alpha4))*Ti
-  d_Mi <- +(alpha1*((TNF^h1)/(n1^h1*(M)*(TNF)+TNF^h1))*((IFN^h1)/(n1^h1*(M)*(IFN)+IFN^h1))*((n2^h2*(M)*(IL10))/(n2^h2*(M)*(IL10)+IL10^h2)))*TL*M-(mu5*(((IFN^h1)/(n1^h1*(M)*(IFN)+IFN^h1))*((n2^h2*(M)*(IL10))/(n2^h2*(M)*(IL10)+IL10^h2))))*Mi
-  d_Ci <- +alpha2*TL*Cn-(mu6*((TNF^h1)/(n1^h1*(Ci)*(TNF)+TNF^h1))*((IFN^h1)/(n1^h1*(Ci)*(IFN)+IFN^h1))*((n2^h2*(Ci)*(IL10))/(n2^h2*(Ci)*(IL10)+IL10^h2)))*Ci
-  d_TNF <- +(alpha5*((n1^h2*(TNF)*(IL10))/(n1*h1*(TNF)*(IL10)+IL10^h1)))Mi-mu7*(TNF-qTNF)
-  d_IFN <- +(alpha5*((n1^h1*(IFN)*(IL10))/(n1^h1*(IFN)*(IL10)+IL10^h1)))*Ci-mu8*(IFN-qIFN)
+    
+  d_TL <- -(alpha1*((TNF**h1)/((n1**h1)*(M)*(TNF)+TNF**h1))*((IFN**h1)/((n1**h1)*(M)*(IFN)+IFN**h1))*(((n2**h2)*(M)*(IL10))/((n2**h2)*(M)*(IL10)+IL10**h2)))*TL*M-alpha2*TL*Cn-(mu1*((TNF**h1)/((n1**h1)*(TL)*(TNF)+TNF**h1))*((IFN**h1)/((n1**h1)*(TL)*(IFN)+IFN**h1))*(((n2**h2)*(TL)*(IL10))/((n2**h2)*(TL)*(IL10)+IL10**h2)))*TL
+  
+  d_M <- (nu2*((TNF**h1)/((n1**h1)*(TL)*(TNF)+TNF**h1))*(((n2**h2)*(M)*(IL10))/((n2**h2)*(M)*(IL10)+IL10**h2)))*(M-M0)-(alpha1*(((TNF**h1)/((n1**h1)*(M)*(TNF)+TNF**h1))*((IFN**h1)/((n1**h1)*(IFN)+(IFN**h1)))*(((n2**h2)*(M)*(IL10))/((n2**h2)*(M)*(IL10)+IL10**h2))))*TL*M-(mu2*(((IFN**h1)/((n1**h1)*(M)*(IFN)+IFN**h1))*(((n2**h2)*(M)*(IL10))/((n2**h2)*(M)*(IL10)+IL10**h2))))*M
+  
+  d_Cn <- -(alpha2*TL*Cn-(mu3*(((IFN**h1)/((n1**h1)*(Cn)*(IFN)+IFN**h1))*(((n2**h2)*(Cn)*(IL10))/((n2**h2)*(Cn)*(IL10)+IL10**h2))))*Cn)
+  
+  d_Ti <- alpha2*TL*Cn+(alpha1*((TNF**h1)/((n1**h1)*(M)*(TNF)+TNF**h1))*((IFN**h1)/((n1**h1)*(M)*(IFN)+IFN**h1))*(((n2**h2)*(M)*(IL10))/((n2**h2)*(M)*(IL10)+IL10**h2)))*TL*M-(mu4*((TNF**h1)/((n1**h1)*(M)*(TNF)+TNF**h1))*((IFN**h1)/((n1**h1)*(M)*(IFN)+IFN**h1))*(((n2**h2)*(M)*(IL10))/((n2**h2)*(M)*(IL10)+IL10**h2)))*Ti+((((TNF**h1)/((n1**h1)*(Ti)*(TNF)+TNF**h1))*((IFN**h1)/((n1**h1)*(Ti)*(IFN)+IFN**h1))*(((n2**h2)*(Ti)*(IL10))/((n2**h2)*(Ti)*(IL10)+IL10**h2)))*(alpha3+alpha4))*Ti
+  
+  d_Mi <- (alpha1*((TNF**h1)/((n1**h1)*(M)*(TNF)+TNF**h1))*((IFN**h1)/((n1**h1)*(M)*(IFN)+IFN**h1))*(((n2**h2)*(M)*(IL10))/(n2**h2*(M)*(IL10)+IL10**h2)))*TL*M-(mu5*(((IFN**h1)/((n1**h1)*(M)*(IFN)+IFN**h1))*(((n2**h2)*(M)*(IL10))/((n2**h2)*(M)*(IL10)+IL10**h2))))*Mi
+  
+  d_Ci <- alpha2*TL*Cn-(mu6*((TNF**h1)/((n1**h1)*(Ci)*(TNF)+TNF**h1))*((IFN**h1)/((n1**h1)*(Ci)*(IFN)+IFN**h1))*(((n2**h2)*(Ci)*(IL10))/((n2**h2)*(Ci)*(IL10)+IL10**h2)))*Ci
+  
+  d_TNF <- (alpha5*(((n1**h2)*(TNF)*(IL10))/((n1**h1)*(TNF)*(IL10)+IL10**h1)))*Mi-mu7*(TNF-qTNF)
+  
+  d_IFN <- (alpha5*(((n1**h1)*(IFN)*(IL10))/((n1**h1)*(IFN)*(IL10)+IL10**h1)))*Ci-mu8*(IFN-qIFN)
+  
   d_IL10 <- alpha7-mu9*(IL10-qIL10)
+  
+  return(list(
+    d_TL=d_TL,
+    d_M=d_M,
+    d_Cn=d_Cn,
+    d_Ti=d_Ti,
+    d_Mi=d_Mi,
+    d_Ci=d_Ci,
+    d_TNF=d_TNF,
+    d_IFN=d_IFN,
+    d_IL10=d_IL10
+  ))
   })
 }
 
 
-parameter <- c(alpha1,alpha2, mu1, nu2, mu2, mu3, mu4, alpha3, alpha4, mu5, mu6, alpha5, alpha6, alpha7, mu7, mu8, mu9, n1, n2, h1, h2, qIL10, qIFN, qTNF) 
-state <- c(TL= 50, Ti=0, M=209, Mi= 0, Cn= 136, Ci = 0, TNF = 0.14, IFN = 0.1, IL10 =0.15, M0 = 50)
+parameter <- c(alpha1,alpha2, mu1, nu2, mu2, mu3, mu4, alpha3, alpha4, mu5, mu6, alpha5, alpha6, alpha7, mu7, mu8, mu9, n1, n2, h1, h2, qIL10, qIFN, qTNF,M0) 
+state <- c(TL= 50, Ti=0, M=209, Mi= 0, Cn= 136, Ci = 0, TNF = 0.14, IFN = 0.1, IL10 =0.15)
 times <- seq(0,100, by=1)
 out <- ode(y= state, times = times, func= trypanosoma, parms = parameter)
   
