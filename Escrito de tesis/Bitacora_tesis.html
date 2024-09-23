@@ -1543,7 +1543,72 @@ TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M  \]</spa
 <li></li>
 </ol>
 <p><span class="math display">\[ \underbrace{\dot{IL10}=
-\alpha{7}-\mu_{9}(IL10-qIL10)}_{Texto} \]</span></p>
+\alpha{7}-\mu_{9}(IL10-qIL10)}_{Texto} \]</span> # Descripcion</p>
+<ol style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[ \dot{T_{L}}= -\underbrace{
+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+
+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M}_{\text{Fagocitosis}}  \]</span>
+<span class="math display">\[-\underbrace{\alpha_{2}T_{L}C_{N}}_{\text{Infección}}-\underbrace{
+[\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}}_{\text{Muerte
+del parásito}} \]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[ \dot{M}=
+\underbrace{[\nu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)}_\text{{Proliferación/
+reclutamiento?}}\]</span> <span class="math display">\[-\underbrace{[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+
+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M}_{\text{Fagocitosis}}\]</span>
+<span class="math display">\[-\underbrace{[\mu_{2}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M}_{\text{Muerte/Necrosis/Apoptosis}}  \]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[ \dot{C_{N}}=
+-\underbrace{\alpha_{2}T_{L}C_{N}}_{\text{Infección}}-\underbrace{[\mu_{3}(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N}}_{\text{Muerte/Necrosis/Apoptosis}}
+\]</span></p>
+<ol start="4" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[
+\dot{T_{i}}=\underbrace{\alpha_{2}T_{L}C_{N}}_{\text{Infección}}+\underbrace{\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+
+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M}_{\text{Fagocitosis}}  \]</span>
+<span class="math display">\[-\underbrace{[\mu_{4}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{i}}_{\text{Muerte
+de parasito}} \]</span> <span class="math display">\[+\underbrace{[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}}_{\text{Replicacion
+intracelular}}  \]</span></p>
+<ol start="5" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[ \dot{M_{i}}=
++\underbrace{[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}M}_{\text{Fagocitosis}}   \]</span>
+<span class="math display">\[-\underbrace{[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}}_{\text{Muerte/Necrsosis/Apoptosis
+de infectado}}  \]</span></p>
+<ol start="6" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[ \dot{C_{i}}= +
+\underbrace{\alpha_{2}T_{L}C_{N}}_{\text{Infección}}-\underbrace{
+[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}})]C_{i}}_{\text{Muerte
+de infectado}} \]</span></p>
+<ol start="7" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[\dot{TNF}=
+\underbrace{[\alpha_{5}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{i}}_{\text{Secreción}}
+-\underbrace{\mu_{7}(TNF -qTNF)}_{\text{Degradación de
+citocina}}\]</span></p>
+<ol start="8" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[
+\dot{IFN}=  \underbrace{[\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^{h}})]C_{i}}_{\text{Secreción}}-\underbrace{\mu_{8}(IFN-qIFN)}_{\text{Degradación}}
+\]</span></p>
+<ol start="9" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[ \dot{IL10}=
+\underbrace{\alpha{7}}_{\text{Secreción}}-\underbrace{\mu_{9}(IL10-qIL10)}_{\text{Degradación}}
+\]</span></p>
 </div>
 </div>
 

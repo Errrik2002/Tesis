@@ -3,7 +3,7 @@
     "path": "C:/Users/DELL/Desktop/GitHub/Tesis/Escrito de tesis/Bitacora_tesis.Rmd",
     "project_path": "Bitacora_tesis.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "2405215748",
     "contents": "",
     "dirty": false,
     "created": 1725682870112.0,
@@ -13,8 +13,8 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "413,161",
-        "scrollLine": "0",
+        "cursorPosition": "693,2",
+        "scrollLine": "689",
         "rmdVisualMode": "false",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "19578:13195.8330078125",
@@ -22,11 +22,11 @@
         "docOutlineVisible": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1726766404,
+    "lastKnownWriteTime": 1727130430,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1726766404378,
+    "last_content_update": 1727130430292,
     "read_only": false,
     "read_only_alternatives": []
 }

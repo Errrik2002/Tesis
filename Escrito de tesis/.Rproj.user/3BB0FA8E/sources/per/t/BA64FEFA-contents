@@ -67,7 +67,7 @@ plot(out, col="red")
 #Revisarlas con lupa
 #escribir ecuaciones con descriptores
 
-?ode
+
 
 
 
