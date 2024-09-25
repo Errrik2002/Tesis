@@ -11,21 +11,21 @@ nu2 <- 1 # REFERENCIA DE FREITAS, LA OTRA OPCION ES MUY DRASTICA
 mu2 <- 5*10^-1
 mu3 <- 5*10^-1 #MISMO VALOR QUE EL DE LOS MACROFAGOS, MU2
 mu4 <- 6.5*10^-4 #ES LA SUMA DE PARAMETRO DE MUERTE DEL PARASITO Y SU ELIMINACION POR CD8
-alpha3 <- 90
-alpha4 <- 90
+alpha3 <- 90 #replicacion Ci
+alpha4 <- 90 #Replicacion Mi
 mu5 <- 5*10^-1
 mu6 <- 1*10^-6
 alpha5 <- 200
 alpha6 <- 41.44 #TASA DE SECRECION DE IFN #la pendiente del experimento
-alpha7 <- 1.1
-mu7 <- 72 #TASA DE degradacion DE TNF #en base a la literatura
+alpha7 <- 1.1 #SECRECION DE IL10
+mu7 <- 72 #TASA DE degradacion DE TNF #en base a la literatura CADA 18 MIN
 mu8 <- 2 #NO TIENEN TASA DE DEGRADACION IFN g 
 mu9 <- 2 #NO TIENEN TASA DE DEGRADACION IL10
 n1 <- 17.4 #TNF-IL10
 n2 <- 560 #IL10-IL6
 h1 <- 3 #TNF-IL10
 h2 <- 3.68 #IL10-IL6
-M0 <-50
+M0 <-50 # NUMERO EQUIS
 qTNF <- 0.14
 qIFN <- 0.10
 qIL10 <- 0.15
