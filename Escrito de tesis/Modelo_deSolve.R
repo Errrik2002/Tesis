@@ -60,9 +60,9 @@ out <- ode(y= state, times = times, func= trypanosoma, parms = parameter)
 plot(out)  
 
 
-
+pdf("images/Normal,pdf", width = 30, height = 15)
 plot(out, col="red")
-
+dev.off()
 #Curvas solucion proxima semana deSolve
 #Revisarlas con lupa
 #escribir ecuaciones con descriptores
