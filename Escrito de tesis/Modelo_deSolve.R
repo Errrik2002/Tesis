@@ -10,12 +10,12 @@ alpha2 <- 2.5*10**-9
 mu1 <- 1*10**-1
 nu2 <- 1 # REFERENCIA DE FREITAS, LA OTRA OPCION ES MUY DRASTICA 
 mu2 <- 5*10**-1
-mu3 <- 5*10**-1 #MISMO VALOR QUE EL DE LOS MACROFAGOS, MU2
+mu3 <- 1*10**-6 #MISMO VALOR QUE EL DE LOS MACROFAGOS, MU2
 mu4 <- 6.5*10**-4 #ES LA SUMA DE PARAMETRO DE MUERTE DEL PARASITO Y SU ELIMINACION POR CD8
 alpha3 <- 90 #replicacion Ci
 alpha4 <- 90 #Replicacion Mi
 mu5 <- 9*10**-1
-mu6 <- 1*10**-6
+mu6 <- 5*10**-1
 alpha5 <- 600
 alpha6 <- 124.33 #TASA DE SECRECION DE IFN #la pendiente del experimento
 alpha7 <- 0.00001 #SECRECION DE IL10
