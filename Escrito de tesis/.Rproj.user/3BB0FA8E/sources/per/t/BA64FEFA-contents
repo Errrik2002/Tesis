@@ -7,29 +7,29 @@ library(deSolve)
 alpha1 <- 3.14*10**-10
 alpha2 <- 2.5*10**-9
 #mu1 <- 0.06 # REFERENCIA DE YANG 2015 (HAY OTRO VALOR)
-mu1 <- 1*10**-1
+mu1 <- 0.06
 nu2 <- 1 # REFERENCIA DE FREITAS, LA OTRA OPCION ES MUY DRASTICA 
 mu2 <- 5*10**-1
-mu3 <- 1*10**-6 #MISMO VALOR QUE EL DE LOS MACROFAGOS, MU2
+mu3 <- 1*10**-7 #MISMO VALOR QUE EL DE LOS MACROFAGOS, MU2
 mu4 <- 6.5*10**-4 #ES LA SUMA DE PARAMETRO DE MUERTE DEL PARASITO Y SU ELIMINACION POR CD8
 alpha3 <- 90 #replicacion Ci
 alpha4 <- 90 #Replicacion Mi
 mu5 <- 9*10**-1
-mu6 <- 5*10**-1
-alpha5 <- 600
-alpha6 <- 124.33 #TASA DE SECRECION DE IFN #la pendiente del experimento
-alpha7 <- 0.00001 #SECRECION DE IL10
-mu7 <- 2 #TASA DE degradacion DE TNF #en base a la literatura CADA 18 MIN
-mu8 <- 2 #NO TIENEN TASA DE DEGRADACION IFN g 
-mu9 <- 1000 #NO TIENEN TASA DE DEGRADACION IL10
+mu6 <- 1*10**-6
+alpha5 <- 200
+alpha6 <- 41.44 #TASA DE SECRECION DE IFN #la pendiente del experimento
+alpha7 <- 1.1 #SECRECION DE IL10
+mu7 <- 72 #TASA DE degradacion DE TNF #en base a la literatura CADA 18 MIN
+mu8 <- 0.74 #NO TIENEN TASA DE DEGRADACION IFN g 
+mu9 <- 0.74 #NO TIENEN TASA DE DEGRADACION IL10
 n1 <- 17.4 #TNF-IL10
 n2 <- 560 #IL10-IL6
 h1 <- 3 #TNF-IL10
 h2 <- 3.68 #IL10-IL6
 M0 <-50 # NUMERO EQUIS
-qTNF <- 0.42
-qIFN <- 0.14
-qIL10 <- 0.05
+qTNF <- 0.14
+qIFN <- 0.10
+qIL10 <- 0.15
 
 
 
@@ -53,16 +53,19 @@ trypanosoma <- function(t, state, parameter){
 
 
 parameter <- c(alpha1,alpha2, mu1, nu2, mu2, mu3, mu4, alpha3, alpha4, mu5, mu6, alpha5, alpha6, alpha7, mu7, mu8, mu9, n1, n2, h1, h2, qIL10, qIFN, qTNF,M0) 
-state <- c(TL= 50, M=209, Cn= 136, Ti=0, Mi= 0, Ci = 0, TNF = 0.42, IFN = 0.3, IL10 =0.005)
+state <- c(TL= 50, M=209, Cn= 136, Ti=0, Mi= 0, Ci = 0, TNF = 0.14, IFN = 0.1, IL10 =0.15)
 times <- seq(0,3500, by=1)
 out <- ode(y= state, times = times, func= trypanosoma, parms = parameter)
 
 
-plot(out)  
+plot(out[,"M"], out[,"Mi"])  
 
 
-pdf("images/10_years_chronic_infection.pdf", width = 20, height = 15)
-plot(out, col="red")
+png("images/TL.png")
+plot(out[,"Ti"], col="red")
+dev.off()
+png("images/macrofagoI.png")
+plot(out[,"Mi"], col="red")
 dev.off()
 #Curvas solucion proxima semana deSolve
 #Revisarlas con lupa
