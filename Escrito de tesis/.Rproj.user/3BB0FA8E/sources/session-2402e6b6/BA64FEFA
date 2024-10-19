@@ -3,7 +3,7 @@
     "path": "C:/Users/DELL/Desktop/GitHub/Tesis/Escrito de tesis/Modelo_deSolve.R",
     "project_path": "Modelo_deSolve.R",
     "type": "r_source",
-    "hash": "3251913101",
+    "hash": "3715711688",
     "contents": "",
     "dirty": false,
     "created": 1726629140994.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "66,0",
-        "scrollLine": "55"
+        "cursorPosition": "134,0",
+        "scrollLine": "116"
     },
     "folds": "",
-    "lastKnownWriteTime": 1728015577,
+    "lastKnownWriteTime": 1729368513,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1728015577111,
+    "last_content_update": 1729368513717,
     "read_only": false,
     "read_only_alternatives": []
 }

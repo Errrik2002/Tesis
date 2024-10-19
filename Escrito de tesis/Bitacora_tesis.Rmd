@@ -2,10 +2,12 @@
 title: "Bitacora Tesis"
 author: "Erik Martinez"
 date: "2024-05-15"
+output:
+  html_document: default
+  pdf_document: default
 bibliography: referencias.bib
-output: html_document
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -735,3 +737,46 @@ $$ \dot{IFN}=  \underbrace{[\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)
 
 $$ \dot{IL10}= \underbrace{\alpha{7}}_{\text{Secreción}}-\underbrace{\mu_{9}(IL10-qIL10)}_{\text{Degradación}} $$
 
+
+
+# 18 de octubre, post EOBM
+
+
+#### Nuevas ecuaciones sin Ti
+
+1.
+$$\dot{T_{L}}= -\alpha_{1}T_{L}M-\alpha_{2}T_{L}C_{N}-\mu_{1}T_{L}+\alpha_{3}Mi+\alpha_{4}Ci $$
+2.
+$$\dot{M}=\nu_{1}(M-M0)-\alpha_{1}T_{L}M-\mu_{2}M $$
+3.
+$$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}-\mu_{3}C_{N} $$
+4.
+$$\dot{Mi}=\alpha_{1}T_{L}M-\mu_{5}Mi $$
+5.
+$$\dot{Ci}=\alpha_{2}T_{L}C_{N}-\mu_{6}Ci $$
+6.
+$$\dot{TNF}=\alpha_{5}Mi-\mu_{7}TNF $$
+7.
+$$\dot{IL10}=\alpha_{7}-\mu_{9}IL10 $$
+
+#### Ecuaciones con funciones de HILL
+
+1.
+$$\dot{T_{L}}= -[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+$$-\alpha_{2}T_{L}C_{N}-[\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}$$
+$$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Mi+\alpha_{4}Ci $$
+2.
+$$\dot{M}=[\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)$$
+$$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+$$-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M $$
+3.
+$$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]C_{N} $$
+4.
+$$\dot{Mi}=[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+$$-[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Mi $$
+5.
+$$\dot{Ci}=\alpha_{2}T_{L}C_{N}-[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Ci $$
+6.
+$$\dot{TNF}=[\alpha_{5}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Mi-\mu_{7}TNF $$
+7.
+$$\dot{IL10}=\alpha_{7}-\mu_{9}IL10 $$
