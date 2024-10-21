@@ -125,11 +125,13 @@ trypanosoma_18OCT <- function(t, state, parameter){
 
 parameter <- c(alpha1,alpha2, mu1, nu2, mu2, mu3, mu4, alpha3, alpha4, mu5, mu6, alpha5, alpha6, alpha7, mu7, mu8, mu9, n1, n2, h1, h2, qIL10, qIFN, qTNF,M0) 
 state <- c(TL=50, M=209, Cn= 136, Mi= 0, Ci = 0, TNF = 0.14, IL10 =0.15)
-times <- seq(0,3000, by=1)
+times <- seq(0,100, by=1)
 out <- ode(y= state, times = times, func= trypanosoma_18OCT, parms = parameter)
 
 plot(out,col='red')
 
 
-
+pdf("images/21_OCT_2024_100D.pdf")
+plot(out,col='red')
+dev.off()
 
