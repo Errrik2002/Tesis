@@ -105,7 +105,7 @@ h1 <- 3 #TNF-IL10
 h2 <- 3.68 #IL10-IL6
 M0 <-50 # NUMERO EQUIS
 qTNF <- 0.14 #16
-qIL10 <- 0.15 #17
+qIL10 <- 0.15 #17  
 
 
 trypanosoma_18OCT <- function(t, state, parameter){
@@ -125,7 +125,7 @@ trypanosoma_18OCT <- function(t, state, parameter){
 
 parameter <- c(alpha1,alpha2, mu1, nu2, mu2, mu3, mu4, alpha3, alpha4, mu5, mu6, alpha5, alpha6, alpha7, mu7, mu8, mu9, n1, n2, h1, h2, qIL10, qIFN, qTNF,M0) 
 state <- c(TL=50, M=209, Cn= 136, Mi= 0, Ci = 0, TNF = 0.14, IL10 =0.15)
-times <- seq(0,3000, by=1)
+times <- seq(0,100, by=1)
 out <- ode(y= state, times = times, func= trypanosoma_18OCT, parms = parameter)
 
 plot(out,col='red')
@@ -182,3 +182,59 @@ ASP <- rfast99(param_ASP, n=200, q=q, q.arg = q.arg, replicate = 1)
 out_ASP <- solve_fun(ASP, time = times, func = trypanosoma_18OCT, initState = state, outnames = out)
 
 
+#----------#######################3---------------------------------------------------
+
+
+library(deSolve)
+
+#Parametros
+alpha1 <- 3.14*10**-10 #1
+alpha2 <- 2.5*10**-9 #2
+#mu1 <- 0.06 # REFERENCIA DE YANG 2015 (HAY OTRO VALOR)
+mu1 <- 0.06 #3
+nu2 <- 1 # REFERENCIA DE FREITAS, LA OTRA OPCION ES MUY DRASTICA  #4 
+mu2 <- 5*10**-1 #5
+mu3 <- 1*10**-7 #MISMO VALOR QUE EL DE LOS MACROFAGOS, MU2 #6
+mu4 <- 6.5*10**-4 #ES LA SUMA DE PARAMETRO DE MUERTE DEL PARASITO Y SU ELIMINACION POR CD8 #7
+alpha3 <- 30 #replicacion Mi #8
+alpha4 <- 90 #Replicacion Ci #9
+mu5 <- 9*10**-1 #10
+mu6 <- 1*10**-6 #11
+alpha5 <- 200 #12
+alpha7 <- 0.19 #SECRECION DE IL10 #13
+mu7 <- 72 #TASA DE degradacion DE TNF #en base a la literatura CADA 18 MIN #14
+mu9 <- 1.1 #15
+n1 <- 17.4 #TNF-IL10
+n2 <- 560 #IL10-IL6
+h1 <- 3 #TNF-IL10
+h2 <- 3.68 #IL10-IL6
+M0 <-50 # NUMERO EQUIS
+qTNF <- 0.14 #16
+qIL10 <- 0.15 #17  
+
+trypanosoma_27NOV <- function(t, state, parameter){
+  with(as.list(c(state, parameter)), {
+    d_TL <- alpha1*((TNF**h1)/((n1**h1)+TNF**h1))*(((n2**h2))/((n2**h2)+IL10**h2))*TL*M-alpha2*TL*Cn+(mu1*((TNF**h1)/((n1**h1)+TNF**h1))*(((n2**h2))/((n2**h2)+IL10**h2)))*TL+(alpha3*((TNF**h1)/((n1**h1)+TNF**h1))*(((n2**h2))/((n2**h2)+IL10**h2)))*Mi+alpha4*Ci
+    d_M <- (nu2*((TNF**h1)/((n1**h1)+TNF**h1))*(((n2**h2))/((n2**h2)+IL10**h2)))*(M-M0)+(alpha1*(((TNF**h1)/((n1**h1)+TNF**h1))*(((n2**h2))/((n2**h2)+IL10**h2))))*TL*M+(mu2*(((TNF**h1)/((n1**h1)+TNF**h1))*(((n2**h2))/((n2**h2)+IL10**h2))))*M
+    d_Cn <- -alpha2*TL*Cn+(mu3*(((TNF**h1)/((n1**h1)+TNF**h1))*(((n2**h2))/((n2**h2)+IL10**h2))))*Cn
+    d_Mi <- (alpha1*((TNF**h1)/((n1**h1)+TNF**h1))*(((n2**h2))/((n2**h2)+IL10**h2)))*TL*M+(mu5*(((TNF**h1)/((n1**h1)+TNF**h1))*(((n2**h2))/((n2**h2)+IL10**h2))))*Mi
+    d_Ci <- alpha2*TL*Cn+(mu6*((TNF**h1)/((n1**h1)+TNF**h1))*(((n2**h2))/((n2**h2)+IL10**h2)))*Ci
+    d_TNF <- (alpha5*(((n1**h1))/((n1**h1)+IL10**h1)))*Mi-mu7*(TNF-qTNF)
+    d_IL10 <- alpha7*Mi-mu9*(IL10-qIL10)
+    
+    return(list(c(d_TL,d_M,d_Cn,d_Mi,d_Ci,d_TNF,d_IL10)))
+  })
+}
+
+
+parameter <- c(alpha1,alpha2, mu1, nu2, mu2, mu3, mu4, alpha3, alpha4, mu5, mu6, alpha5, alpha7, mu7, mu9, n1, n2, h1, h2, qIL10, qTNF,M0) 
+state <- c(TL=50, M=209, Cn= 136, Mi= 0, Ci = 0, TNF = 0.14, IL10 =0.15)
+times <- seq(0,100, by=1)
+out1 <- ode(y= state, times = times, func= trypanosoma_27NOV, parms = parameter)
+
+plot(out1,col='red')
+
+
+pdf("images/29_NOV_2024_NOSIGNS_100D.pdf")
+plot(out1,col='red')
+dev.off()

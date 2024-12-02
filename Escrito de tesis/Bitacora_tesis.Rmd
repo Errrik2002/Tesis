@@ -220,7 +220,7 @@ $$\dot{TNF} = (\alpha_{11}H_{TNF}^{D}(IL10))M_{\phi}i - \mu_{8}(TNF - qTNF)$$
 10.- $$\dot{IL10} = \alpha_{13} - \mu_{10}(IL10-qIL10)  $$
 
 | Variable     | Valor Inicial | Definicion                   | Cita             |
-|--------------------|-----------------|-----------------|-----------------|
+|-------------------|------------------|------------------|------------------|
 | $T_{L}$      | 50            | Parasitos en sangre          | Freitas 2018     |
 | $T_{i}$      | 0             | Parasitos intracelulares     |                  |
 | $M_{\phi}$   | 209           | Macrofagos                   | Freitas 2018     |
@@ -233,7 +233,7 @@ $$\dot{TNF} = (\alpha_{11}H_{TNF}^{D}(IL10))M_{\phi}i - \mu_{8}(TNF - qTNF)$$
 | IL10         | 0.15          | Interleucina 10              | Brady et al 2016 |
 
 | Parametro     | Valor            | Definicion                                      | Referencia     |
-|--------------------|------------------|------------------|------------------|
+|-------------------|------------------|------------------|------------------|
 | $\alpha_{1}$  | ---------------- | Tasa de entrada de parasitos                    | -------------- |
 | $\alpha_{2}$  | ---------------- | Tasa de infeccion de macrofagos                 | -------------- |
 | $\alpha_{3}$  | ---------------- | Tasa de infeccion de cardiomiocitos             | -------------- |
@@ -345,7 +345,7 @@ $$ \dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^
 $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 
 | Variable     | Valor Inicial | Definicion                   | Cita             |
-|--------------------|-----------------|-----------------|-----------------|
+|-------------------|------------------|------------------|------------------|
 | $T_{L}$      | 50            | Parasitos en sangre          | Freitas 2018     |
 | $T_{i}$      | 0             | Parasitos intracelulares     | ---------------  |
 | $M_{\phi}$   | 209           | Macrofagos                   | Freitas 2018     |
@@ -357,7 +357,7 @@ $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 | IL10         | 0.15          | Interleucina 10              | Brady et al 2016 |
 
 | Parametro         | Valor                                        | Definicion                                 | Referencia                     |
-|--------------------|------------------|------------------|------------------|
+|-------------------|------------------|------------------|------------------|
 | $\alpha_{1}$      | $3.14X^{-10} \dfrac{1}{M_{\phi}*Dia}$        | Tasa de fagocitosis de Macrofagos          | Flores Garza 2022              |
 | $\alpha_{2}$      | $2.5X10^{-9}$                                | Tasa de infeccion de cardiomiocitos        | Freitas 2018                   |
 | $\mu_{1}$\*       | $0.06 \dfrac{1}{Dia}$                        | Muerte de pareasito libre                  | Yang 2015                      |
@@ -389,7 +389,7 @@ $$ \dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10) $$
 
 # Modelo corregido
 
-![](images/Proyecto de Tesis.jpg)
+![](images/Proyecto%20de%20Tesis.jpg)
 
 # POSTER OAXACA
 
@@ -692,8 +692,8 @@ $$ \dot{IFN}=  [\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^
 
 9.  
 
-$$ \underbrace{\dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10)}_{Texto} $$
-# Descripcion
+$$ \underbrace{\dot{IL10}= \alpha{7}-\mu_{9}(IL10-qIL10)}_{Texto} $$ \#
+Descripcion
 
 1.  
 
@@ -737,46 +737,77 @@ $$ \dot{IFN}=  \underbrace{[\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)
 
 $$ \dot{IL10}= \underbrace{\alpha{7}}_{\text{Secreción}}-\underbrace{\mu_{9}(IL10-qIL10)}_{\text{Degradación}} $$
 
-
-
 # 18 de octubre, post EOBM
-
 
 #### Nuevas ecuaciones sin Ti
 
-1.
-$$\dot{T_{L}}= -\alpha_{1}T_{L}M-\alpha_{2}T_{L}C_{N}-\mu_{1}T_{L}+\alpha_{3}Mi+\alpha_{4}Ci $$
-2.
-$$\dot{M}=\nu_{1}(M-M0)-\alpha_{1}T_{L}M-\mu_{2}M $$
-3.
-$$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}-\mu_{3}C_{N} $$
-4.
-$$\dot{Mi}=\alpha_{1}T_{L}M-\mu_{5}Mi $$
-5.
-$$\dot{Ci}=\alpha_{2}T_{L}C_{N}-\mu_{6}Ci $$
-6.
-$$\dot{TNF}=\alpha_{5}Mi-\mu_{7}TNF $$
-7.
-$$\dot{IL10}=\alpha_{7}-\mu_{9}IL10 $$
+1.  $$\dot{T_{L}}= -\alpha_{1}T_{L}M-\alpha_{2}T_{L}C_{N}-\mu_{1}T_{L}+\alpha_{3}Mi+\alpha_{4}Ci $$
+2.  $$\dot{M}=\nu_{1}(M-M0)-\alpha_{1}T_{L}M-\mu_{2}M $$
+3.  $$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}-\mu_{3}C_{N} $$
+4.  $$\dot{Mi}=\alpha_{1}T_{L}M-\mu_{5}Mi $$
+5.  $$\dot{Ci}=\alpha_{2}T_{L}C_{N}-\mu_{6}Ci $$
+6.  $$\dot{TNF}=\alpha_{5}Mi-\mu_{7}TNF $$
+7.  $$\dot{IL10}=\alpha_{7}-\mu_{9}IL10 $$
 
 #### Ecuaciones con funciones de HILL
 
+1.  $$\dot{T_{L}}= -[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+    $$-\alpha_{2}T_{L}C_{N}-[\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}$$
+    $$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Mi+\alpha_{4}Ci $$
+2.  $$\dot{M}=[\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)$$
+    $$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+    $$-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M $$
+3.  $$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]C_{N} $$
+4.  $$\dot{Mi}=[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
+    $$-[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Mi $$
+5.  $$\dot{Ci}=\alpha_{2}T_{L}C_{N}-[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Ci $$
+6.  $$\dot{TNF}=[\alpha_{5}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Mi-\mu_{7}TNF $$
+7.  $$\dot{IL10}=\alpha_{7}-\mu_{9}IL10 $$
+
+# Modelo actualizado 
+#### Con los subindices en las funciones de Hill y los signo en funciones de Hill (Asignan su propio signo)
+
+![](images/Modelo_29_NOV_2024.jpg)
+
+### Ecuaciones 
 1.
-$$\dot{T_{L}}= -[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
-$$-\alpha_{2}T_{L}C_{N}-[\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}$$
-$$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Mi+\alpha_{4}Ci $$
+$$\dot{T_{L}}= [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}{}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M$$
+$$-\alpha_{2}T_{L}C_{N}+[\mu{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L} $$
+$$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}+\alpha_{4}C_{i} $$
 2.
-$$\dot{M}=[\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)$$
-$$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
-$$-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M $$
+$$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M-M_{0})$$
+$$+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
+$$+[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M  $$
+
 3.
-$$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]C_{N} $$
+
+$$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}+[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{N} $$
 4.
-$$\dot{Mi}=[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M$$
-$$-[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Mi $$
+$$\dot{M_{i}}=[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
+$$+[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}  $$
 5.
-$$\dot{Ci}=\alpha_{2}T_{L}C_{N}-[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Ci $$
+
+$$\dot{C_{i}}=\alpha_{2}T_{L}C_{N}+[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{i}$$
 6.
-$$\dot{TNF}=[\alpha_{5}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Mi-\mu_{7}TNF $$
+$$\dot{TNF}=[\alpha_{5}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}-\mu_{7}(TNF-qTNF) $$
 7.
-$$\dot{IL10}=\alpha_{7}-\mu_{9}IL10 $$
+$$\dot{IL10}=\alpha_{7}-\mu_{9}(IL10-qIL10) $$
+
+#### Resultados a los 100 dias
+
+![](images/29_NOV_2024_NOSIGNS_100d.png)
+
+#### Resultados a los 3650 dias (10 years)
+
+![](images/29_NOV_2024_NOSIGNS.png)
+
+
+
+
+
+
+
+
+
+
+
