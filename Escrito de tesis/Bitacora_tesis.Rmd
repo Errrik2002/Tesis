@@ -764,22 +764,23 @@ $$ \dot{IL10}= \underbrace{\alpha{7}}_{\text{Secreción}}-\underbrace{\mu_{9}(IL
 6.  $$\dot{TNF}=[\alpha_{5}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]Mi-\mu_{7}TNF $$
 7.  $$\dot{IL10}=\alpha_{7}-\mu_{9}IL10 $$
 
-# Modelo actualizado 
+# Modelo actualizado
+
 #### Con los subindices en las funciones de Hill y los signo en funciones de Hill (Asignan su propio signo)
 
 ![](images/Modelo_29_NOV_2024.jpg)
 
-### Ecuaciones 
-1.
-$$\dot{T_{L}}= [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}{}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M$$
-$$-\alpha_{2}T_{L}C_{N}+[\mu{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L} $$
-$$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}+\alpha_{4}C_{i} $$
-2.
-$$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M-M_{0})$$
-$$+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
-$$+[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M  $$
+### Ecuaciones
 
-3.
+1.  $$\dot{T_{L}}= [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}{}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M$$
+    $$-\alpha_{2}T_{L}C_{N}+[\mu{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L} $$
+    $$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}+\alpha_{4}C_{i} $$
+
+2.  $$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M-M_{0})$$
+    $$+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
+    $$+[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M  $$
+
+3.  
 
 $$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}+[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{N} $$
 4.
@@ -790,8 +791,7 @@ $$+[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(I
 $$\dot{C_{i}}=\alpha_{2}T_{L}C_{N}+[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{i}$$
 6.
 $$\dot{TNF}=[\alpha_{5}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}-\mu_{7}(TNF-qTNF) $$
-7.
-$$\dot{IL10}=\alpha_{7}-\mu_{9}(IL10-qIL10) $$
+7. $$\dot{IL10}=\alpha_{7}-\mu_{9}(IL10-qIL10) $$
 
 #### Resultados a los 100 dias
 
@@ -801,13 +801,87 @@ $$\dot{IL10}=\alpha_{7}-\mu_{9}(IL10-qIL10) $$
 
 ![](images/29_NOV_2024_NOSIGNS.png)
 
+# 03 de Diciembre del 2024
 
+# 
 
+# ![](images/Chagas_03dic/Diapositiva1.PNG)
 
+# 
 
+### Ecuaciones Con los valores de Hill adecuados
 
+1.  $$\dot{T_{L}}= [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}{}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M$$
+    $$-\alpha_{2}T_{L}C_{N}+[\mu{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L} $$
+    $$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}+\alpha_{4}C_{i} $$
 
+2.  $$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M_{0}-M)$$
+    $$+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
+    $$+[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M  $$
 
+3.  
 
+$$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}+[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{N} $$
+4.
+$$\dot{M_{i}}=[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
+$$+[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}  $$
+5.
 
+$$\dot{C_{i}}=\alpha_{2}T_{L}C_{N}+[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{i}$$
+6.
+$$\dot{TNF}=[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]M_{i}-\mu_{7}(TNF-qTNF) $$
+7. $$\dot{IL10}=\alpha_{7}M_{i}-\mu_{9}(IL10-qIL10) $$
 
+### Variables y parametro
+
+| Variable     | Valor Inicial | Definicion                   | Cita             |
+|-------------------|------------------|------------------|------------------|
+| $T_{L}$      | 50            | Parasitos en sangre          | Freitas 2018     |
+| $M_{\phi}$   | 209           | Macrofagos                   | Freitas 2018     |
+| $M_{\phi i}$ | 0             | Macrofagos infectados        | --------         |
+| $C_{N}$      | 136           | Cardiomiocitos no infectados | Freitas 2018     |
+| $C_{i}$      | 0             | Cardiomiocitos infectados    | Freitas 2018     |
+| TNF          | 0.14          | TNF alpha                    | Brady et al 2016 |
+| IL10         | 0.15          | Interleucina 10              | Brady et al 2016 |
+
+| Parametro         | Valor                                             | Definicion                                 | Referencia                     |
+|-------------------|------------------|------------------|------------------|
+| $\alpha_{1}$      | $3.14X^{-10} \dfrac{1}{M_{\phi}*Dia}$             | Tasa de fagocitosis de Macrofagos          | Flores Garza 2022              |
+| $\alpha_{2}$      | $2.5X10^{-9}$                                     | Tasa de infeccion de cardiomiocitos        | Freitas 2018                   |
+| $\mu_{1}$\*       | $0.06 \dfrac{1}{Dia}$                             | Muerte de pareasito libre                  | Yang 2015                      |
+| $\mu_{1}$\*       | $1X10^{-1}$                                       | Muerte de pareasito libre                  | Freitas 2018                   |
+| $\nu_{1}$\*       | 1                                                 | Proliferacion de Macrofagos                | Freitas 2018                   |
+| $\nu_{1}$\*       | 1,080,728                                         | Proliferacion de Macrofagos                | Flores Garza 2022              |
+| $\nu_{1}$\*       | 0.99                                              | Proliferacion de Macrofagos                |                                |
+| $\mu_{2}$         | $0.0019 \dfrac{1}{Dia}$                           | Tasa de muerte de macrofago                | Flores Garza 2022              |
+| $\mu_{2}$         | $5X10^{-1}$                                       | Tasa de muerte de macrofago                | Freitas 2018                   |
+| $\mu_{3}$         | -----------------                                 | Muerte de cardiomiocitos                   | -----------------              |
+| $\mu_{4}$         | $5X10^{-4} + 1.5X10^{-4}$                         | Tasa de muerte de Trypanosoma intracelular | Freitas 2018 (M+CD8)           |
+| $\alpha_{3}$\*    | 90                                                | Tasa de proliferacion en $C_{i}$           | Freitas 2018                   |
+| $\alpha_{3}$\*    | $20 \dfrac{1}{Ti*Sc}$                             | Tasa de proliferacion en $C_{i}$           | Yang 2015 Sc=Susceptible cells |
+| $\alpha_{3}$\*    | 1.95 \* cell                                      | Tasa de proliferacion en $C_{i}$           | Arias 2020                     |
+| $\alpha_{4}$\*    | 90                                                | Tasa de proliferacion en $M_{i}$           | Freitas 2018                   |
+| $\alpha_{4}$\*    | $20 \dfrac{1}{Ti*Sc}$                             | Tasa de proliferacion en $M_{i}$           | Yang 2015 Sc=Susceptible cells |
+| $\alpha_{4}$\*    | 1.95 \* cell                                      | Tasa de proliferacion en $M_{i}$           | Arias 2020                     |
+| $\mu_{5}$         | $5X10^{-1}$                                       | Muerte de Macrofago infectado              | Feitas 2018                    |
+| $\mu_{6}$         | $1X10^{-6}$                                       | Muerte de cardiomiocito infectado          | Freitas 2018                   |
+| $\alpha_{5}$      | $200 \dfrac{1}{Dia} + 1.5 \dfrac{1}{M*Dia}$       | Secrecion de TNF-$\alpha$                  | Talaei 2021                    |
+| $\alpha_{5}$\*    | 14.4/dia                                          | Secrecion de TNF-$\alpha$                  | Brady et al 2016               |
+| $\alpha_{7}$      | $1.1 \dfrac{1}{Dia} + 0.19 \dfrac{R}{Dia*M}=1.29$ | Secrecion de IL-10                         | Talaei 2021                    |
+| $\alpha_{7}$\*    | 0.45.dia                                          | Secrecion de IL10                          | Brady et al 2016               |
+| $\mu_{7}$         | 24/Dia                                            | Degradacion de TNF-$\alpha$                | Brady et al 2016               |
+| $\mu_{9}$         | 19.2/Dia                                          | Degradacion de IL-10                       | Brady et al. 2016              |
+| $\eta_{TNF-IL10}$ | 17.4                                              | Hill Functions Relative concentration      | Talaei 2021                    |
+| $\eta_{10-IL6}$   | 560                                               | Hill Functions Relative concentration      | Talaei 2021                    |
+| $h_{10-IL6}$      | 3.68                                              | Hill Functions Dimentionless               | Talaei 2021                    |
+| $h_{TNF-IL10}$    | 3                                                 | Hill Functions Dimentionless               | Talaei 2021                    |
+| $\eta_{M-TNF}$    | 100                                               | Hill Functions Relative concentration      | Talaei 2021                    |
+| $\eta_{M-IL10}$   | 4.35                                              | Hill Functions Relative concentration      | Talaei 2021                    |
+| $h_{M-TNF}$       | 3.16                                              | Hill Functions Relative concentration      | Talaei 2021                    |
+| $h_{M-IL10}$      | 0.3                                               | Hill Functions Relative concentration      | Talaei 2021                    |
+
+### Imagenes de resultados
+
+![Modelo a los 3650 dias (10 years)](images/03_DIC_2024.png)
+
+![Modelo de 100 dias](images/03_DIC_2024_100D.png)
