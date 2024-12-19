@@ -2,7 +2,7 @@ library(deSolve)
 
 
 #Parametros
-alpha1 <- 3.14*10**-10 #1
+alpha1 <- 5.8*10**-8 #1
 alpha2 <- 2.5*10**-9 #2
 #mu1 <- 0.06 # REFERENCIA DE YANG 2015 (HAY OTRO VALOR)
 mu1 <- 0.06 #3
@@ -10,7 +10,7 @@ nu1 <- 0.99 # REFERENCIA DE FREITAS, LA OTRA OPCION ES MUY DRASTICA  #4
 mu2 <- 5*10**-1 #5
 mu3 <- 0 #MISMO VALOR QUE EL DE LOS MACROFAGOS, MU2 #6
 mu4 <- 6.5*10**-4 #ES LA SUMA DE PARAMETRO DE MUERTE DEL PARASITO Y SU ELIMINACION POR CD8 #7
-alpha3 <- 30 #replicacion Mi #8
+alpha3 <- 0 #replicacion Mi #8
 alpha4 <- 90 #Replicacion Ci #9
 mu5 <- 9*10**-1 #10
 mu6 <- 1*10**-6 #11
@@ -42,7 +42,7 @@ trypanosoma_29_NOV <- function(t,state,parameter){
     d_Cn <- -alpha2*TL*Cn+(mu3*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Cn
     d_Mi <- (alpha1*((TNF**h3)/((n3**h3)+TNF**h3))*(n4**h4)/((n4**h4)+IL10**h4))*TL*M+(mu5*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Mi
     d_Ci <- alpha2*TL*Cn+(mu6*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Ci
-    d_TNF <- (alpha5*((n1**h1)/((n1**h1)+IL10**h1)))*Mi-mu7*(TNF-qTNF)
+    d_TNF <- (alpha5*((n1**h1)/((n1**h1)+IL10**h1)))*Mi-mu7*(TNF-qTNF)+(alpha5*((n1**h1)/((n1**h1)+IL10**h1)))*Ci
     d_IL10 <- alpha7*Mi - mu9*(IL10-qIL10)
 
     return(list(c(d_TL,d_M,d_Cn,d_Mi,d_Ci,d_TNF,d_IL10)))      
@@ -58,7 +58,7 @@ out29_NOV <- ode(y= state, times = times, func= trypanosoma_29_NOV, parms = para
 plot(out29_NOV,col='red')
 
 
-png("images/03_DIC_2024_100D.png")
+png("images/10_DIC_2024_macrofagos_M1.png")
 plot(out29_NOV,col='red')
 dev.off()
 
