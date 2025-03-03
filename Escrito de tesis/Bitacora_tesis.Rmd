@@ -13,19 +13,19 @@ editor_options:
 
 # Primer modelo
 
-1.-$$ d{T_{L}} = \alpha_{1} T_{L} - \alpha_{2} T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N} - \mu T_{L} $$
+1.-$$ \dot{d{T_{L}}} = \alpha_{1} T_{L} - \alpha_{2} T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N} - \mu T_{L} $$
 
-2.-$$ dT_{i} = \alpha_{2}T_{L}M_{\phi} + \alpha_{3}T_{L}C_{N} - \alpha_{4}M_{\phi}iT_{i}-\alpha_{5}M_{\phi}iCD8 - \alpha_{6}C_{i}CD8 - \mu T_{i} + \alpha_{9}T_{i} $$
+2.-$$ \dot{dT_{i}} = \alpha_{2}T_{L}M_{\phi} + \alpha_{3}T_{L}C_{N} - \alpha_{4}M_{\phi}iT_{i}-\alpha_{5}M_{\phi}iCD8 - \alpha_{6}C_{i}CD8 - \mu T_{i} + \alpha_{9}T_{i} $$
 
-3.-$$ dM_{\phi} = \alpha_{7}M_{\phi} - \alpha_{2}T_{L}M_{\phi} - \mu M_{\phi} $$
+3.-$$ \dot{dM_{\phi}} = \alpha_{7}M_{\phi} - \alpha_{2}T_{L}M_{\phi} - \mu M_{\phi} $$
 
-4-.$$ dM_{\phi}i = \alpha_{2}T_{L}M_{\phi} - \alpha_{5}M_{\phi}iCD8 -\mu M_{\phi}i $$
+4-.$$ \dot{dM_{\phi}i} = \alpha_{2}T_{L}M_{\phi} - \alpha_{5}M_{\phi}iCD8 -\mu M_{\phi}i $$
 
-5.-$$ dC_{N}= \alpha_{8}C_{N} - \alpha_{3}T_{L}C_{N} - \mu C_{N} $$
+5.-$$ \dot{dC_{N}}= \alpha_{8}C_{N} - \alpha_{3}T_{L}C_{N} - \mu C_{N} $$
 
-6.-$$ dC_{i} = \alpha_{3}T_{L}C_{N} - \alpha_{6}C_{i}CD8 - \mu C_{i} $$
+6.-$$ \dot{dC_{i}} = \alpha_{3}T_{L}C_{N} - \alpha_{6}C_{i}CD8 - \mu C_{i} $$
 
-7.- $$ dCD8 = \alpha_{10} CD8 - \mu CD8 $$
+7.- $$ \dot{dCD8} = \alpha_{10} CD8 - \mu CD8 $$
 
 ## Explicacion
 
@@ -847,6 +847,7 @@ $$\dot{TNF}=[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL
 | Parametro         | Valor                                             | Definicion                                 | Referencia                     |
 |-------------------|------------------|------------------|------------------|
 | $\alpha_{1}$      | $3.14X^{-10} \dfrac{1}{M_{\phi}*Dia}$             | Tasa de fagocitosis de Macrofagos          | Flores Garza 2022              |
+| $\alpha_{1}$      | $5.8X10^{-8}$             | Tasa de fagocitosis de Macrofagos          | Flores Garza 2022              |
 | $\alpha_{2}$      | $2.5X10^{-9}$                                     | Tasa de infeccion de cardiomiocitos        | Freitas 2018                   |
 | $\mu_{1}$\*       | $0.06 \dfrac{1}{Dia}$                             | Muerte de pareasito libre                  | Yang 2015                      |
 | $\mu_{1}$\*       | $1X10^{-1}$                                       | Muerte de pareasito libre                  | Freitas 2018                   |

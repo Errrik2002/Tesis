@@ -359,22 +359,24 @@ display: none;
 
 <div id="primer-modelo" class="section level1">
 <h1>Primer modelo</h1>
-<p>1.-<span class="math display">\[ d{T_{L}} = \alpha_{1} T_{L} -
+<p>1.-<span class="math display">\[ \dot{d{T_{L}}} = \alpha_{1} T_{L} -
 \alpha_{2} T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N} - \mu T_{L}
 \]</span></p>
-<p>2.-<span class="math display">\[ dT_{i} = \alpha_{2}T_{L}M_{\phi} +
-\alpha_{3}T_{L}C_{N} - \alpha_{4}M_{\phi}iT_{i}-\alpha_{5}M_{\phi}iCD8 -
-\alpha_{6}C_{i}CD8 - \mu T_{i} + \alpha_{9}T_{i} \]</span></p>
-<p>3.-<span class="math display">\[ dM_{\phi} = \alpha_{7}M_{\phi} -
-\alpha_{2}T_{L}M_{\phi} - \mu M_{\phi} \]</span></p>
-<p>4-.<span class="math display">\[ dM_{\phi}i = \alpha_{2}T_{L}M_{\phi}
-- \alpha_{5}M_{\phi}iCD8 -\mu M_{\phi}i \]</span></p>
-<p>5.-<span class="math display">\[ dC_{N}= \alpha_{8}C_{N} -
-\alpha_{3}T_{L}C_{N} - \mu C_{N} \]</span></p>
-<p>6.-<span class="math display">\[ dC_{i} = \alpha_{3}T_{L}C_{N} -
-\alpha_{6}C_{i}CD8 - \mu C_{i} \]</span></p>
-<p>7.- <span class="math display">\[ dCD8 = \alpha_{10} CD8 - \mu CD8
+<p>2.-<span class="math display">\[ \dot{dT_{i}} =
+\alpha_{2}T_{L}M_{\phi} + \alpha_{3}T_{L}C_{N} -
+\alpha_{4}M_{\phi}iT_{i}-\alpha_{5}M_{\phi}iCD8 - \alpha_{6}C_{i}CD8 -
+\mu T_{i} + \alpha_{9}T_{i} \]</span></p>
+<p>3.-<span class="math display">\[ \dot{dM_{\phi}} = \alpha_{7}M_{\phi}
+- \alpha_{2}T_{L}M_{\phi} - \mu M_{\phi} \]</span></p>
+<p>4-.<span class="math display">\[ \dot{dM_{\phi}i} =
+\alpha_{2}T_{L}M_{\phi} - \alpha_{5}M_{\phi}iCD8 -\mu M_{\phi}i
 \]</span></p>
+<p>5.-<span class="math display">\[ \dot{dC_{N}}= \alpha_{8}C_{N} -
+\alpha_{3}T_{L}C_{N} - \mu C_{N} \]</span></p>
+<p>6.-<span class="math display">\[ \dot{dC_{i}} = \alpha_{3}T_{L}C_{N}
+- \alpha_{6}C_{i}CD8 - \mu C_{i} \]</span></p>
+<p>7.- <span class="math display">\[ \dot{dCD8} = \alpha_{10} CD8 - \mu
+CD8 \]</span></p>
 <div id="explicacion" class="section level2">
 <h2>Explicacion</h2>
 <div id="primera.-parasitos-libres" class="section level3">
@@ -1818,194 +1820,200 @@ de Hill (Asignan su propio signo)</h4>
 <td>Flores Garza 2022</td>
 </tr>
 <tr class="even">
+<td><span class="math inline">\(\alpha_{1}\)</span></td>
+<td><span class="math inline">\(5.8X10^{-8}\)</span></td>
+<td>Tasa de fagocitosis de Macrofagos</td>
+<td>Flores Garza 2022</td>
+</tr>
+<tr class="odd">
 <td><span class="math inline">\(\alpha_{2}\)</span></td>
 <td><span class="math inline">\(2.5X10^{-9}\)</span></td>
 <td>Tasa de infeccion de cardiomiocitos</td>
 <td>Freitas 2018</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\mu_{1}\)</span>*</td>
 <td><span class="math inline">\(0.06 \dfrac{1}{Dia}\)</span></td>
 <td>Muerte de pareasito libre</td>
 <td>Yang 2015</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\mu_{1}\)</span>*</td>
 <td><span class="math inline">\(1X10^{-1}\)</span></td>
 <td>Muerte de pareasito libre</td>
 <td>Freitas 2018</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\nu_{1}\)</span>*</td>
 <td>1</td>
 <td>Proliferacion de Macrofagos</td>
 <td>Freitas 2018</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\nu_{1}\)</span>*</td>
 <td>1,080,728</td>
 <td>Proliferacion de Macrofagos</td>
 <td>Flores Garza 2022</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\nu_{1}\)</span>*</td>
 <td>0.99</td>
 <td>Proliferacion de Macrofagos</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\mu_{2}\)</span></td>
 <td><span class="math inline">\(0.0019 \dfrac{1}{Dia}\)</span></td>
 <td>Tasa de muerte de macrofago</td>
 <td>Flores Garza 2022</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\mu_{2}\)</span></td>
 <td><span class="math inline">\(5X10^{-1}\)</span></td>
 <td>Tasa de muerte de macrofago</td>
 <td>Freitas 2018</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\mu_{3}\)</span></td>
 <td>—————–</td>
 <td>Muerte de cardiomiocitos</td>
 <td>—————–</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\mu_{4}\)</span></td>
 <td><span class="math inline">\(5X10^{-4} + 1.5X10^{-4}\)</span></td>
 <td>Tasa de muerte de Trypanosoma intracelular</td>
 <td>Freitas 2018 (M+CD8)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\alpha_{3}\)</span>*</td>
 <td>90</td>
 <td>Tasa de proliferacion en <span class="math inline">\(C_{i}\)</span></td>
 <td>Freitas 2018</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\alpha_{3}\)</span>*</td>
 <td><span class="math inline">\(20 \dfrac{1}{Ti*Sc}\)</span></td>
 <td>Tasa de proliferacion en <span class="math inline">\(C_{i}\)</span></td>
 <td>Yang 2015 Sc=Susceptible cells</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\alpha_{3}\)</span>*</td>
 <td>1.95 * cell</td>
 <td>Tasa de proliferacion en <span class="math inline">\(C_{i}\)</span></td>
 <td>Arias 2020</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\alpha_{4}\)</span>*</td>
 <td>90</td>
 <td>Tasa de proliferacion en <span class="math inline">\(M_{i}\)</span></td>
 <td>Freitas 2018</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\alpha_{4}\)</span>*</td>
 <td><span class="math inline">\(20 \dfrac{1}{Ti*Sc}\)</span></td>
 <td>Tasa de proliferacion en <span class="math inline">\(M_{i}\)</span></td>
 <td>Yang 2015 Sc=Susceptible cells</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\alpha_{4}\)</span>*</td>
 <td>1.95 * cell</td>
 <td>Tasa de proliferacion en <span class="math inline">\(M_{i}\)</span></td>
 <td>Arias 2020</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\mu_{5}\)</span></td>
 <td><span class="math inline">\(5X10^{-1}\)</span></td>
 <td>Muerte de Macrofago infectado</td>
 <td>Feitas 2018</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\mu_{6}\)</span></td>
 <td><span class="math inline">\(1X10^{-6}\)</span></td>
 <td>Muerte de cardiomiocito infectado</td>
 <td>Freitas 2018</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\alpha_{5}\)</span></td>
 <td><span class="math inline">\(200 \dfrac{1}{Dia} + 1.5
 \dfrac{1}{M*Dia}\)</span></td>
 <td>Secrecion de TNF-<span class="math inline">\(\alpha\)</span></td>
 <td>Talaei 2021</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\alpha_{5}\)</span>*</td>
 <td>14.4/dia</td>
 <td>Secrecion de TNF-<span class="math inline">\(\alpha\)</span></td>
 <td>Brady et al 2016</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\alpha_{7}\)</span></td>
 <td><span class="math inline">\(1.1 \dfrac{1}{Dia} + 0.19
 \dfrac{R}{Dia*M}=1.29\)</span></td>
 <td>Secrecion de IL-10</td>
 <td>Talaei 2021</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\alpha_{7}\)</span>*</td>
 <td>0.45.dia</td>
 <td>Secrecion de IL10</td>
 <td>Brady et al 2016</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\mu_{7}\)</span></td>
 <td>24/Dia</td>
 <td>Degradacion de TNF-<span class="math inline">\(\alpha\)</span></td>
 <td>Brady et al 2016</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\mu_{9}\)</span></td>
 <td>19.2/Dia</td>
 <td>Degradacion de IL-10</td>
 <td>Brady et al. 2016</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\eta_{TNF-IL10}\)</span></td>
 <td>17.4</td>
 <td>Hill Functions Relative concentration</td>
 <td>Talaei 2021</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\eta_{10-IL6}\)</span></td>
 <td>560</td>
 <td>Hill Functions Relative concentration</td>
 <td>Talaei 2021</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(h_{10-IL6}\)</span></td>
 <td>3.68</td>
 <td>Hill Functions Dimentionless</td>
 <td>Talaei 2021</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(h_{TNF-IL10}\)</span></td>
 <td>3</td>
 <td>Hill Functions Dimentionless</td>
 <td>Talaei 2021</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\eta_{M-TNF}\)</span></td>
 <td>100</td>
 <td>Hill Functions Relative concentration</td>
 <td>Talaei 2021</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\eta_{M-IL10}\)</span></td>
 <td>4.35</td>
 <td>Hill Functions Relative concentration</td>
 <td>Talaei 2021</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(h_{M-TNF}\)</span></td>
 <td>3.16</td>
 <td>Hill Functions Relative concentration</td>
 <td>Talaei 2021</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(h_{M-IL10}\)</span></td>
 <td>0.3</td>
 <td>Hill Functions Relative concentration</td>
