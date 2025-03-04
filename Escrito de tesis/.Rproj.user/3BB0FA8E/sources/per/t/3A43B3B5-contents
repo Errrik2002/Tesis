@@ -893,7 +893,7 @@ $$\dot{TNF}=[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL
     $$-\alpha_{2}T_{L}C_{N}+[\mu{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L} $$
     $$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}+\alpha_{4}C_{i} $$
 
-2.  $$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M_{0}-M)$$
+2.  $$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M-M_{0})$$
     $$+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
     $$+[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M  $$
 

@@ -14,15 +14,15 @@ alpha3 <- 0 #replicacion Mi #8 PUEDE VARIAR SI ES M1 O M2
 alpha4 <- 90 #Replicacion Ci #9
 mu5 <- 5*10**-1 #10 #NO AFECTAN, PUEDE SER POR LAS CITOCINAS
 mu6 <- 1*10**-6 #11
-alpha5 <- 200 #12
-alpha7 <- 1.29 #SECRECION DE IL10 #13
+alpha5 <- 14.4 #12
+alpha7 <- 0.45 #SECRECION DE IL10 #13
 mu7 <- 24 #TASA DE degradacion DE TNF #en base a la literatura CADA 18 MIN #14
 mu9 <- 19.2 #15 Degradacion de IL10
 n1 <- 17.4 #TNF-IL10
 n2 <- 560 #IL10-IL6
 h1 <- 3 #TNF-IL10
 h2 <- 3.68 #IL10-IL6
-M0 <-209 # NUMERO EQUIS
+M0 <-209# NUMERO EQUIS
 qTNF <- 0.14 #16
 qIL10 <- 0.15 #17  
 n3 <- 100 #MTNF
@@ -53,9 +53,9 @@ trypanosoma_29_NOV <- function(t,state,parameter){
 parameter <- c(alpha1,alpha2, mu1, nu1, mu2, mu3, mu4, alpha3, alpha4, mu5, mu6, alpha5, alpha7, mu7, mu9, n1, n2, h1, h2, qIL10, qTNF,M0) 
 state <- c(TL=50, M=209, Cn= 136, Mi= 0, Ci = 0, TNF = 0.14, IL10 =0.15)
 times <- seq(0,3650, by=1)
-Param_alpha5_200 <- ode(y= state, times = times, func= trypanosoma_29_NOV, parms = parameter)
+cuatro_de_marzo_2025 <- ode(y= state, times = times, func= trypanosoma_29_NOV, parms = parameter)
 
-plot(Param_alpha5_200,col='red')
+plot(cuatro_de_marzo_2025,col='red')
 
 
 
