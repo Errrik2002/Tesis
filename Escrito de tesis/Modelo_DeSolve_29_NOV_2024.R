@@ -296,7 +296,8 @@ analisis_SP <- function(p,np,nv){
   
   parameter_function_image <- paste("imagenes_analisis_sensibilidad_param/",parametros[np],"_",nombre_columnas[nv],".png", sep = "") 
   png(parameter_function_image)
-  plot(basedatos_variables,col='red')
+  par(mfrow=c(3,3))
+  plot(basedatos_variables, main= paste("ASP_",parametros[np],"_",nombre_columnas[nv],sep = ""),ylab= nombre_columnas[nv])
   dev.off()
   
   
@@ -312,7 +313,7 @@ analisis_SP <- function(p,np,nv){
 
 #parametros <- c("alpha1","alpha2", "mu1", "nu1", "mu2", "mu3", "alpha3", "alpha4", "mu5", "mu6", "alpha5", "alpha7", "mu7", "mu9", "n1", "n2", "h1", "h2", "qIL10", "qTNF","M0") 
 #NUMERO DE PARAMETROS
-#alpha1 = 1   #mu1=3   #mu2=5     #mu5=9   #alpha5=11  #mu7=13  #qIL10=19  #M0=17
+#alpha1 = 1   #mu1=3   #mu2=5     #mu5=9   #alpha5=11  #mu7=13  #qIL10=19  #M0=21
 #alpha2= 2    #nu1=4  #alpha4=8  #mu6=10  #alpha7=12  #mu9=14  #qTNF=20
 
 #\\mu3=6\\#
@@ -324,6 +325,15 @@ analisis_SP(M0,21,8)
 
 
 #TAL VEZ EN CITOCINAS, VER EL PUNTO MAXIMO?
+
+
+
+##################
+#GRAFICA DEL ANALISIS DE SENSIBILIDAD PARAMETRICA
+#####################
+#
+#ALPHA1
+
 
 
 
