@@ -927,3 +927,9 @@ $$\dot{TNF}=[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL
 ![](images/10_DIC_2024_macrofagos_M1.png)
 
 ![](images/Seminario_LBCSC.jpg)
+# Analisis de sensibilidad parametrica
+
+$$ \lvert \dfrac{X(\alpha +\delta)-X(\alpha)}{X(\alpha)}  \rvert$$
+Esta es la ecuacion para el valor absoulto de los cambios, debo aplicarlo a cada uno de todos los parametros
+
+
