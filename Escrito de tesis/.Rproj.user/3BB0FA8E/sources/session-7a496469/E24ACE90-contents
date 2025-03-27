@@ -39,12 +39,12 @@ h4 <- 0.3#MIL10
 
 trypanosoma_29_NOV <- function(t,state,parameter){
   with(as.list(c(state,parameter)),  {
-    d_TL <- (alpha1*((TNF**h3)/((n3**h3)+TNF**h3))*(n4**h4)/((n4**h4)+IL10**h4))*TL*M-alpha2*TL*Cn+(mu1*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*TL+(alpha3*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Mi+alpha4*Ci
-    d_M <- (nu1*((TNF**h1)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*(M0-M)+(alpha1*((TNF**h3)/((n3**h3)+TNF**h3))*(n4**h4)/((n4**h4)+IL10**h4))*TL*M+(mu2*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*M
-    d_Cn <- -alpha2*TL*Cn+(mu3*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Cn
-    d_Mi <- (alpha1*((TNF**h3)/((n3**h3)+TNF**h3))*(n4**h4)/((n4**h4)+IL10**h4))*TL*M+(mu5*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Mi
-    d_Ci <- alpha2*TL*Cn+(mu6*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Ci
-    d_TNF <- (alpha5*((n1**h1)/((n1**h1)+IL10**h1)))*Mi-mu7*(TNF-qTNF)+(alpha5*((n1**h1)/((n1**h1)+IL10**h1)))*Ci
+    d_TL <- -(alpha1*((TNF**h3)/((n3**h3)+TNF**h3))*(n4**h4)/((n4**h4)+IL10**h4))*TL*M-alpha2*TL*Cn-(mu1*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*TL+(alpha3*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Mi+alpha4*Ci
+    d_M <- (nu1*((TNF**h1)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*(M0-M)+(alpha1*((TNF**h3)/((n3**h3)+TNF**h3))*(n4**h4)/((n4**h4)+IL10**h4))*TL*M-(mu2*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*M
+    d_Cn <- -alpha2*TL*Cn-(mu3*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Cn
+    d_Mi <- (alpha1*((TNF**h3)/((n3**h3)+TNF**h3))*(n4**h4)/((n4**h4)+IL10**h4))*TL*M-(mu5*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Mi
+    d_Ci <- alpha2*TL*Cn-(mu6*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Ci
+    d_TNF <- (alpha5*((n1**h1)/((n1**h1)+IL10**h1)))*Mi-mu7*(TNF-qTNF)+((alpha5*((n1**h1)/((n1**h1)+IL10**h1)))*Ci)#*0.25
     d_IL10 <- alpha7*Mi - mu9*(IL10-qIL10)
 
     return(list(c(d_TL,d_M,d_Cn,d_Mi,d_Ci,d_TNF,d_IL10)))      
@@ -58,7 +58,9 @@ times <- seq(0,3650, by=1)
 parametros_normales_18_mar_2025 <- ode(y= state, times = times, func= trypanosoma_29_NOV, parms = parameter)
 
 plot(parametros_normales_18_mar_2025,col='red')
-
+plot(parametronormales)
+#parametros_normales_18_mar_2025[3651,]
+#parametronormales[3651,]
 
 
    #############Guardar las imagenes ###########
@@ -117,6 +119,7 @@ abs(-20) #Valor absoluto es la distancia de un valor a otro sin importar el sign
 parametronormales <- readRDS("objetosRDS/Parametrosnormales.rds")
 View(parametronormales)
 nombre_columnas <-colnames(parametronormales) #nombre de columnas
+plot(parametronormales)
 
 #alpha1 
 
