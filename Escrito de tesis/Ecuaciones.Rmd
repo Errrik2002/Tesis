@@ -1,0 +1,27 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+##### 1.  
+$$\dot{T_{L}}= -[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}{}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M-\alpha_{2}T_{L}C_{N}-[\mu{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L} $$
+    $$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}+\alpha_{4}C_{i} $$
+
+##### 2.
+$$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M-M_{0})-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
+    $$-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M  $$
+
+##### 3.  
+$$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{N} $$
+
+##### 4.
+$$\dot{M_{i}}=[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M-[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}  $$
+
+##### 5.
+$$\dot{C_{i}}=\alpha_{2}T_{L}C_{N}-[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{i}$$
+
+##### 6.
+$$\dot{TNF}=[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]M_{i}-\mu_{7}(TNF-qTNF)+[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]C_{i} $$
+
+##### 7.
+$$\dot{IL10}=\alpha_{7}M_{i}-\mu_{9}(IL10-qIL10) $$

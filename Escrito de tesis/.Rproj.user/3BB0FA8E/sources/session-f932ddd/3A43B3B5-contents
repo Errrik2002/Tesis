@@ -889,25 +889,22 @@ $$\dot{TNF}=[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL
 
 # TNF-a de los cardiomiocitos 10_Diciembre_2024
 
-1.  $$\dot{T_{L}}= [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}{}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M$$
+1.
+$$\dot{T_{L}}= [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}{}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M$$
     $$-\alpha_{2}T_{L}C_{N}+[\mu{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L} $$
     $$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}+\alpha_{4}C_{i} $$
 
-2.  $$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M-M_{0})$$
-    $$+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
+2.
+$$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M-M_{0})+[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M$$
     $$+[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M  $$
 
-3.  
-
-$$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}+[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{N} $$
-4.
-$$\dot{M_{i}}=[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
+3.$$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}+[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{N} $$
+4.$$\dot{M_{i}}=[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
 $$+[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}  $$
-5.
+5.$$\dot{C_{i}}=\alpha_{2}T_{L}C_{N}+[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{i}$$
 
-$$\dot{C_{i}}=\alpha_{2}T_{L}C_{N}+[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{i}$$
-6.
-$$\dot{TNF}=[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]M_{i}-\mu_{7}(TNF-qTNF)+[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]C_{i} $$
+6.$$\dot{TNF}=[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]M_{i}-\mu_{7}(TNF-qTNF)+[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]C_{i} $$
+
 7. $$\dot{IL10}=\alpha_{7}M_{i}-\mu_{9}(IL10-qIL10) $$
 
 ## Resultados
@@ -934,27 +931,25 @@ Esta es la ecuacion para el valor absoulto de los cambios, debo aplicarlo a cada
 
 # Agregandole signo a las ecuaciones a pesar de la funcion de Hill
 
-1.  $$\dot{T_{L}}= -[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}{}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M$$
-    $$-\alpha_{2}T_{L}C_{N}-[\mu{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L} $$
+##### 1.  
+$$\dot{T_{L}}= -[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}{}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M-\alpha_{2}T_{L}C_{N}-[\mu{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L} $$
     $$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}+\alpha_{4}C_{i} $$
 
-2.  $$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M-M_{0})$$
-    $$-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
+##### 2.
+$$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M-M_{0})-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
     $$-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M  $$
 
-3.  
-
+##### 3.  
 $$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{N} $$
 
-4.
-$$\dot{M_{i}}=[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
-$$-[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}  $$
+##### 4.
+$$\dot{M_{i}}=[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M-[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}  $$
 
-5.
-
+##### 5.
 $$\dot{C_{i}}=\alpha_{2}T_{L}C_{N}-[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{i}$$
 
-6.
+##### 6.
 $$\dot{TNF}=[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]M_{i}-\mu_{7}(TNF-qTNF)+[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]C_{i} $$
 
-7. $$\dot{IL10}=\alpha_{7}M_{i}-\mu_{9}(IL10-qIL10) $$
+##### 7.
+$$\dot{IL10}=\alpha_{7}M_{i}-\mu_{9}(IL10-qIL10) $$

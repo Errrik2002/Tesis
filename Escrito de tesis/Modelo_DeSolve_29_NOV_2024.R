@@ -54,7 +54,7 @@ trypanosoma_29_NOV <- function(t,state,parameter){
 
 parameter <- c(alpha1,alpha2, mu1, nu1, mu2, mu3, alpha3, alpha4, mu5, mu6, alpha5, alpha7, mu7, mu9, n1, n2, h1, h2, qIL10, qTNF,M0) 
 state <- c(TL=50, M=209, Cn= 136, Mi= 0, Ci = 0, TNF = 22, IL10 =9.8)
-times <- seq(0,5000, by=1)
+times <- seq(0,3650, by=1)
 parametros_signos_bien_27_mar_nosave <- ode(y= state, times = times, func= trypanosoma_29_NOV, parms = parameter)
 
 plot(parametros_signos_bien_27_mar_nosave,col='red')
@@ -69,9 +69,9 @@ signos_bien_parametros_normales <- readRDS("analisis_sensibilidad_param_signos_b
 
    #############Guardar las imagenes ###########
 
-png("images/Param_alpha5_200_25FEB.png")
-plot(Param_alpha5_200,col='red')
-dev.off()
+#pdf("images/Parametros_normales_28_mar_25.pdf",width = 6, height = 8)
+#plot(parametros_signos_bien_27_mar_nosave,col='red')
+#dev.off()
    ##################################
 
 
@@ -296,12 +296,13 @@ analisis_SP <- function(p,np,nv){
   }
   
   basedatos_variables<- basedatos_variables[-1,]
+  
   print(basedatos_variables) 
+  
   plot(basedatos_variables, main= paste("ASP_",parametros[np],"_",nombre_columnas[nv],sep = ""),ylab= nombre_columnas[nv])
   
   parameter_function_image <- paste("imagenes_analisis_sensibilidad_param_signos_bien/",parametros[np],"_",nombre_columnas[nv],".png", sep = "") 
   png(parameter_function_image)
-  par(mfrow=c(3,3))
   plot(basedatos_variables, main= paste("ASP_",parametros[np],"_",nombre_columnas[nv],sep = ""),ylab= nombre_columnas[nv])
   dev.off()
   
