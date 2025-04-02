@@ -932,24 +932,24 @@ Esta es la ecuacion para el valor absoulto de los cambios, debo aplicarlo a cada
 # Agregandole signo a las ecuaciones a pesar de la funcion de Hill
 
 ##### 1.  
-$$\dot{T_{L}}= -[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}{}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M-\alpha_{2}T_{L}C_{N}-[\mu{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L} $$
-    $$+[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}+\alpha_{4}C_{i} $$
+$$\dot{T_{L}}= \underbrace{-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}{}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M}_{\text{Fagocitosis M}}-\underbrace{\alpha_{2}T_{L}C_{N}}_{\text{Infeccion Cn}}-\underbrace{[\mu{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}}_{\text{Muerte de parasito T}} $$
+    $$+\underbrace{[\alpha_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}}_{\text{Replicacion T}}+\underbrace{\alpha_{4}C_{i}}_{\text{Replicacion T}} $$
 
 ##### 2.
-$$\dot{M}= [\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M-M_{0})-[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M $$
-    $$-[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M  $$
+$$\dot{M}= \underbrace{[\nu_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})](M-M_{0})}_{\text{Proliferacion M}}-\underbrace{[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M}_{\text{Fagocitosis M}} $$
+    $$-\underbrace{[\mu_{2}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M}_{\text{Muerte celular M}} $$
 
 ##### 3.  
-$$\dot{C_{N}}=-\alpha_{2}T_{L}C_{N}-[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{N} $$
+$$\dot{C_{N}}=-\underbrace{\alpha_{2}T_{L}C_{N}}_{\text{Infeccion Cn}}-\underbrace{[\mu_{3}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{N}}_{\text{Muerte celular Cn}} $$
 
 ##### 4.
-$$\dot{M_{i}}=[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M-[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}  $$
+$$\dot{M_{i}}=\underbrace{[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]T_{L}M}_{\text{Fagocitosis M}}-\underbrace{[\mu_{5}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]M_{i}}_{\text{Muerte celular Mi}}  $$
 
 ##### 5.
-$$\dot{C_{i}}=\alpha_{2}T_{L}C_{N}-[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{i}$$
+$$\dot{C_{i}}=\underbrace{\alpha_{2}T_{L}C_{N}}_{\text{Infeccion Cn}}-\underbrace{[\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}_{(M)(TNF)}+TNF^{h}})(\dfrac{\eta^{h}_{(M)(IL10)}}{\eta^{h}_{(M)(IL10)}+IL10^{h}})]C_{i}}_{\text{Muerte celular Ci}} $$
 
 ##### 6.
-$$\dot{TNF}=[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]M_{i}-\mu_{7}(TNF-qTNF)+[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]C_{i} $$
+$$\dot{TNF}=\underbrace{[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]M_{i}}_{\text{Secrecion Mi}}-\underbrace{\mu_{7}(TNF-qTNF)}_{\text{Degradacion TNF}}+\underbrace{[\alpha_{5}(\dfrac{\eta^{h}_{(TNF)(IL10)}}{\eta^{h}_{(TNF)(IL10)}+IL10^{h}})]C_{i}}_{\text{Secrecion Ci}} $$
 
 ##### 7.
-$$\dot{IL10}=\alpha_{7}M_{i}-\mu_{9}(IL10-qIL10) $$
+$$\dot{IL10}=\underbrace{\alpha_{7}M_{i}}_{\text{Secrecion Mi}}-\underbrace{\mu_{9}(IL10-qIL10)}_{\text{Degradacion IL10}} $$
