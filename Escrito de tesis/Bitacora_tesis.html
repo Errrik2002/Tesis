@@ -359,24 +359,38 @@ display: none;
 
 <div id="primer-modelo" class="section level1">
 <h1>Primer modelo</h1>
-<p>1.-<span class="math display">\[ \dot{d{T_{L}}} = \alpha_{1} T_{L} -
-\alpha_{2} T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N} - \mu T_{L}
-\]</span></p>
-<p>2.-<span class="math display">\[ \dot{dT_{i}} =
-\alpha_{2}T_{L}M_{\phi} + \alpha_{3}T_{L}C_{N} -
-\alpha_{4}M_{\phi}iT_{i}-\alpha_{5}M_{\phi}iCD8 - \alpha_{6}C_{i}CD8 -
-\mu T_{i} + \alpha_{9}T_{i} \]</span></p>
-<p>3.-<span class="math display">\[ \dot{dM_{\phi}} = \alpha_{7}M_{\phi}
-- \alpha_{2}T_{L}M_{\phi} - \mu M_{\phi} \]</span></p>
-<p>4-.<span class="math display">\[ \dot{dM_{\phi}i} =
-\alpha_{2}T_{L}M_{\phi} - \alpha_{5}M_{\phi}iCD8 -\mu M_{\phi}i
-\]</span></p>
-<p>5.-<span class="math display">\[ \dot{dC_{N}}= \alpha_{8}C_{N} -
-\alpha_{3}T_{L}C_{N} - \mu C_{N} \]</span></p>
-<p>6.-<span class="math display">\[ \dot{dC_{i}} = \alpha_{3}T_{L}C_{N}
-- \alpha_{6}C_{i}CD8 - \mu C_{i} \]</span></p>
-<p>7.- <span class="math display">\[ \dot{dCD8} = \alpha_{10} CD8 - \mu
-CD8 \]</span></p>
+<p>1.-<span class="math display">\[ \dot{{T_{L}}} =
+\underbrace{\alpha_{1} T_{L}}_{\text{Entrada}} - \underbrace{\alpha_{2}
+T_{L}M_{\phi}}_{\text{Fagocitosis}} -
+\underbrace{\alpha_{3}T_{L}C_{N}}_{\text{Infeccion}} - \underbrace{\mu
+T_{L}}_{\text{Muerte}} \]</span></p>
+<p>2.-<span class="math display">\[ \dot{T_{i}} =
+\underbrace{\alpha_{2}T_{L}M_{\phi}}_{\text{Fagocitosis}} +
+\underbrace{\alpha_{3}T_{L}C_{N}}_{\text{Infeccion}} -
+\underbrace{\alpha_{4}M_{\phi}iT_{i}}_{\text{Muerte por
+parasito}}-\underbrace{\alpha_{5}M_{\phi}iCD8}_{\text{Muerte CD8}} -
+\underbrace{\alpha_{6}C_{i}CD8}_{\text{Muerte CD8}} - \underbrace{\mu
+T_{i}}_{\text{Muerte natural}} +
+\underbrace{\alpha_{9}T_{i}}_{\text{Proliferacion}} \]</span></p>
+<p>3.-<span class="math display">\[ \dot{M_{\phi}} =
+\underbrace{\alpha_{7}M_{\phi}}_{\text{Proliferacion}} -
+\underbrace{\alpha_{2}T_{L}M_{\phi}}_{\text{Fagocitosis}} -
+\underbrace{\mu M_{\phi}}_{\text{Muerte natural}} \]</span></p>
+<p>4-.<span class="math display">\[ \dot{M_{\phi}i} =
+\underbrace{\alpha_{2}T_{L}M_{\phi}}_{\text{Fagocitosis}} -
+\underbrace{\alpha_{5}M_{\phi}iCD8}_{\text{Muerte CD8}} -\underbrace{\mu
+M_{\phi}i}_{\text{Muerte natural}} \]</span></p>
+<p>5.-<span class="math display">\[ \dot{C_{N}}=
+\underbrace{\alpha_{8}C_{N}}_{\text{Proliferacion}} -
+\underbrace{\alpha_{3}T_{L}C_{N}}_{\text{Infeccion}} - \underbrace{\mu
+C_{N}}_{\text{Muerte natural}} \]</span></p>
+<p>6.-<span class="math display">\[ \dot{C_{i}} =
+\underbrace{\alpha_{3}T_{L}C_{N}}_{\text{Infeccion}} -
+\underbrace{\alpha_{6}C_{i}CD8}_{\text{Muerte CD8}} - \underbrace{\mu
+C_{i}}_{\text{Muerte natural}} \]</span></p>
+<p>7.- <span class="math display">\[ \dot{CD8} = \underbrace{\alpha_{10}
+CD8}_{\text{Proliferacion CD8}} - \underbrace{\mu CD8}_{\text{Muerte
+natural}} \]</span></p>
 <div id="explicacion" class="section level2">
 <h2>Explicacion</h2>
 <div id="primera.-parasitos-libres" class="section level3">

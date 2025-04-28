@@ -13,19 +13,19 @@ editor_options:
 
 # Primer modelo
 
-1.-$$ \dot{d{T_{L}}} = \alpha_{1} T_{L} - \alpha_{2} T_{L}M_{\phi} - \alpha_{3}T_{L}C_{N} - \mu T_{L} $$
+1.-$$ \dot{{T_{L}}} = \underbrace{\alpha_{1} T_{L}}_{\text{Entrada}} - \underbrace{\alpha_{2} T_{L}M_{\phi}}_{\text{Fagocitosis}} - \underbrace{\alpha_{3}T_{L}C_{N}}_{\text{Infeccion}} - \underbrace{\mu T_{L}}_{\text{Muerte natural}} $$
 
-2.-$$ \dot{dT_{i}} = \alpha_{2}T_{L}M_{\phi} + \alpha_{3}T_{L}C_{N} - \alpha_{4}M_{\phi}iT_{i}-\alpha_{5}M_{\phi}iCD8 - \alpha_{6}C_{i}CD8 - \mu T_{i} + \alpha_{9}T_{i} $$
+2.-$$ \dot{T_{i}} = \underbrace{\alpha_{2}T_{L}M_{\phi}}_{\text{Fagocitosis}} + \underbrace{\alpha_{3}T_{L}C_{N}}_{\text{Infeccion}} - \underbrace{\alpha_{4}M_{\phi}iT_{i}}_{\text{Muerte por parasito}}-\underbrace{\alpha_{5}M_{\phi}iCD8}_{\text{Muerte CD8}} - \underbrace{\alpha_{6}C_{i}CD8}_{\text{Muerte CD8}} - \underbrace{\mu T_{i}}_{\text{Muerte natural}} + \underbrace{\alpha_{9}T_{i}}_{\text{Proliferacion}} $$
 
-3.-$$ \dot{dM_{\phi}} = \alpha_{7}M_{\phi} - \alpha_{2}T_{L}M_{\phi} - \mu M_{\phi} $$
+3.-$$ \dot{M_{\phi}} = \underbrace{\alpha_{7}M_{\phi}}_{\text{Proliferacion}} - \underbrace{\alpha_{2}T_{L}M_{\phi}}_{\text{Fagocitosis}} - \underbrace{\mu M_{\phi}}_{\text{Muerte natural}} $$
 
-4-.$$ \dot{dM_{\phi}i} = \alpha_{2}T_{L}M_{\phi} - \alpha_{5}M_{\phi}iCD8 -\mu M_{\phi}i $$
+4-.$$ \dot{M_{\phi}i} = \underbrace{\alpha_{2}T_{L}M_{\phi}}_{\text{Fagocitosis}} - \underbrace{\alpha_{5}M_{\phi}iCD8}_{\text{Muerte CD8}} -\underbrace{\mu M_{\phi}i}_{\text{Muerte natural}} $$
 
-5.-$$ \dot{dC_{N}}= \alpha_{8}C_{N} - \alpha_{3}T_{L}C_{N} - \mu C_{N} $$
+5.-$$ \dot{C_{N}}= \underbrace{\alpha_{8}C_{N}}_{\text{Proliferacion}} - \underbrace{\alpha_{3}T_{L}C_{N}}_{\text{Infeccion}} - \underbrace{\mu C_{N}}_{\text{Muerte natural}} $$
 
-6.-$$ \dot{dC_{i}} = \alpha_{3}T_{L}C_{N} - \alpha_{6}C_{i}CD8 - \mu C_{i} $$
+6.-$$ \dot{C_{i}} = \underbrace{\alpha_{3}T_{L}C_{N}}_{\text{Infeccion}} - \underbrace{\alpha_{6}C_{i}CD8}_{\text{Muerte CD8}} - \underbrace{\mu C_{i}}_{\text{Muerte natural}} $$
 
-7.- $$ \dot{dCD8} = \alpha_{10} CD8 - \mu CD8 $$
+7.- $$ \dot{CD8} = \underbrace{\alpha_{10} CD8}_{\text{Proliferacion CD8}} - \underbrace{\mu CD8}_{\text{Muerte natural}} $$
 
 ## Explicacion
 

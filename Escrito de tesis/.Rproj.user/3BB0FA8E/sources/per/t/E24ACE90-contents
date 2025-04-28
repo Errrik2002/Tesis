@@ -5,18 +5,19 @@
 
 #Instalacion de paquetes necesarios para el modelo
 install.packages("tidyverse")
-install.packages("tidyverse")
+install.packages("deSolve")
 
 #Cargar los paquetes
 library(tidyverse)
 library(deSolve)
+library(dplyr)
 
 
 
 
 #Creacion de paramaetros y asignacion de valores a cada uno
 alpha1 <- 5.8*10**-8 #1
-alpha2 <- 2.5*10**-9 #2
+alpha2 <- 2.75*10**-9 #2
 mu1 <- 0.06 #3
 nu1 <- 1 #4
 mu2 <- 5*10**-1 #5
@@ -65,17 +66,25 @@ trypanosoma_29_NOV <- function(t,state,parameter){
 
 parameter <- c(alpha1,alpha2, mu1, nu1, mu2, mu3, alpha3, alpha4, mu5, mu6, alpha5, alpha7, mu7, mu9, n1, n2, h1, h2, qIL10, qTNF,M0) 
 state <- c(TL=50, M=209, Cn= 136, Mi= 0, Ci = 0, TNF = 22, IL10 =9.8)
-times <- seq(0,5000, by=1)
-parametros_signos_bien_27_mar_nosave <- ode(y= state, times = times, func= trypanosoma_29_NOV, parms = parameter)
+times <- seq(0,3650, by=1)
+parametros_signos_bien_09_apr_nosave <- ode(y= state, times = times, func= trypanosoma_29_NOV, parms = parameter)
 
 # Se grafican las soluciones
-plot(parametros_signos_bien_27_mar_nosave,col='red')
+plot(parametros_signos_bien_09_apr_nosave,col='red')
+View(parametros_signos_bien_09_apr_nosave)
+tail(parametros_signos_bien_09_apr_nosave)
 
 #Se guardan las soluciones del sistema de ecuaciones 
 saveRDS(parametros_signos_bien_27_mar, "analisis_sensibilidad_param_signos_bien/parametros_normales_signos_bien.rds")
 signos_bien_parametros_normales <- readRDS("analisis_sensibilidad_param_signos_bien/parametros_normales_signos_bien.rds")
 
-  
+View(signos_bien_parametros_normales)
+max(signos_bien_parametros_normales[,8])
+#######
+alpha4_Cardiomiocito_no_infec
+
+
+
 
 
 
@@ -394,3 +403,16 @@ mu7_Macrofagos_infectados
 
 mu7_tripanosomas_libres <- readRDS("analisis_sensibilidad_param_signos_bien/mu7_TL.rds")
 mu7_tripanosomas_libres
+
+
+#### PARAMETROS NORMALES ####
+
+Modelo_4_abril_2025 <- readRDS("analisis_sensibilidad_param_signos_bien/parametros_normales_signos_bien.rds")
+View(Modelo_4_abril_2025)
+
+
+
+
+
+
+

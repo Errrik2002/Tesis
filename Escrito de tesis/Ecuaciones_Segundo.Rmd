@@ -1,0 +1,33 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+1. $$\dot{T_{L}}= -\underbrace{ [\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M}_{\text{Fagocitosis}}
+ -\underbrace{\alpha_{2}T_{L}C_{N}}_{\text{Infección}}$$
+ $$-\underbrace{ [\mu_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{L})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}}_{\text{Muerte del parásito}}$$
+
+2.  $$\dot{M} \ \ \ \ = \underbrace{[\nu_{2}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})](M-M0)}_\text{{Proliferación}} $$
+ $$-\underbrace{[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M}_{\text{Fagocitosis}}$$
+$$\underbrace{-[\mu_{2}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]M}_{\text{Muerte de Macrófago}}$$
+
+
+3.$$\dot{C_{N}}=-\underbrace{\alpha_{2}T_{L}C_{N}}_{\text{Infección}}
+-\underbrace{[\mu_{3}(\dfrac{IFN^{h}}{\eta^{h}(C_{N})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{N})(IL10)}{\eta^{h}(C_{N})(IL10)+IL10^{h}})]C_{N}}_{\text{Muerte de cardiomiocito}}$$
+
+4.$$\dot{T_{i}}=\underbrace{\alpha_{2}T_{L}C_{N}}_{\text{Infección}}+
+\underbrace{\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+ TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{L}M}_{\text{Fagocitosis}}  $$
+$$-\underbrace{[\mu_{4}(\dfrac{TNF^{h}}{\eta^{h}(M)(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}})]T_{i}}_{\text{Muerte de parásito}} $$
+$$+\underbrace{[(\dfrac{TNF^{h}}{\eta^{h}(T_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(T_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{i})(IL10)}{\eta^{h}(T_{i})(IL10)+IL10^{h}})(\alpha_{3}+\alpha_{4})]T_{i}}_{\text{Replicación intracelular}}  $$
+
+5. $$\dot{M_{i}}= +\underbrace{[\alpha_{1}(\dfrac{TNF^{h}}{\eta^{h}(T_{L})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(T_{L})(IL10)}{\eta^{h}(T_{L})(IL10)+IL10^{h}})]T_{L}M}_{\text{Fagocitosis}}   $$
+$$-\underbrace{[\mu_{5}(\dfrac{IFN^{h}}{\eta^{h}(M)(IFN)+IFN^{h}})(\dfrac{\eta^{h}(M)(IL10)}{\eta^{h}(M)(IL10)+IL10^{h}}]M_{i}}_{\text{Muerte de macrófago infectado}}  $$
+
+6. $$ \dot{C_{i}}= + \underbrace{\alpha_{2}T_{L}C_{N}}_{\text{Infección}}\\
+-\underbrace{ [\mu_{6}(\dfrac{TNF^{h}}{\eta^{h}(C_{i})(TNF)+TNF^{h}})(\dfrac{IFN^{h}}{\eta^{h}(C_{i})(IFN)+IFN^{h}})(\dfrac{\eta^{h}(C_{I})(IL10)}{\eta^{h}(C_{i})(IL10)+IL10^{h}})]C_{i}}_{\text{Muerte de cardiomiocito infectado}} $$
+
+7. $$\dot{TNF}= \underbrace{[\alpha_{5}(\dfrac{\eta^{h}(TNF)(IL10)}{\eta^{h}(TNF)(IL10)+IL10^{h}})]M_{i}}_{\text{Secreción}} -\underbrace{\mu_{7}(TNF -qTNF)}_{\text{Degradación}}$$
+
+8. $$\dot{IFN}=  \underbrace{[\alpha_{6}(\dfrac{\eta^{h}(IFN)(IL10)}{\eta^{h}(IFN)(IL10)+IL10^{h}})]C_{i}}_{\text{Secreción}}-\underbrace{\mu_{8}(IFN-qIFN)}_{\text{Degradación}} $$
+
+9. $$ \dot{IL10}= \underbrace{\alpha{7}}_{\text{Secreción}}-\underbrace{\mu_{9}(IL10-qIL10)}_{\text{Degradación}} $$
