@@ -117,109 +117,18 @@ saveRDS(Param_alpha7_1p29, "03_Results/objetosRDS/parametro_alpha7_1p29.rds")
   
 ############################################################# 
 ######################## 18 DE MARZO DEL 2025 ###############
-#############################################################
-
-
-
-abs(-20) #Valor absoluto es la distancia de un valor a otro sin importar el signo, tipo
-#si es -20, implica que hay 20 lugares de diferencia del 0, no importa si es + o -
-
-#Ciclo FOR
-
-#Parametro 1
-
-######################################################
-#CICLO FOR PARA ANALISIS DE SENSIBILIDAD PARAMETRICA ########################################################################
-#############################################################################################################################
-#####################################################
-parametronormales <- readRDS("03_Results/objetosRDS/Parametrosnormales.rds")
-View(parametronormales)
-nombre_columnas <-colnames(parametronormales) #nombre de columnas
-plot(parametronormales)
-
-#alpha1 
-
-
-head(parametronormales)
-
-basedatos_variables <- data.frame(parametro = alpha1_1,
-                                  variable_TL_alpha1=parametronormales[3651,2])
-basedatos_variables
-
-a<- 0.10
-for (x in 1:10){
-  
-  parameter <- c(alpha1,alpha2, mu1, nu1, mu2, mu3, alpha3, alpha4, mu5, mu6, alpha5, alpha7, mu7, mu9, n1, n2, h1, h2, qIL10, qTNF,M0) 
-  state <- c(TL=50, M=209, Cn= 136, Mi= 0, Ci = 0, TNF = 22, IL10 =9.8)
-  times <- seq(0,3650, by=1)
-
-    
-  trypanosoma_29_NOV <- function(t,state,parameter){
-    with(as.list(c(state,parameter)),  {
-      d_TL <- (alpha1*((TNF**h3)/((n3**h3)+TNF**h3))*(n4**h4)/((n4**h4)+IL10**h4))*TL*M-alpha2*TL*Cn+(mu1*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*TL+(alpha3*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Mi+alpha4*Ci
-      d_M <- (nu1*((TNF**h1)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*(M0-M)-(alpha1*((TNF**h3)/((n3**h3)+TNF**h3))*(n4**h4)/((n4**h4)+IL10**h4))*TL*M+(mu2*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*M
-      d_Cn <- -alpha2*TL*Cn+(mu3*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Cn
-      d_Mi <- (alpha1*((TNF**h3)/((n3**h3)+TNF**h3))*(n4**h4)/((n4**h4)+IL10**h4))*TL*M+(mu5*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Mi
-      d_Ci <- alpha2*TL*Cn+(mu6*((TNF**h3)/((n3**h3)+TNF**h3))*((n4**h4)/((n4**h4)+IL10**h4)))*Ci
-      d_TNF <- (alpha5*((n1**h1)/((n1**h1)+IL10**h1)))*Mi-mu7*(TNF-qTNF)+(alpha5*((n1**h1)/((n1**h1)+IL10**h1)))*Ci
-      d_IL10 <- alpha7*Mi - mu9*(IL10-qIL10)
-      
-      return(list(c(d_TL,d_M,d_Cn,d_Mi,d_Ci,d_TNF,d_IL10)))      
-    })
-  
-    
-  }
-veinticinco_de_marzo <- ode(y= state, times = times, func= trypanosoma_29_NOV, parms = parameter)
-
-
-basedatos_variables[nrow(basedatos_variables)+1,]<- c(alpha1,abs((veinticinco_de_marzo[3651,2]-parametronormales[3651,2])/parametronormales[3651,2])) #aqui va el que se ira moviendo 
-                                                    
-alpha1<- alpha1+ (alpha1_1*a) #aqui va el que no se va a amover alpha2_2
-#igual aqui ira el que se ira moviendo
-
-
-if (x ==10){
-print(basedatos_variables)
-}
-
-}
-#####
-base_TL_alpha1 <-basedatos_variables[-1,]
-base_TL_alpha1 
-plot(base_TL_alpha1)
-saveRDS(base_TL_mu2, "Tabla_parametros_RDS/Base_TL_mu2.rds")
-#Cada que acabemos un parametro, volverlo a poner en su valor inicial
-
-########################################################################################################
-######################################################################################################
-#################################################################################################
-nombre_columnas <-colnames(parametronormales) #nombre de columnas
-nombre_columnas[2]
-
-
-
-
-
-paste()
-
-a<- 0.1
-p <- as.numeric(p)
-p_1 <- p
-
-
-p_1 <- p_1+p*a
-
-print(p_1)
-
+############################################################
 
 ############################################################
-      ########   #    #
-      #          #    #
-      #####      #    #
-      #          #    #
-      #          #    #
-      #           ####
+      ########   #    #  #     #
+      #          #    #  # #   # 
+      #####      #    #  #  #  #
+      #          #    #  #   # #
+      #          #    #  #    ## 
+      #           ####   #     #
 ###########################################################
+#FUNCION PARA EL ANALISIS DE SENSIBILIDAD PARAMETRICA
+
 
 analisis_SP <- function(p,np,nv){
   alpha1 <- 5.8*10**-8 #1 o 3.14, ELISA D H
@@ -270,7 +179,7 @@ analisis_SP <- function(p,np,nv){
   for (x in 1:10){
     ################################################
     M0 <- pn #hacelo cambiar dependiendo el parametro
-    #####################voy a tener que hacerlo manual
+    #Hacerlo manual
     #COLOCAR AQUI EL PARAMETRO QUE ESTAMOS ESCOGIENDO
 
     
@@ -342,15 +251,7 @@ analisis_SP(M0,21,8)
 #mu3 su valor es 0, igual que alpha 3
 
 
-#TAL VEZ EN CITOCINAS, VER EL PUNTO MAXIMO?
 
-
-
-##################
-#GRAFICA DEL ANALISIS DE SENSIBILIDAD PARAMETRICA
-#####################
-#
-#ALPHA1
 
 
 
